@@ -8,4 +8,7 @@ original_dms_data_mask=original_dms_data['DMS_score']>=2      ###als mask defini
 filtered_dms_scores = original_dms_data[original_dms_data_mask]   ###nur die Zeilen die in mask definiert wurden
 print(filtered_dms_scores)
 
+plt.savefig  # -> in ython anzeigen
+plt.show()
+
 ##nur noch 30000 Werte anstatt 51000 -> Werte raus die einen DMS_score unter 2 haben, also wahrscheinlich ohne FUnktion sind
