@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="43dbcddc-bf12-4b8a-9d18-c6fbc5d740d2" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QVupenooSkRdCv6ZKGpvSfu0K0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43dbcddc-bf12-4b8a-9d18-c6fbc5d740d2" name="Changes" comment="" />
+      <created>1685451253889</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685451253889</updated>
+      <workItem from="1685451254934" duration="14482000" />
+      <workItem from="1685627822569" duration="613000" />
+      <workItem from="1686030735948" duration="21157000" />
+      <workItem from="1686060551586" duration="93000" />
+      <workItem from="1686060671391" duration="967000" />
+      <workItem from="1686061666209" duration="460000" />
+      <workItem from="1686069263907" duration="7818000" />
+    </task>
+    <task id="LOCAL-00001" summary="Dateiname korrekt">
+      <created>1685451755841</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685451755841</updated>
+    </task>
+    <task id="LOCAL-00002" summary="only keep row if m1 and m2 are at least duplicated (not possible yet)">
+      <created>1685476487111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685476487111</updated>
+    </task>
+    <task id="LOCAL-00003" summary="only keep row if m1 and m2 are at least duplicated possible now, but new problem: single mutations deleted">
+      <created>1685477537089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685477537089</updated>
+    </task>
+    <task id="LOCAL-00004" summary="überlappende Mutation mit m1 als Ausgangsmutation (Problem: max. 3)">
+      <created>1685510157508</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685510157508</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Versuch &quot;Stammbaum&quot; across m1 to m15 (funktioniert noch nicht wie erwünscht)">
+      <created>1685532897351</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685532897351</updated>
+    </task>
+    <task id="LOCAL-00006" summary="A_neu_Stammbaum.ipynb (nicht fertig)">
+      <created>1686038659368</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686038659368</updated>
+    </task>
+    <task id="LOCAL-00007" summary="A_neu_Stammbaum.ipynb (nicht fertig)">
+      <created>1686039019251</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686039019251</updated>
+    </task>
+    <task id="LOCAL-00008" summary="A_neu_Stammbaum.ipynb (nicht fertig)">
+      <created>1686040657562</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686040657562</updated>
+    </task>
+    <task id="LOCAL-00009" summary="A_neu_Stammbaum.ipynb (nicht fertig)">
+      <created>1686041535752</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686041535752</updated>
+    </task>
+    <task id="LOCAL-00010" summary="A_neu_Stammbaum.ipynb (nicht fertig)">
+      <created>1686046065381</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686046065381</updated>
+    </task>
+    <task id="LOCAL-00011" summary="A_neu_Stammbaum.ipynb (nicht fertig)">
+      <created>1686047193927</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686047193927</updated>
+    </task>
+    <task id="LOCAL-00012" summary="A_ord_Stammbaum.ipynb (stimmt nicht mit Ergebnis A_neu_Stammbaum.ipynb überein)">
+      <created>1686052477058</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686052477058</updated>
+    </task>
+    <task id="LOCAL-00013" summary="A_ord_Stammbaum.ipynb (stimmt nicht mit Ergebnis A_neu_Stammbaum.ipynb überein)">
+      <created>1686060216359</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686060216359</updated>
+    </task>
+    <task id="LOCAL-00014" summary="A_ord_Stammbaum.ipynb (stimmt mit Ergebnis A_neu_Stammbaum.ipynb überein)">
+      <created>1686072579039</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1686072579040</updated>
+    </task>
+    <task id="LOCAL-00015" summary="A_ord_Stammbaum.ipynb: individual dfs for mutations with count over 12 (+ mutation_1)">
+      <created>1686075813843</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686075813843</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Dateiname korrekt" />
+    <MESSAGE value="only keep row if m1 and m2 are at least duplicated (not possible yet)" />
+    <MESSAGE value="only keep row if m1 and m2 are at least duplicated possible now, but new problem: single mutations deleted" />
+    <MESSAGE value="überlappende Mutation mit m1 als Ausgangsmutation (Problem: max. 3)" />
+    <MESSAGE value="Versuch &quot;Stammbaum&quot; across m1 to m15 (funktioniert noch nicht wie erwünscht)" />
+    <MESSAGE value="A_neu_Stammbaum.ipynb (nicht fertig)" />
+    <MESSAGE value="A_ord_Stammbaum.ipynb (stimmt nicht mit Ergebnis A_neu_Stammbaum.ipynb überein)" />
+    <MESSAGE value="A_ord_Stammbaum.ipynb (stimmt mit Ergebnis A_neu_Stammbaum.ipynb überein)" />
+    <MESSAGE value="A_ord_Stammbaum.ipynb: individual dfs for mutations with count over 12 (+ mutation_1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="A_ord_Stammbaum.ipynb: individual dfs for mutations with count over 12 (+ mutation_1)" />
+  </component>
+</project>
