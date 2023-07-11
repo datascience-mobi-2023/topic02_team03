@@ -3,7 +3,7 @@ import numpy as np
 pd.set_option('display.max_columns', 50)
 #%%
 #read dataset
-original_dms_data = pd.read_csv('topic02_team03/original dataset/GFP_AEQVI_Sarkisyan_2016.csv')
+original_dms_data = pd.read_csv('original dataset/GFP_AEQVI_Sarkisyan_2016.csv')
 # split first column of df into multiple columns
 original_dms_data_col = original_dms_data
 only_mutants = original_dms_data["mutant"].to_frame()
