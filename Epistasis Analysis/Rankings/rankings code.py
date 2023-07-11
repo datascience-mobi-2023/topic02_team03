@@ -3,7 +3,7 @@ import numpy as np
 pd.set_option('display.max_columns', 50)
 #%%
 #read dataset
-original_dms_data = pd.read_csv('/Users/liza/Desktop/Bioinfo Project/DMS_data/GFP_AEQVI_Sarkisyan_2016.csv')
+original_dms_data = pd.read_csv('topic02_team03/original dataset/GFP_AEQVI_Sarkisyan_2016.csv')
 # split first column of df into multiple columns
 original_dms_data_col = original_dms_data
 only_mutants = original_dms_data["mutant"].to_frame()
@@ -217,7 +217,7 @@ def highlight_top_mutants(row):
 styled_ranking0= sorted_Ranking0.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking0.html', 'w') as file:
-    file.write(styled_ranking0.render())
+    #file.write(styled_ranking0.render())
 #%% md
 #----------------RANKING 1: (that was the try if the ranking-function works)
 #-> ranked by the available values for each mutation (how often does mutation X appear in total)
@@ -235,7 +235,7 @@ def highlight_top_mutants(row):
 styled_ranking1= sorted_Ranking1.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking1.html', 'w') as file:
-    file.write(styled_ranking1.render())
+    #file.write(styled_ranking1.render())
 #%% md
 
 
@@ -266,7 +266,7 @@ def highlight_top_mutants(row):
 styled_ranking1a= sorted_only_stab_Ranking1a.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking1a.html', 'w') as file:
-    file.write(styled_ranking1a.render())
+    #file.write(styled_ranking1a.render())
 #%% md
 
 
@@ -302,7 +302,7 @@ def highlight_top_mutants(row):
 styled_ranking2= ranking2.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking2.html', 'w') as file:
-    file.write(styled_ranking2.render())
+    #file.write(styled_ranking2.render())
 #%% md
 
 
@@ -330,7 +330,7 @@ def highlight_top_mutants(row):
 styled_ranking3= ranking3.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking3.html', 'w') as file:
-    file.write(styled_ranking3.render())
+    #file.write(styled_ranking3.render())
 
 #%% md
 
@@ -360,7 +360,7 @@ def highlight_top_mutants(row):
 styled_ranking4= ranking4.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking4.html', 'w') as file:
-    file.write(styled_ranking4.render())
+    #file.write(styled_ranking4.render())
 
 #%% md
 
@@ -392,7 +392,7 @@ def highlight_top_mutants(row):
 styled_ranking5= ranking5.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking5.html', 'w') as file:
-    file.write(styled_ranking5.render())
+    #file.write(styled_ranking5.render())
 
 #%% md
 
@@ -454,7 +454,7 @@ def highlight_top_mutants(row):
 styled_ranking6= ranking6.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking6.html', 'w') as file:
-    file.write(styled_ranking6.render())
+    #file.write(styled_ranking6.render())
 #%% md
 
 
@@ -481,4 +481,6 @@ def highlight_top_mutants(row):
 styled_ranking7= ranking7.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking7.html', 'w') as file:
-    file.write(styled_ranking7.render())
+    #file.write(styled_ranking7.render())
+
+print(finished)
