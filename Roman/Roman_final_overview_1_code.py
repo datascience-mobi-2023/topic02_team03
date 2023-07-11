@@ -47,6 +47,8 @@ plt.gcf().set_size_inches(10, 6)
 plt.title("Fitness scores of each single mutation based on the new AS")
 threshold = 2.5
 plt.axhline(threshold, color='red', linestyle='--', label='Threshold')
+def plot1
+    plt.show()
 # Plot shows all the single mutants (new AA) with the corresponding dms-score.
 # There is a clear cut off at 2.5 visible. Everything underneath is completely unfunctional.
 
