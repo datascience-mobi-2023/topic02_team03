@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="fertig5" />
+    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="fertig6">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_statistical_tests_3_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_statistical_tests_3_code.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,14 +126,7 @@
       <workItem from="1689157205959" duration="235000" />
       <workItem from="1689157521004" duration="10000" />
       <workItem from="1689157538745" duration="138000" />
-      <workItem from="1689157687940" duration="12189000" />
-    </task>
-    <task id="LOCAL-00002" summary="Creates a dataframe with single mutants only and shows, what the new amino acid is">
-      <created>1684871808737</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1684871808737</updated>
+      <workItem from="1689157687940" duration="16379000" />
     </task>
     <task id="LOCAL-00003" summary="Creates a dataframe with single mutants only and shows, what the new amino acid is">
       <created>1684871855349</created>
@@ -468,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689169864911</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fertig6">
+      <created>1689174241062</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1689174241063</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fast fertig, muss nur noch beispielhaft angewandt werden" />
     <MESSAGE value="nice" />
     <MESSAGE value="Rechenfehler aber sonst fertig" />
     <MESSAGE value="Fertig, Rechenfehler behoben" />
@@ -565,7 +567,8 @@
     <MESSAGE value="fertig3" />
     <MESSAGE value="fertig4" />
     <MESSAGE value="fertig5" />
-    <option name="LAST_COMMIT_MESSAGE" value="fertig5" />
+    <MESSAGE value="fertig6" />
+    <option name="LAST_COMMIT_MESSAGE" value="fertig6" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
