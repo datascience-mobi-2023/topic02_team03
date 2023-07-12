@@ -138,44 +138,44 @@ plt.tight_layout()
 # This plot is created to show a global overview of all the positions with their respective dms-scores
 # Plot shows all the single mutations that occured at a specific position (x-axis) against the dms-score (y-axis)
 
-# Define the x-axis range for each section
+# Defines the x-axis range for each section in tupels
 x_axis_ranges_overview_plot = [(0, 61), (61, 121), (121, 181), (181, 239)]
 
-# Convert "Position" column to numeric type
+# Converts the "Position" column to numeric type
 mutations_singles_pos_dms_without_new_AA["Position"] = pd.to_numeric(mutations_singles_pos_dms_without_new_AA["Position"])
 
-# Create subplots with 2 rows and 2 columns
+# Creates subplots with 2 rows and 2 columns
 fig, axes = plt.subplots(nrows=2, ncols=2)
 
-# Iterate over the subplots and x-axis ranges
+# Iterates over the subplots and x-axis ranges
 for i, ax in enumerate(axes.flat):
-    # Slice the data based on the x-axis range
+    # Slices the data based on the x-axis range
     x_start, x_end = x_axis_ranges_overview_plot[i]
     overview_plot_pos_dms = mutations_singles_pos_dms_without_new_AA[(mutations_singles_pos_dms_without_new_AA["Position"] >= x_start) & (mutations_singles_pos_dms_without_new_AA["Position"] < x_end)]
 
-    # Plot the scatter for each section
+    # Plots the scatter for each section
     ax.scatter(overview_plot_pos_dms["Position"], overview_plot_pos_dms["DMS-score"], s=1)
     ax.set_title("DMS-scores of each single mutation based on the position")
-# Set x-axis ticks to show all data points
+    # Sets x-axis ticks to show all data points
     ax.set_xticks(overview_plot_pos_dms["Position"].unique())
     ax.set_xticklabels(overview_plot_pos_dms["Position"].unique(), rotation=90)  # Rotate x-axis labels by 90 degrees
     ax.set_xlabel("Position")  # Set x-axis label
     ax.set_ylabel("DMS-score")  # Set y-axis label
-# Customize individual subplots as needed
-# Check if the specific x-axis labels are present in the current subplot
+# Customizes individual subplots as needed
+# Checks if the specific x-axis labels are present in the current subplot
     if 65 in overview_plot_pos_dms["Position"].unique():
         ax.axvline(x=65, color='red', linestyle='--')
     if 67 in overview_plot_pos_dms["Position"].unique():
         ax.axvline(x=67, color='red', linestyle='--')
 
     ax.axhline(y=2.5, color='green', linestyle='--')
-
+# Inserts some threshold-lines to indicate important positions (chromophor).
 
 # Show the plot
 plt.gcf().set_size_inches(17, 10)  # Adjust the size of the overall figure
 plt.tight_layout()  # Ensures proper spacing between subplots
 plt.show()
-# Inserts some threshold-lines to indicate important positions (chromophor).
+
 # It's interesting to see here, that there are mutations occuring in the chromophore (positions 65-67) that still have a good dms-score.
 # Position 66 is the fluorescing amino acid, and position 67 also participates in the cyclization reaction, whereas position 65 has a smaller impact on the fluorescence.
 # Therefore, it makes sense that position 66 and 67 show lowered dms-scores, whilst position 65 is more stable.
