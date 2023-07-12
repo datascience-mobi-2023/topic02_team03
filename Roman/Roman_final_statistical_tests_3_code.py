@@ -73,10 +73,10 @@ dms_scores_per_group_pos_list = []
 for position, group in grouped_by_position:
     dms_scores_per_group_pos_list.append(group['DMS-score'])
 
-sns.boxplot(x='Position', y='Fitness_Score', data=work_with_df_pos_new_AA_dms_score)
+sns.boxplot(x='Position', y='DMS-score', data=work_with_df_pos_new_AA_dms_score)
 plt.xlabel('Position')
-plt.ylabel('Fitness Score')
-plt.title('Distribution of DMS Scores by Mutation Position')
+plt.ylabel('DMS-score')
+plt.title('Distribution of DMS scores by Mutation Position')
 plt.xticks(range(0, len(grouped_by_position), 10))
 plt.gcf().set_size_inches(25, 12)
 plt.show()
@@ -128,12 +128,17 @@ print(f"P-value: {p_value}")
 
 # The following code shows more information about the results of the ANOVA
 # This incorporates all 3 factors (new amino acid, position and dms-score)
+# This provides information about the statistical significance of the independent variables in explaining the variation in the dependent variable
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
-
+# The name of the column has to be changed because of the "-" in the name (it clashes with the function).
+ANOVA_work_with_df_pos_new_AA_dms_score = work_with_df_pos_new_AA_dms_score.rename(columns={"DMS-score": "DMS_score_for_ANOVA"})
 
 # Performs the ANOVA
-model_ANOVA_3_components = ols('DMS-score ~ Position + new_AA', data=work_with_df_pos_new_AA_dms_score).fit()
+model_ANOVA_3_components = ols("DMS_score_for_ANOVA ~ Position + new_AA", data=ANOVA_work_with_df_pos_new_AA_dms_score).fit()
+# This line of code is performing a linear regression analysis using the Ordinary Least Squares (OLS) method.
+# It creates a model object that represents the linear regression model.
+# Formula specifying the relationship between the dependent variable (DMS-score) and the independent variables (Position and new_AA).
 anova_table_3_components = sm.stats.anova_lm(model_ANOVA_3_components)
 
 # Print the ANOVA table
@@ -163,7 +168,7 @@ print(anova_table_3_components)
 sum_sq_position = anova_table_3_components.loc['Position', 'sum_sq']
 SST = anova_table_3_components['sum_sq'].sum()
 
-sum_sq_new_as = anova_table_3_components.loc['new_AA', 'sum_sq']
+sum_sq_new_AA = anova_table_3_components.loc['new_AA', 'sum_sq']
 SST = anova_table_3_components['sum_sq'].sum()
 
 eta_squared_position = sum_sq_position / SST
@@ -280,6 +285,7 @@ import pandas as pd
 # Converts the column with positions to numeric values
 work_with_df_pos_new_AA_dms_score['Position'] = pd.to_numeric(work_with_df_pos_new_AA_dms_score['Position'])
 
+final_results_MWU_collective = []
 for position, group_position_loop_MWU in grouped_position_MWU:
     for AA, group_AA_loop_MWU in grouped_AA_MWU:
         dms_scores_position = group_position_loop_MWU['DMS-score'].values
@@ -292,19 +298,19 @@ for position, group_position_loop_MWU in grouped_position_MWU:
         result_MWU_collective = {'Position': position, 'Amino acid': AA, 'Test statistic': statistic, 'P-value': p_value,
                   'Significant?': "Yes" if p_value < alpha else "No"}
 
-        results_MWU_collective.append(result_MWU_collective)
+        final_results_MWU_collective.append(result_MWU_collective)
 # Makes a summary of the results.
-summary_MWU_collective_df = pd.DataFrame(results_MWU_collective)
+summary_MWU_collective_df = pd.DataFrame(final_results_MWU_collective)
 # This sorts the values in an ascending order.
 summary_MWU_collective_df = summary_MWU_collective_df.sort_values('Position', ascending=True)
-
+summary_MWU_collective_df["Position"] = pd.to_numeric(summary_MWU_collective_df["Position"])
+print(summary_MWU_collective_df)
 # However, this yields all combinations, even if they are not in the data set.
 
 # This following mask filters out any combinations that do not occur in our dataset:
-mask_for_summary_MWU_collective_df = summary_MWU_collective_df.apply(lambda row: (row['Position'], row['Amino acid']) in zip(work_with_df_pos_new_AA_dms_score['Position'], work_with_df_pos_new_AA_dms_score['new_AA']),
-                        axis=1)
+mask_for_summary_MWU_collective_df = summary_MWU_collective_df.apply(lambda row: (row['Position'], row['Amino acid']) in zip(work_with_df_pos_new_AA_dms_score['Position'], work_with_df_pos_new_AA_dms_score['new_AA']), axis=1)
 
-summary_MWU_collective_df_filtered = summary_MWU_collective_df[mask]
+summary_MWU_collective_df_filtered = summary_MWU_collective_df[mask_for_summary_MWU_collective_df]
 
 print(summary_MWU_collective_df_filtered)
 
@@ -312,16 +318,18 @@ print(summary_MWU_collective_df_filtered)
 # If the p-value is > alpha (0.05) then the H0 hypothesis cannot be discarded --> no significant difference in dms-score
 
 # Now these results will be visualized in a scatter plot:
-
-plt.scatter(summary_MWU_collective_df_filtered['Position'], summary_MWU_collective_df_filtered['Amino acid'], c=summary_MWU_collective_df_filtered['P-value'],
-            cmap='coolwarm')
 plt.figure(figsize=(30, 15))
+plt.scatter(summary_MWU_collective_df_filtered['Position'], summary_MWU_collective_df_filtered['Amino acid'],
+            c=summary_MWU_collective_df_filtered['P-value'], cmap='coolwarm')
+
 plt.xlabel('Position')
 plt.ylabel('Amino acid')
 plt.title('Scatter plot of the Mann-Whitney-U test results')
 cbar = plt.colorbar()
 cbar.set_label('P-value')
 plt.show()
+
+
 
 # Here a different statistical test is performed:
 # The Kruskal-Wallis-test is a non-parametric method that uses ranks and therefor does not make assumptions about the distribution of the data.
@@ -359,10 +367,9 @@ else:
 grouped_by_amino_acid = work_with_df_pos_new_AA_dms_score.groupby('new_AA')
 
 # Liste zum Speichern der Fitness-Scores für jede Position und Aminosäure
+print(grouped_by_amino_acid)
 position_new_AA_scores_Kruskal_list = []
-
-# Schleife über die Positionen und Aminosäuren
-for (position, amino_acid), group_data in grouped_by_amino_acid:
+for (position, new_AA), group_data in grouped_by_amino_acid:
     dms_scores_Kruskal_new_AA = group_data['DMS-score'].values
     position_new_AA_scores_Kruskal_list.append(dms_scores_Kruskal_new_AA)
 
@@ -386,8 +393,6 @@ else:
 
 # Lastly, a Friedman test was performed to analyse the dependence of both the parameters to eachother:
 
-#%%
-import pandas as pd
 import scipy.stats as stats
 
 grouped_pos_new_AA_Friedman = work_with_df_pos_new_AA_dms_score.groupby(['Position', 'new_AA'])
