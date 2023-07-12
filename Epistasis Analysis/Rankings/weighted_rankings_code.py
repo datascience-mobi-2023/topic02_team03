@@ -71,7 +71,7 @@ import matplotlib.pyplot as plt
 #fig, axes = plt.subplots(nrows=5, ncols=3, figsize=(19, 12))  # Abbildung und Achsenobjekte erstellen
 #plt.subplots_adjust(wspace=0.4, hspace=0.6)
 
-for j, ax in zip(range(2, 16), axes.flatten()):
+for j in range(2, 16):
     variance_per_mutant_list = []
 
     for i in all_possible_mutations:
@@ -120,7 +120,7 @@ frame_zum_mitteln_variance = pd.DataFrame(index = all_possible_mutations)
 variance_per_mutant_count_list = []
 
 # ACHTUNG: es werden nur counts von 2 bis 7 einbezogen weil die mit mehr sowieso "kaputt" sind!!!
-for j, ax in zip(range(2, 8), axes.flatten()):
+for j in range(2, 8):
     variance_per_mutant_list = []
 
     for i in all_possible_mutations:
@@ -143,35 +143,20 @@ mean_variances_per_mutations = pd.DataFrame(variance_per_mutant_count_df.mean(ax
 print("variances_per_mutant_count_df finished (3)")
 #%%
 
-#%%
-##mean of the variance weighted -> sum of all mean_variance_permutcount * mean_fitness_score_per_mutcount divided by the sum of all used mean_fitness_score_per_mutcount, because apparently that´s necessary?
+#dataframe with the mean fscores of each mutation count
+mean_fitness_scores = pd.DataFrame(index = range(2,16), columns = ["mean_fitness_score"])
+for i in range(2,16):
+    fscore_mutcount_mean = count_fscore_frame["DMS_score"].loc[count_fscore_frame["mut_count"] == j].mean()
+    mean_fitness_scores.loc[j, "mean_fitness_score"] = fscore_mutcount_mean
 
-weighted_mean_per_mutant_df = pd.DataFrame(index=all_possible_mutations)
-
-for mutation in all_possible_mutations:
-    weighted_mean = 0
-    total_weight = 0
-
-    for mutation_count in range(2, 15):
-        variance = variance_per_mutant_count_df.loc[mutation, mutation_count]
-
-        if not np.isnan(variance):
-            mean_fitness_score = mean_fitness_scores.at[mutation_count, 'mean_fitness_score']
-            weighted_mean += variance * mean_fitness_score
-            total_weight += mean_fitness_score
-
-    if total_weight != 0:
-        weighted_mean /= total_weight
-
-    weighted_mean_per_mutant_df.at[mutation, 'weighted_mean'] = weighted_mean
-print("weighted variance finished (4)")
+print("mean_fitness_scores finished (4)")
 #%% md
---> 384 von 1810 sind gleich 0 weil die Mutation nur einmal pro mutcount vorkommt, müssen bei den rankings nicht beachtet werden, zu wenig Werte
+#--> 384 von 1810 sind gleich 0 weil die Mutation nur einmal pro mutcount vorkommt, müssen bei den rankings nicht beachtet werden, zu wenig Werte
 
 #%%
 how_many_per_mutant_count_list = []
 
-for j, ax in zip(range(2, 8), axes.flatten()):
+for j in range(2, 8):
     how_many_for_variance = []
 
     for i in all_possible_mutations:
@@ -192,13 +177,6 @@ combined_means_variance_how_many = pd.concat([mean_variances_per_mutations, mean
 combined_means_variance_how_many.columns = ['mean_variances_per_mutations', 'mean_how_many_per_mutations']
 
 print("ranking prep finished (5)")
-#%% md
-#----------------RANKING 0 weighted: nur nach Varianz der fscores
-#%%
-sorted_Ranking0_weighted = weighted_mean_per_mutant_df.sort_values(by='weighted_mean')
-
-#%%
-TOP_MUTANTS = ['V163A', 'K166Q', 'V68M', 'E172A', 'A206V', 'T43N', 'H25Q', 'S205T', 'E6K', 'T62S', 'I171V', 'T203I', 'Y39N', 'E111V', 'E32A']
 
 # Funktion zum Formatieren der Zeilen und Hervorheben der Werte in TOP_MUTANTS
 #def highlight_top_mutants(row):
@@ -212,11 +190,10 @@ TOP_MUTANTS = ['V163A', 'K166Q', 'V68M', 'E172A', 'A206V', 'T43N', 'H25Q', 'S205
 #with open('formatted_ranking0_weighted.html', 'w') as file:
  #   file.write(styled_ranking0_weighted.render())
 #%% md
+#%%
+nur_fscore_mut_count = working_dataframe.loc[:, ["DMS_score", "mut_count"]]
 
-
-
-
-----------------RANKING 2 weighted: nur nach fscore_mean Differenz
+#----------------RANKING 2 weighted: nur nach fscore_mean Differenz
 #%%
 # Create an empty dataframe to store the results
 mean_for_differences_with = pd.DataFrame(index=all_possible_mutations, columns=range(2, 16))
@@ -226,7 +203,7 @@ for mutation in all_possible_mutations:
 
         index_when_mut_present_weighted = result_how_often.loc[result_how_often[mutation] == True].index
 
-        only_rows_with_mut_weighted = nur_fscore_mut_count_weighted[(nur_fscore_mut_count_weighted['mut_count'] == mutation_count) & (nur_fscore_mut_count_weighted.index.isin(index_when_mut_present_weighted))]
+        only_rows_with_mut_weighted = nur_fscore_mut_count[(nur_fscore_mut_count['mut_count'] == mutation_count) & (nur_fscore_mut_count.index.isin(index_when_mut_present_weighted))]
 
         # Calculate the mean of fitness score for the filtered rows
         mean_fitness_withOUT_mut_score = only_rows_with_mut_weighted['DMS_score'].mean()
@@ -262,7 +239,7 @@ for mutation in all_possible_mutations:
 
         index_when_mut_NOT_present_weighted = result_how_often.loc[result_how_often[mutation] == False].index
 
-        only_rows_withOUT_mut_weighted = nur_fscore_mut_count_weighted[(nur_fscore_mut_count_weighted['mut_count'] == mutation_count) & (nur_fscore_mut_count_weighted.index.isin(index_when_mut_NOT_present_weighted))]
+        only_rows_withOUT_mut_weighted = nur_fscore_mut_count[(nur_fscore_mut_count['mut_count'] == mutation_count) & (nur_fscore_mut_count.index.isin(index_when_mut_NOT_present_weighted))]
 
         # Calculate the mean of fitness score for the filtered rows
         mean_fitness_withOUT_mut_score = only_rows_withOUT_mut_weighted['DMS_score'].mean()
