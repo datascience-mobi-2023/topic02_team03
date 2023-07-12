@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="fertig1">
+    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="fertig2">
+      <change afterPath="$PROJECT_DIR$/Roman/Roman_final_basic_analysis_2_code.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_overview_1_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_overview_1_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_overview_1_plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_overview_1_plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_basic_analysis_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_basic_analysis_2.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -127,7 +127,7 @@
       <workItem from="1689157205959" duration="235000" />
       <workItem from="1689157521004" duration="10000" />
       <workItem from="1689157538745" duration="138000" />
-      <workItem from="1689157687940" duration="8309000" />
+      <workItem from="1689157687940" duration="11873000" />
     </task>
     <task id="LOCAL-00001" summary="Code with my Dateipfad">
       <created>1684835878280</created>
@@ -451,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689165475041</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="fertig2">
+      <created>1689166080428</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1689166080428</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Richtige Nachbarschafts-Sortierung fehlt" />
     <MESSAGE value="gogogo" />
     <MESSAGE value="gogogo2" />
     <MESSAGE value="Fast fertig" />
@@ -548,10 +554,12 @@
     <MESSAGE value="Variablen und Kommentare geändert 1" />
     <MESSAGE value="pray" />
     <MESSAGE value="fertig1" />
-    <option name="LAST_COMMIT_MESSAGE" value="fertig1" />
+    <MESSAGE value="fertig2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fertig2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_overview_1_code.coverage" NAME="Roman_final_overview_1_code Coverage Results" MODIFIED="1689165313983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_basic_analysis_2_code.coverage" NAME="Roman_final_basic_analysis_2_code Coverage Results" MODIFIED="1689169362920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
   </component>
 </project>
