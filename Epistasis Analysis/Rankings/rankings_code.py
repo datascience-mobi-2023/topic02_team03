@@ -58,7 +58,7 @@ for i in all_possible_mutations:
 # concat dfs from the list
 result_how_often = pd.concat(list_of_dfs, axis=1)
 result_how_often = result_how_often.reset_index(drop=True)
-print("fertig1")
+print("result_how_often finished (1)")
 ## result_how_often.to_csv('dataframe_mutanten_Mutationen.csv', index=True)
 #%%
 # more convenient df (just mutcount und fscore)
@@ -113,7 +113,7 @@ for j, ax in zip(range(2, 16), axes.flatten()):
         ax.scatter(how_many_AND_variance_df['number of used values']['V163A'],how_many_AND_variance_df['Variance']['V163A'], c='red')
     ax.set_title(f'mutation count = {j} ')
 plot_variances = fig
-print("fertig2")
+print("variances plot finished (2)")
 #%% md
 #FURTHER PREPARATION FOR RANKINGS:
 #1. variance calculation per mutant (not-weighted)
@@ -170,9 +170,17 @@ how_many_per_mutant_count_df.set_axis(range(2,8), axis=1, inplace=True)
 mean_how_many_per_mutations = pd.DataFrame(how_many_per_mutant_count_df.mean(axis=1, skipna=True), columns=['Mean'])
 
 #%%
+#dataframe with the mean fscores of each mutationcount
+mean_fitness_scores = pd.DataFrame(index=range(2, 16), columns=['mean_fitness_score'])
+
+for j in range(2, 16):
+    fscore_mutcount_mean = count_fscore_frame['DMS_score'].loc[count_fscore_frame['mut_count'] == j].mean()
+    mean_fitness_scores.loc[j, 'mean_fitness_score'] = fscore_mutcount_mean
+
+#%%
 combined_means_variance_how_many = pd.concat([mean_variances_per_mutations, mean_how_many_per_mutations], axis=1)
 combined_means_variance_how_many.columns = ['mean_variances_per_mutations', 'mean_how_many_per_mutations']
-print("fertig3")
+print("combined_means_variance_how_many finished (3)")
 #%%
 #differences calculated (effect of mutation X on the fscore)
 nur_fscore_mut_count = working_dataframe.loc[:, ["DMS_score", "mut_count"]]
@@ -200,7 +208,7 @@ for i in all_possible_mutations:
     differences_list.append(difference_means)
 
 all_differences_means = pd.DataFrame({'Difference': differences_list}, index=all_possible_mutations)
-print("fertig4")
+print("all_different_means finished (4)")
 #%% md
 #----------------RANKING 0:
 #-> ranked by variance (without taking into account how many values got used for the calculation)
@@ -234,7 +242,7 @@ def highlight_top_mutants(row):
     return ['color: {}'.format(color)] * len(row)
 
 styled_ranking1= sorted_Ranking1.style.apply(highlight_top_mutants, axis=1)
-print("fertig5")
+print("styled ranking 1 finsihed (5)")
 #with open('formatted_ranking1.html', 'w') as file:
     #file.write(styled_ranking1.render())
 #%% md
@@ -266,7 +274,7 @@ def highlight_top_mutants(row):
 
 styled_ranking1a= sorted_only_stab_Ranking1a.style.apply(highlight_top_mutants, axis=1)
 
-print("fertig6")
+print("styled ranking 1a finished (6)")
 #with open('formatted_ranking1a.html', 'w') as file:
     #file.write(styled_ranking1a.render())
 #%% md
@@ -360,7 +368,7 @@ def highlight_top_mutants(row):
     return ['color: {}'.format(color)] * len(row)
 
 styled_ranking4= ranking4.style.apply(highlight_top_mutants, axis=1)
-print("fertig7")
+print("styled ranking 4 finished (7)")
 #with open('formatted_ranking4.html', 'w') as file:
     #file.write(styled_ranking4.render())
 
@@ -432,7 +440,7 @@ for i in all_possible_mutations:
     differences_delta_G_list.append(difference_means_delta_G)
 
 all_differences_delta_G_means = pd.DataFrame({'Difference dG': differences_delta_G_list}, index=all_possible_mutations)
-print("fertig7")
+print("all_differences_delta_G_means (8)")
 # the better the stability of the mutation
 #-> difference: WITHOUT - WITH
 #%%
@@ -485,4 +493,286 @@ styled_ranking7= ranking7.style.apply(highlight_top_mutants, axis=1)
 #with open('formatted_ranking7.html', 'w') as file:
     #file.write(styled_ranking7.render())
 
-print("finished fertig")
+print("finished fertig unweighted (9)")
+
+#%%
+
+##mean of the variance weighted -> sum of all mean_variance_permutcount * mean_fitness_score_per_mutcount divided by the sum of all used mean_fitness_score_per_mutcount, because apparently that´s necessary?
+
+weighted_mean_per_mutant_df = pd.DataFrame(index=all_possible_mutations)
+
+for mutation in all_possible_mutations:
+    weighted_mean = 0
+    total_weight = 0
+
+    for mutation_count in range(2, 15):
+        variance = variance_per_mutant_count_df.loc[mutation, mutation_count]
+
+        if not np.isnan(variance):
+            mean_fitness_score = mean_fitness_scores.at[mutation_count, 'mean_fitness_score']
+            weighted_mean += variance * mean_fitness_score
+            total_weight += mean_fitness_score
+
+    if total_weight != 0:
+        weighted_mean /= total_weight
+
+    weighted_mean_per_mutant_df.at[mutation, 'weighted_mean'] = weighted_mean
+
+#%% md
+#----------------RANKING 0 weighted: nur nach Varianz der fscores
+#%%
+sorted_Ranking0_weighted = weighted_mean_per_mutant_df.sort_values(by='weighted_mean')
+
+#%%
+TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
+
+# Funktion zum Formatieren der Zeilen und Hervorheben der Werte in TOP_MUTANTS
+def highlight_top_mutants(row):
+    color = 'red' if row.name in TOP_MUTANTS else 'black'
+    return ['color: {}'.format(color)] * len(row)
+
+# Anwendung der Formatierungsfunktion auf das gesamte DataFrame
+styled_ranking0_weighted= sorted_Ranking0_weighted.style.apply(highlight_top_mutants, axis=1)
+
+# Den formatierten DataFrame als HTML-Datei speichern
+#with open('formatted_ranking0_weighted.html', 'w') as file:
+    #file.write(styled_ranking0_weighted.render())
+#%% md
+
+
+
+
+#----------------RANKING 2: nur nach fscore_mean Differenz
+#%%
+# Create an empty dataframe to store the results
+mean_for_differences_with = pd.DataFrame(index=all_possible_mutations, columns=range(2, 16))
+
+for mutation in all_possible_mutations:
+    for mutation_count in range(2, 16):
+
+        index_when_mut_present_weighted = result_how_often.loc[result_how_often[mutation] == True].index
+
+        only_rows_with_mut_weighted = nur_fscore_mut_count_weighted[(nur_fscore_mut_count_weighted['mut_count'] == mutation_count) & (nur_fscore_mut_count_weighted.index.isin(index_when_mut_present_weighted))]
+
+        # Calculate the mean of fitness score for the filtered rows
+        mean_fitness_withOUT_mut_score = only_rows_with_mut_weighted['DMS_score'].mean()
+
+        # Store the mean fitness score in the result dataframe
+        mean_for_differences_with.loc[mutation, mutation_count] = mean_fitness_withOUT_mut_score
+
+#%%
+# Assuming your dataframe is named 'data' and 'mean_fitness_scores' is another dataframe with weights
+
+weights = mean_fitness_scores['mean_fitness_score'].values
+
+# Calculate weighted means per row, ignoring NaN values
+weighted_means = np.zeros(len(mean_for_differences_with))
+
+for i, row in enumerate(mean_for_differences_with.values):
+    non_nan_values = row[~pd.isna(row)]
+    non_nan_weights = weights[~pd.isna(row)]
+
+    if len(non_nan_values) > 0:
+        weighted_means[i] = np.average(non_nan_values, weights=non_nan_weights)
+
+# Create a new dataframe to store the weighted means
+weighted_means_with_df = pd.DataFrame({'Weighted Mean': weighted_means}, index=mean_for_differences_with.index)
+
+
+#%%
+# Create an empty dataframe to store the results
+mean_for_differences_withOUT = pd.DataFrame(index=all_possible_mutations, columns=range(2, 16))
+
+for mutation in all_possible_mutations:
+    for mutation_count in range(2, 16):
+
+        index_when_mut_NOT_present_weighted = result_how_often.loc[result_how_often[mutation] == False].index
+
+        only_rows_withOUT_mut_weighted = nur_fscore_mut_count_weighted[(nur_fscore_mut_count_weighted['mut_count'] == mutation_count) & (nur_fscore_mut_count_weighted.index.isin(index_when_mut_NOT_present_weighted))]
+
+        # Calculate the mean of fitness score for the filtered rows
+        mean_fitness_withOUT_mut_score = only_rows_withOUT_mut_weighted['DMS_score'].mean()
+
+        # Store the mean fitness score in the result dataframe
+        mean_for_differences_withOUT.loc[mutation, mutation_count] = mean_fitness_withOUT_mut_score
+
+#%%
+weights = mean_fitness_scores.values.ravel()
+
+weighted_means = np.average(mean_for_differences_withOUT, axis=1, weights= weights)
+
+# Create a new dataframe to store the weighted means
+weighted_means_withOUT_df = pd.DataFrame({'Weighted Mean': weighted_means}, index=mean_for_differences_withOUT.index)
+
+#%%
+all_differences_means_weighted = weighted_means_with_df -weighted_means_withOUT_df
+
+#%% md
+
+#%%
+#VORBEREITUNG copy&paste
+list_wie_oft_mut = []
+for j in all_possible_mutations:
+    matching_indexes = result_how_often.loc[result_how_often[j] == True].index
+    wie_oft = len(matching_indexes)
+    list_wie_oft_mut.append(wie_oft)
+df_wie_oft_muts_insg = pd.DataFrame(list_wie_oft_mut, index=all_possible_mutations)
+
+#%%
+#VORBEREITUNG copy&paste
+#code für ranking aus anderem dokument aber mit den sachen von oben berücksichtigt, alle destab raus
+combined_differenz_wie_oft_mut_weighted= pd.concat([all_differences_means_weighted, df_wie_oft_muts_insg], axis=1)
+combined_differenz_wie_oft_mut_weighted.columns = ['Difference_weighted', 'wie oft kommt mut insg vor']
+
+#%%
+ranking2_weighted = combined_differenz_wie_oft_mut_weighted.sort_values(by='Difference_weighted', ascending= False)
+
+#%%
+TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
+
+# Funktion zum Formatieren der Zeilen und Hervorheben der Werte in TOP_MUTANTS
+def highlight_top_mutants(row):
+    color = 'red' if row.name in TOP_MUTANTS else 'black'
+    return ['color: {}'.format(color)] * len(row)
+
+# Anwendung der Formatierungsfunktion auf das gesamte DataFrame
+styled_ranking2_weighted= ranking2_weighted.style.apply(highlight_top_mutants, axis=1)
+
+# Den formatierten DataFrame als HTML-Datei speichern
+#with open('formatted_ranking2_weighted.html', 'w') as file:
+    #file.write(styled_ranking2_weighted.render())
+#%% md
+
+
+
+
+#----------------RANKING 3: nach Differenz gewichtet nach Anzahl
+#%%
+list_ranking3_weighted = []
+for i in all_possible_mutations:
+    score_ranking3_weighted = all_differences_means_weighted.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0]
+    list_ranking3_weighted.append(score_ranking3_weighted)
+
+ranking3_unsorted_weighted = pd.DataFrame(list_ranking3_weighted, index=all_possible_mutations, columns=['ranking3_score_weighted'])
+ranking3_weighted = ranking3_unsorted_weighted.sort_values(by='ranking3_score_weighted', ascending= False)
+
+#%%
+TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
+
+# Funktion zum Formatieren der Zeilen und Hervorheben der Werte in TOP_MUTANTS
+def highlight_top_mutants(row):
+    color = 'red' if row.name in TOP_MUTANTS else 'black'
+    return ['color: {}'.format(color)] * len(row)
+
+# Anwendung der Formatierungsfunktion auf das gesamte DataFrame
+styled_ranking3_weighted= ranking3_weighted.style.apply(highlight_top_mutants, axis=1)
+
+# Den formatierten DataFrame als HTML-Datei speichern
+#with open('formatted_ranking3_weighted.html', 'w') as file:
+    #file.write(styled_ranking3_weighted.render())
+
+#%% md
+
+#--> bei den Werten wo die Varianz wegen zu wenigen Werten gleich 0 ist, entstehen durch den Bruch INF werte, müssen ignoriert werden
+#---> theoretisch später raussortierbar
+#---> kein if clause, weil sonst unterschiedliche Berechnung ("unfair")
+
+
+#----------------RANKING 4: nach eigenem score1:
+#-> score1 = Differenz * 1/Varianz * Anzahl muts
+#%%
+list_ranking4_weighted  = []
+for i in all_possible_mutations:
+
+    score_ranking4_weighted = all_differences_means_weighted .loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0] * (1/mean_variances_per_mutations.loc[i].values[0])
+    list_ranking4_weighted .append(score_ranking4_weighted )
+ranking4_unsorted_weighted  = pd.DataFrame(list_ranking4_weighted , index=all_possible_mutations, columns=['ranking4_score_weighted '])
+ranking4_weighted  = ranking4_unsorted_weighted .sort_values(by='ranking4_score_weighted ', ascending= False)
+
+#%%
+TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
+
+# Funktion zum Formatieren der Zeilen und Hervorheben der Werte in TOP_MUTANTS
+def highlight_top_mutants(row):
+    color = 'red' if row.name in TOP_MUTANTS else 'black'
+    return ['color: {}'.format(color)] * len(row)
+
+# Anwendung der Formatierungsfunktion auf das gesamte DataFrame
+styled_ranking4_weighted = ranking4_weighted .style.apply(highlight_top_mutants, axis=1)
+
+# Den formatierten DataFrame als HTML-Datei speichern
+#with open('formatted_ranking4_weighted .html', 'w') as file:
+    #file.write(styled_ranking4_weighted .render())
+
+#%% md
+
+
+
+
+#----------------RANKING 5: nach eigenem score2 :
+#-> score2 = Differenz * aggregierte Varianz
+#-> Varianz: gewichten mit mutcount (aggregierte Varianz)
+#(Summe aller Varianzen*1/Anzahl muts)/(Gesamtzahl Mutationen)
+###macht keinen sinn, aggregierte Varianz nochmal ? , ist auch nicht gut
+
+#aggregierte Varianz: bezieht streuung über ganzes Datenset mi ein
+#gewichtete Varianz: Verhalten innerhalb der Gruppe
+
+#--> NUR DIFFERENCE ist gewichtet miteinbezogen!! Varianz nicht, nicht geeigenet
+#%%
+list_ranking5_weighted1 = []
+for i in all_possible_mutations:
+
+    score_ranking5_weighted1 = (all_differences_means_weighted.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0]* 51714) / np.sum(variance_per_mutant_count_df.loc[i].values)
+    list_ranking5_weighted1.append(score_ranking5_weighted1)
+ranking5_unsorted_weighted1 = pd.DataFrame(list_ranking5_weighted1, index=all_possible_mutations, columns=['ranking5_score_weighted1'])
+ranking5_weighted1 = ranking5_unsorted_weighted1.sort_values(by='ranking5_score_weighted1', ascending= False)
+
+#%%
+TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
+
+# Funktion zum Formatieren der Zeilen und Hervorheben der Werte in TOP_MUTANTS
+def highlight_top_mutants(row):
+    color = 'red' if row.name in TOP_MUTANTS else 'black'
+    return ['color: {}'.format(color)] * len(row)
+
+# Anwendung der Formatierungsfunktion auf das gesamte DataFrame
+styled_ranking5_weighted1= ranking5_weighted1.style.apply(highlight_top_mutants, axis=1)
+
+# Den formatierten DataFrame als HTML-Datei speichern
+#with open('formatted_ranking5_weighted.html', 'w') as file:
+    #file.write(styled_ranking5_weighted1.render())
+
+#%% md
+
+
+
+#%% md
+
+
+#RANKING 7 weighted:
+#-> delta G Differenzwerte mit Ranking 5 verrechnet
+#%%
+list_ranking7_weighted = []
+for i in all_possible_mutations:
+
+    score_ranking7_weighted = (all_differences_means_weighted.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0]* 51714) / (np.sum(variance_per_mutant_count_df.loc[i].values) * all_differences_delta_G_means.loc[i].values[0])
+    list_ranking7_weighted.append(score_ranking7_weighted)
+ranking7_unsorted_weighted = pd.DataFrame(list_ranking7_weighted, index=all_possible_mutations, columns=['ranking7_weighted_score'])
+ranking7_weighted = ranking7_unsorted_weighted.sort_values(by='ranking7_weighted_score', ascending= False)
+
+#%%
+TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
+
+# Funktion zum Formatieren der Zeilen und Hervorheben der Werte in TOP_MUTANTS
+def highlight_top_mutants(row):
+    color = 'red' if row.name in TOP_MUTANTS else 'black'
+    return ['color: {}'.format(color)] * len(row)
+
+# Anwendung der Formatierungsfunktion auf das gesamte DataFrame
+styled_ranking7_weighted= ranking7_weighted.style.apply(highlight_top_mutants, axis=1)
+
+# Den formatierten DataFrame als HTML-Datei speichern
+#with open('formatted_ranking7_weighted.html', 'w') as file:
+    #file.write(styled_ranking7_weighted.render())
+#%%
