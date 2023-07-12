@@ -1,0 +1,11 @@
+Index: Romans Teil.ipnyb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n
+===================================================================
+diff --git a/Romans Teil.ipnyb b/Romans Teil.ipnyb
+--- a/Romans Teil.ipnyb	
++++ b/Romans Teil.ipnyb	
+@@ -1,1 +1,2 @@
++#Einlesen des Datensatzes
+ 

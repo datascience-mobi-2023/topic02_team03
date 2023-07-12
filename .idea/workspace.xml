@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="Variablen und Kommentare geändert 1" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/Testing" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Testing" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="06bd7416-2525-43b8-948e-08b756fa7569" />
+        <option name="url" value="https://github.com/datascience-mobi-2023/topic02_team03" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PLT5eqYxom9YBubo4Ob3UJFHEr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/roman/PycharmProjects/topic02_team03&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="" />
+      <created>1683235181797</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683235181797</updated>
+      <workItem from="1683235186115" duration="9000" />
+      <workItem from="1683641707824" duration="18000" />
+      <workItem from="1683641741227" duration="22000" />
+      <workItem from="1683641777338" duration="30000" />
+      <workItem from="1683641824281" duration="105000" />
+      <workItem from="1683641970155" duration="229000" />
+      <workItem from="1683642248948" duration="88000" />
+      <workItem from="1684833201295" duration="563000" />
+      <workItem from="1684833780617" duration="592000" />
+      <workItem from="1684834387415" duration="2277000" />
+      <workItem from="1684837091826" duration="486000" />
+      <workItem from="1684871664636" duration="355000" />
+      <workItem from="1684872036010" duration="1082000" />
+      <workItem from="1684938490391" duration="1809000" />
+      <workItem from="1684945096290" duration="413000" />
+      <workItem from="1685005456887" duration="916000" />
+      <workItem from="1685378868776" duration="271000" />
+      <workItem from="1685451186147" duration="167000" />
+      <workItem from="1685451453750" duration="331000" />
+      <workItem from="1685546617801" duration="7000" />
+      <workItem from="1685982648491" duration="32000" />
+      <workItem from="1686060239937" duration="1247000" />
+      <workItem from="1686143237047" duration="624000" />
+      <workItem from="1686150294979" duration="1887000" />
+      <workItem from="1686153295110" duration="644000" />
+      <workItem from="1686568241961" duration="12988000" />
+      <workItem from="1686646642813" duration="26939000" />
+      <workItem from="1686729086792" duration="11693000" />
+      <workItem from="1686832991586" duration="9201000" />
+      <workItem from="1687166379480" duration="11254000" />
+      <workItem from="1687329018303" duration="5694000" />
+      <workItem from="1688462584537" duration="226000" />
+      <workItem from="1688565969427" duration="14137000" />
+      <workItem from="1688649949889" duration="14127000" />
+      <workItem from="1688911643891" duration="7440000" />
+      <workItem from="1689083279858" duration="2237000" />
+      <workItem from="1689085920957" duration="128000" />
+      <workItem from="1689156953442" duration="203000" />
+      <workItem from="1689157205959" duration="235000" />
+      <workItem from="1689157521004" duration="10000" />
+      <workItem from="1689157538745" duration="138000" />
+      <workItem from="1689157687940" duration="316000" />
+    </task>
+    <task id="LOCAL-00001" summary="Code with my Dateipfad">
+      <created>1684835878280</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684835878280</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Creates a dataframe with single mutants only and shows, what the new amino acid is">
+      <created>1684871808737</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684871808737</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Creates a dataframe with single mutants only and shows, what the new amino acid is">
+      <created>1684871855349</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684871855349</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Creates a dataframe with single mutants only and shows, what the new amino acid is">
+      <created>1684872209531</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684872209531</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Vereinfachung des Codes">
+      <created>1684940965264</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684940965264</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Legende korrekt">
+      <created>1684945186161</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684945186161</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Variablen besser benannt">
+      <created>1685006096168</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685006096168</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Variablen besser benannt">
+      <created>1685006278054</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685006278054</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Roman's part traurigerweise löschen">
+      <created>1685451267018</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685451267018</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Weniger Speicherplatz verbrauchend">
+      <created>1686143573881</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686143573881</updated>
+    </task>
+    <task id="LOCAL-00011" summary="renamed">
+      <created>1686143659528</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686143659528</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ich kann multiplizieren!!">
+      <created>1686570104420</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686570104420</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Ich kann multiplizieren!!">
+      <created>1686570697249</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686570697249</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Richtige Nachbarschafts-Sortierung fehlt">
+      <created>1686588724670</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1686588724670</updated>
+    </task>
+    <task id="LOCAL-00015" summary="gogogo">
+      <created>1686650865361</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686650865361</updated>
+    </task>
+    <task id="LOCAL-00016" summary="gogogo2">
+      <created>1686652605591</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686652605591</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fast fertig">
+      <created>1686683685746</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1686683685746</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fast fertig">
+      <created>1686684336792</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686684336792</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fast fertig, muss nur noch beispielhaft angewandt werden">
+      <created>1686687828883</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1686687828883</updated>
+    </task>
+    <task id="LOCAL-00020" summary="nice">
+      <created>1686687975241</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1686687975241</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Rechenfehler aber sonst fertig">
+      <created>1686758264890</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1686758264892</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Rechenfehler aber sonst fertig">
+      <created>1686758403635</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1686758403635</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fertig, Rechenfehler behoben">
+      <created>1686845046231</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1686845046231</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Blast">
+      <created>1686849972662</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1686849972662</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Clustal omega">
+      <created>1686851952902</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686851952903</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Weiter gearbeitet">
+      <created>1687169287957</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1687169287957</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Weiter gearbeitet">
+      <created>1687281770827</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1687281770827</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Weiter gearbeitet">
+      <created>1687329624718</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1687329624718</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Für finale PPP vorbereitet 1">
+      <created>1688573178617</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1688573178618</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Für finale PPP vorbereitet 1">
+      <created>1688573480382</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1688573480382</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Für finale PPP vorbereitet 2">
+      <created>1688574900923</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1688574900923</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Für finale PPP vorbereitet 3">
+      <created>1688577567304</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1688577567304</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Für finale PPP vorbereitet 4">
+      <created>1688579773816</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1688579773816</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Für finale PPP vorbereitet 4">
+      <created>1688579887056</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1688579887056</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Für finale PPP vorbereitet 5">
+      <created>1688580069932</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1688580069932</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Für finale PPP vorbereitet 6">
+      <created>1688740498220</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1688740498220</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Für finale PPP vorbereitet 7">
+      <created>1688740595297</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1688740595297</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Für finale PPP vorbereitet 8">
+      <created>1688743357726</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1688743357727</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Für finale PPP vorbereitet 9">
+      <created>1688744794825</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1688744794826</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Für finale PPP vorbereitet 10">
+      <created>1688746915233</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1688746915233</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Für finale PPP vorbereitet 11">
+      <created>1688914573946</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1688914573946</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Variablen und Kommentare geändert 1">
+      <created>1688916133998</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1688916133998</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Variablen und Kommentare geändert 1">
+      <created>1689084910591</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1689084910591</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="930e7335-e08f-4d5a-ab43-bdec2e7d37f2">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="range">
+                    <value>
+                      <list>
+                        <option value="main..origin/Testing" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="fdaecfed-3315-4b73-be2b-4065ac91a6eb">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="range">
+                    <value>
+                      <list>
+                        <option value="main..origin/Testing" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="renamed" />
+    <MESSAGE value="Ich kann multiplizieren!!" />
+    <MESSAGE value="Richtige Nachbarschafts-Sortierung fehlt" />
+    <MESSAGE value="gogogo" />
+    <MESSAGE value="gogogo2" />
+    <MESSAGE value="Fast fertig" />
+    <MESSAGE value="Fast fertig, muss nur noch beispielhaft angewandt werden" />
+    <MESSAGE value="nice" />
+    <MESSAGE value="Rechenfehler aber sonst fertig" />
+    <MESSAGE value="Fertig, Rechenfehler behoben" />
+    <MESSAGE value="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Blast" />
+    <MESSAGE value="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Clustal omega" />
+    <MESSAGE value="Weiter gearbeitet" />
+    <MESSAGE value="Für finale PPP vorbereitet 1" />
+    <MESSAGE value="Für finale PPP vorbereitet 2" />
+    <MESSAGE value="Für finale PPP vorbereitet 3" />
+    <MESSAGE value="Für finale PPP vorbereitet 4" />
+    <MESSAGE value="Für finale PPP vorbereitet 5" />
+    <MESSAGE value="Für finale PPP vorbereitet 6" />
+    <MESSAGE value="Für finale PPP vorbereitet 7" />
+    <MESSAGE value="Für finale PPP vorbereitet 8" />
+    <MESSAGE value="Für finale PPP vorbereitet 9" />
+    <MESSAGE value="Für finale PPP vorbereitet 10" />
+    <MESSAGE value="Für finale PPP vorbereitet 11" />
+    <MESSAGE value="Variablen und Kommentare geändert 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Variablen und Kommentare geändert 1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
