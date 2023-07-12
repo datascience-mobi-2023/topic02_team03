@@ -217,13 +217,13 @@ sorted_Ranking0 = combined_means_variance_how_many.sort_values(by='mean_variance
 
 #%%
 # formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
+#TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
 
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
+#def highlight_top_mutants(row):
+   # color = 'red' if row.name in TOP_MUTANTS else 'black'
+   # return ['color: {}'.format(color)] * len(row)
 
-styled_ranking0= sorted_Ranking0.style.apply(highlight_top_mutants, axis=1)
+#styled_ranking0= sorted_Ranking0.style.apply(highlight_top_mutants, axis=1)
 
 #with open('formatted_ranking0.html', 'w') as file:
     #file.write(styled_ranking0.render())
@@ -234,14 +234,7 @@ styled_ranking0= sorted_Ranking0.style.apply(highlight_top_mutants, axis=1)
 sorted_Ranking1 = combined_means_variance_how_many.sort_values(by='mean_how_many_per_mutations', ascending= False)
 
 #%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
 
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
-
-styled_ranking1= sorted_Ranking1.style.apply(highlight_top_mutants, axis=1)
 print("styled ranking 1 finsihed (5)")
 #with open('formatted_ranking1.html', 'w') as file:
     #file.write(styled_ranking1.render())
@@ -266,13 +259,6 @@ sorted_only_stab_Ranking1a = sorted_Ranking1a.drop(all_differences_means.loc[con
 
 #%%
 # formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
-
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
-
-styled_ranking1a= sorted_only_stab_Ranking1a.style.apply(highlight_top_mutants, axis=1)
 
 print("styled ranking 1a finished (6)")
 #with open('formatted_ranking1a.html', 'w') as file:
@@ -301,18 +287,6 @@ combined_differenz_wie_oft_mut.columns = ['Difference', 'wie oft kommt mut insg 
 #%%
 ranking2 = combined_differenz_wie_oft_mut.sort_values(by='Difference', ascending= False)
 
-#%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
-
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
-
-styled_ranking2= ranking2.style.apply(highlight_top_mutants, axis=1)
-
-#with open('formatted_ranking2.html', 'w') as file:
-    #file.write(styled_ranking2.render())
 #%% md
 
 
@@ -329,18 +303,6 @@ for i in all_possible_mutations:
 ranking3_unsorted = pd.DataFrame(list_ranking3, index=all_possible_mutations, columns=['ranking3_score'])
 ranking3 = ranking3_unsorted.sort_values(by='ranking3_score', ascending= False)
 
-#%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
-
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
-
-styled_ranking3= ranking3.style.apply(highlight_top_mutants, axis=1)
-
-#with open('formatted_ranking3.html', 'w') as file:
-    #file.write(styled_ranking3.render())
 
 #%% md
 
@@ -360,14 +322,7 @@ ranking4_unsorted = pd.DataFrame(list_ranking4, index=all_possible_mutations, co
 ranking4 = ranking4_unsorted.sort_values(by='ranking4_score', ascending= False)
 
 #%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
 
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
-
-styled_ranking4= ranking4.style.apply(highlight_top_mutants, axis=1)
 print("styled ranking 4 finished (7)")
 #with open('formatted_ranking4.html', 'w') as file:
     #file.write(styled_ranking4.render())
@@ -391,18 +346,7 @@ for i in all_possible_mutations:
 ranking5_unsorted = pd.DataFrame(list_ranking5, index=all_possible_mutations, columns=['ranking5_score'])
 ranking5 = ranking5_unsorted.sort_values(by='ranking5_score', ascending= False)
 
-#%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
 
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
-
-styled_ranking5= ranking5.style.apply(highlight_top_mutants, axis=1)
-
-#with open('formatted_ranking5.html', 'w') as file:
-    #file.write(styled_ranking5.render())
 
 #%% md
 
@@ -453,18 +397,7 @@ ranking6 = combined_difference_dG_wie_oft_mut.sort_values(by='Difference dG', as
 ranking6 = ranking6.drop(ranking6[~(ranking6['wie oft kommt mut insg vor'] >= 20)].index)
 
 
-#%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
 
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
-
-styled_ranking6= ranking6.style.apply(highlight_top_mutants, axis=1)
-
-#with open('formatted_ranking6.html', 'w') as file:
-    #file.write(styled_ranking6.render())
 #%% md
 
 
@@ -480,18 +413,6 @@ for i in all_possible_mutations:
 ranking7_unsorted = pd.DataFrame(list_ranking7, index=all_possible_mutations, columns=['ranking7_score'])
 ranking7 = ranking7_unsorted.sort_values(by='ranking7_score', ascending= False)
 
-#%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
-
-def highlight_top_mutants(row):
-    color = 'red' if row.name in TOP_MUTANTS else 'black'
-    return ['color: {}'.format(color)] * len(row)
-
-styled_ranking7= ranking7.style.apply(highlight_top_mutants, axis=1)
-
-#with open('formatted_ranking7.html', 'w') as file:
-    #file.write(styled_ranking7.render())
 
 print("finished fertig unweighted (9)")
 
