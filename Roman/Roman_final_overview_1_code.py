@@ -168,7 +168,7 @@ for i, ax in enumerate(axes.flat):
     if 67 in overview_plot_pos_dms["Position"].unique():
         ax.axvline(x=67, color='red', linestyle='--')
 
-    ax.axhline(y=2.5, color='green', linestyle='--')
+    ax.axhline(y=2.5, color='red', linestyle='--')
 # Inserts some threshold-lines to indicate important positions (chromophor).
 
 # Show the plot
