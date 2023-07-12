@@ -357,23 +357,21 @@ if p_value < alpha:
     print("There is a significant difference between the positions.")
 else:
     print("There is no significant difference between the positions.")
-
+print(work_with_df_pos_new_AA_dms_score)
 # This shows that there is a significant difference between the positions.
 # The result makes sense, as mutations in an important region (e.g. the chromophore) have a bigger impact on the dms-score than peripheral mutations.
 
 # Next, this comparison is also being drawn between positions and new amino acids.
 
 # Grouping the data by new amino acid
-grouped_by_amino_acid = work_with_df_pos_new_AA_dms_score.groupby('new_AA')
+grouped_by_pos_and_amino_acid = work_with_df_pos_new_AA_dms_score.groupby(["Position", "new_AA"])
 
-# Liste zum Speichern der Fitness-Scores für jede Position und Aminosäure
-print(grouped_by_amino_acid)
-position_new_AA_scores_Kruskal_list = []
-for (position, new_AA), group_data in grouped_by_amino_acid:
-    dms_scores_Kruskal_new_AA = group_data['DMS-score'].values
-    position_new_AA_scores_Kruskal_list.append(dms_scores_Kruskal_new_AA)
+position_new_AA_and_pos_scores_Kruskal_list = []
+for (position, amino_acid), group_data in grouped_by_pos_and_amino_acid:
+    dms_scores_Kruskal_new_AA_pos = group_data['DMS-score'].values
+    position_new_AA_and_pos_scores_Kruskal_list.append(dms_scores_Kruskal_new_AA_pos)
 
-statistic, p_value = stats.kruskal(*position_new_AA_scores_Kruskal_list)
+statistic, p_value = stats.kruskal(*position_new_AA_and_pos_scores_Kruskal_list)
 
 alpha = 0.05
 

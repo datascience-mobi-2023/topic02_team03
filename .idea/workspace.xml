@@ -127,14 +127,7 @@
       <workItem from="1689157205959" duration="235000" />
       <workItem from="1689157521004" duration="10000" />
       <workItem from="1689157538745" duration="138000" />
-      <workItem from="1689157687940" duration="25528000" />
-    </task>
-    <task id="LOCAL-00005" summary="Vereinfachung des Codes">
-      <created>1684940965264</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1684940965264</updated>
+      <workItem from="1689157687940" duration="27271000" />
     </task>
     <task id="LOCAL-00006" summary="Legende korrekt">
       <created>1684945186161</created>
@@ -472,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689196123342</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="almost done">
+      <created>1689201958199</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1689201958199</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +574,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_overview_1_code.coverage" NAME="Roman_final_overview_1_code Coverage Results" MODIFIED="1689165313983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
-    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689201604742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689203367486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_basic_analysis_2_code.coverage" NAME="Roman_final_basic_analysis_2_code Coverage Results" MODIFIED="1689169362920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
   </component>
 </project>
