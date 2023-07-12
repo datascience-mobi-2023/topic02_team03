@@ -3,7 +3,7 @@ import numpy as np
 pd.set_option('display.max_columns', 50)
 #%%
 #read dataset
-original_dms_data = pd.read_csv('original dataset/GFP_AEQVI_Sarkisyan_2016.csv')
+original_dms_data = pd.read_csv('/Users/liza/Documents/Bioinfo Project/DMS_data/AAAA_GFP_dms_data_original_komplett.csv')
 # split first column of df into multiple columns
 original_dms_data_col = original_dms_data
 only_mutants = original_dms_data["mutant"].to_frame()
@@ -58,7 +58,7 @@ for i in all_possible_mutations:
 # concat dfs from the list
 result_how_often = pd.concat(list_of_dfs, axis=1)
 result_how_often = result_how_often.reset_index(drop=True)
-
+print("fertig1")
 ## result_how_often.to_csv('dataframe_mutanten_Mutationen.csv', index=True)
 #%%
 # more convenient df (just mutcount und fscore)
@@ -113,7 +113,7 @@ for j, ax in zip(range(2, 16), axes.flatten()):
         ax.scatter(how_many_AND_variance_df['number of used values']['V163A'],how_many_AND_variance_df['Variance']['V163A'], c='red')
     ax.set_title(f'mutation count = {j} ')
 plot_variances = fig
-
+print("fertig2")
 #%% md
 #FURTHER PREPARATION FOR RANKINGS:
 #1. variance calculation per mutant (not-weighted)
@@ -172,6 +172,7 @@ mean_how_many_per_mutations = pd.DataFrame(how_many_per_mutant_count_df.mean(axi
 #%%
 combined_means_variance_how_many = pd.concat([mean_variances_per_mutations, mean_how_many_per_mutations], axis=1)
 combined_means_variance_how_many.columns = ['mean_variances_per_mutations', 'mean_how_many_per_mutations']
+print("fertig3")
 #%%
 #differences calculated (effect of mutation X on the fscore)
 nur_fscore_mut_count = working_dataframe.loc[:, ["DMS_score", "mut_count"]]
@@ -199,7 +200,7 @@ for i in all_possible_mutations:
     differences_list.append(difference_means)
 
 all_differences_means = pd.DataFrame({'Difference': differences_list}, index=all_possible_mutations)
-
+print("fertig4")
 #%% md
 #----------------RANKING 0:
 #-> ranked by variance (without taking into account how many values got used for the calculation)
@@ -233,7 +234,7 @@ def highlight_top_mutants(row):
     return ['color: {}'.format(color)] * len(row)
 
 styled_ranking1= sorted_Ranking1.style.apply(highlight_top_mutants, axis=1)
-
+print("fertig5")
 #with open('formatted_ranking1.html', 'w') as file:
     #file.write(styled_ranking1.render())
 #%% md
@@ -265,6 +266,7 @@ def highlight_top_mutants(row):
 
 styled_ranking1a= sorted_only_stab_Ranking1a.style.apply(highlight_top_mutants, axis=1)
 
+print("fertig6")
 #with open('formatted_ranking1a.html', 'w') as file:
     #file.write(styled_ranking1a.render())
 #%% md
@@ -358,7 +360,7 @@ def highlight_top_mutants(row):
     return ['color: {}'.format(color)] * len(row)
 
 styled_ranking4= ranking4.style.apply(highlight_top_mutants, axis=1)
-
+print("fertig7")
 #with open('formatted_ranking4.html', 'w') as file:
     #file.write(styled_ranking4.render())
 
@@ -430,7 +432,7 @@ for i in all_possible_mutations:
     differences_delta_G_list.append(difference_means_delta_G)
 
 all_differences_delta_G_means = pd.DataFrame({'Difference dG': differences_delta_G_list}, index=all_possible_mutations)
-
+print("fertig7")
 # the better the stability of the mutation
 #-> difference: WITHOUT - WITH
 #%%
@@ -483,4 +485,4 @@ styled_ranking7= ranking7.style.apply(highlight_top_mutants, axis=1)
 #with open('formatted_ranking7.html', 'w') as file:
     #file.write(styled_ranking7.render())
 
-print(finished)
+print("finished fertig")
