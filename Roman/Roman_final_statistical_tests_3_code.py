@@ -218,8 +218,6 @@ print()
 print(p)
 
 # Furthermore, a graphical test in the form of a Q-Q-plot was performed to check for normal distribution.
-import numpy as np
-import matplotlib.pyplot as plt
 from scipy.stats import probplot
 
 # Extracts the column with the dms-scores
@@ -272,56 +270,151 @@ for position, group_position_loop_MWU in grouped_position_MWU:
 
         # This code compares all the data from the parameters individually and one by one for now.
 
-# MUSS NOCH KORRIGIERT WERDEN BZW DIE VARIABLEN ANDERS UND AUCH ALLES MUSS NOCH DURCHGELAUFEN WERDEN
+
+# Here the Mann-Whitney-U-test will be done collectively for all combinations of positions and new amino acids.
+# The MWU-test is used to check if there are statistically significant differences in the distributions of the dms-scores between the positions and new amino acids.
+# The MWU-test can be used for big sample sizes and non normally distributed data.
+# Here the H0 hypothesis is: There is no significant difference in the dms-score between the two groups.
+# Is there a significant change in dms-scores between different positions and new amino acids?
+import pandas as pd
+# Converts the column with positions to numeric values
+work_with_df_pos_new_AA_dms_score['Position'] = pd.to_numeric(work_with_df_pos_new_AA_dms_score['Position'])
+
+for position, group_position_loop_MWU in grouped_position_MWU:
+    for AA, group_AA_loop_MWU in grouped_AA_MWU:
+        dms_scores_position = group_position_loop_MWU['DMS-score'].values
+        dms_scores_new_AA = group_AA_loop_MWU['DMS-score'].values
+
+        statistic, p_value = stats.mannwhitneyu(dms_scores_position, dms_scores_new_AA, alternative='two-sided')
+
+        alpha = 0.05
+
+        result_MWU_collective = {'Position': position, 'Amino acid': AA, 'Test statistic': statistic, 'P-value': p_value,
+                  'Significant?': "Yes" if p_value < alpha else "No"}
+
+        results_MWU_collective.append(result_MWU_collective)
+# Makes a summary of the results.
+summary_MWU_collective_df = pd.DataFrame(results_MWU_collective)
+# This sorts the values in an ascending order.
+summary_MWU_collective_df = summary_MWU_collective_df.sort_values('Position', ascending=True)
+
+# However, this yields all combinations, even if they are not in the data set.
+
+# This following mask filters out any combinations that do not occur in our dataset:
+mask_for_summary_MWU_collective_df = summary_MWU_collective_df.apply(lambda row: (row['Position'], row['Amino acid']) in zip(work_with_df_pos_new_AA_dms_score['Position'], work_with_df_pos_new_AA_dms_score['new_AA']),
+                        axis=1)
+
+summary_MWU_collective_df_filtered = summary_MWU_collective_df[mask]
+
+print(summary_MWU_collective_df_filtered)
+
+# If the p-value is < alpha (0.05) then the dms-score between the groups is significantly different
+# If the p-value is > alpha (0.05) then the H0 hypothesis cannot be discarded --> no significant difference in dms-score
+
+# Now these results will be visualized in a scatter plot:
+
+plt.scatter(summary_MWU_collective_df_filtered['Position'], summary_MWU_collective_df_filtered['Amino acid'], c=summary_MWU_collective_df_filtered['P-value'],
+            cmap='coolwarm')
+plt.figure(figsize=(30, 15))
+plt.xlabel('Position')
+plt.ylabel('Amino acid')
+plt.title('Scatter plot of the Mann-Whitney-U test results')
+cbar = plt.colorbar()
+cbar.set_label('P-value')
+plt.show()
+
+# Here a different statistical test is performed:
+# The Kruskal-Wallis-test is a non-parametric method that uses ranks and therefor does not make assumptions about the distribution of the data.
+# This test allows for a comparison between multiple groups independently of their distribution or variance homogeneity.
+
+# Gruppen basierend auf Position erstellen
+grouped_by_position = work_with_df_pos_new_AA_dms_score.groupby('Position')
+# Liste zum Speichern der Fitness-Scores für jede Position
+position_scores_Kruskal_list = []
+
+for position, group_data in grouped_by_position:
+    dms_scores_Kruskal = group_data['DMS-score'].values
+    position_scores_Kruskal_list.append(dms_scores_Kruskal)
+
+# Performs the Kruskal-Wallis-test
+statistic, p_value = stats.kruskal(*position_scores_Kruskal_list)
+
+alpha = 0.05
+
+print("Kruskal-Wallis-test")
+print(f"Test statistic: {statistic}")
+print(f"P-value: {p_value}")
+
+if p_value < alpha:
+    print("There is a significant difference between the positions.")
+else:
+    print("There is no significant difference between the positions.")
+
+# This shows that there is a significant difference between the positions.
+# The result makes sense, as mutations in an important region (e.g. the chromophore) have a bigger impact on the dms-score than peripheral mutations.
+
+# Next, this comparison is also being drawn between positions and new amino acids.
+
+# Grouping the data by new amino acid
+grouped_by_amino_acid = work_with_df_pos_new_AA_dms_score.groupby('new_AA')
+
+# Liste zum Speichern der Fitness-Scores für jede Position und Aminosäure
+position_new_AA_scores_Kruskal_list = []
+
+# Schleife über die Positionen und Aminosäuren
+for (position, amino_acid), group_data in grouped_by_amino_acid:
+    dms_scores_Kruskal_new_AA = group_data['DMS-score'].values
+    position_new_AA_scores_Kruskal_list.append(dms_scores_Kruskal_new_AA)
+
+statistic, p_value = stats.kruskal(*position_new_AA_scores_Kruskal_list)
+
+alpha = 0.05
+
+print("Kruskal-Wallis-test")
+print(f"Test statistic: {statistic}")
+print(f"P-value: {p_value}")
+
+if p_value < alpha:
+    print("There is a significant difference between the positions and amino acids.")
+else:
+    print("There is no significant difference between the positions and amino acids.")
+
+# This result shows that there is no difference between the positions and amino acids.
+# This contradicts the results from the eta-squared test, which explained a significant difference in explained variance.
+# However, the earlier tests required a normal distribution, whilst the Kruskal-Wallis-test does not.
+# Therefor it is likely, that this result is more reliable.
+
+# Lastly, a Friedman test was performed to analyse the dependence of both the parameters to eachother:
+
+#%%
 import pandas as pd
 import scipy.stats as stats
 
+grouped_pos_new_AA_Friedman = work_with_df_pos_new_AA_dms_score.groupby(['Position', 'new_AA'])
 
-#Ich will meine Werte sortieren
-def position_sort(position):
-    if position.isdigit():
-        return int(position)
-    else:
-        return position
+dms_scores_Friedman = []
 
+# Schleife über die Positionen und Aminosäuren
+for (position, amino_acid), group_data in grouped_pos_new_AA_Friedman:
+    dms_scores_Friedman_loop = group_data['DMS-score'].values
+    dms_scores_Friedman.append(dms_scores_Friedman_loop)
 
-#Leere Liste
-results = []
-#Gruppierung basierend auf Position und Aminosäure
-grouped_position = Roman_1.groupby('Position')
-grouped_AS = Roman_1.groupby("New_AS")
+# Friedman-Test
+statistic, p_value = stats.friedmanchisquare(*dms_scores_Friedman)
 
-# Konvertiert die Positionsspalte in numerische Werte
-Roman_1['Position'] = pd.to_numeric(Roman_1['Position'])
+alpha = 0.05
 
-#Whitney-Test für alle Kombinationen von Position und AS durchgeführt --> Signifikanter Unterschied in den Fitness-Scores zwischen verschiedenen Positionen und AS?
-for position, group_position in grouped_position:
-    for AS, group_AS in grouped_AS:
-        fitness_scores_position = group_position['Fitness_Score'].values
-        fitness_scores_AS = group_AS['Fitness_Score'].values
+print("Friedman-test")
+print(f"Test statistic: {statistic}")
+print(f"P-value: {p_value}")
 
-        statistic, p_value = stats.mannwhitneyu(fitness_scores_position, fitness_scores_AS, alternative='two-sided')
-        #Alpha-Wert selbst gesetzt
-        alpha = 0.05
+if p_value < alpha:
+    print("There is a significant difference between the positions and amino acids.")
+else:
+    print("There is no significant difference between the positions and amino acids.")
 
-        result = {'Position': position, 'Aminosäure': AS, 'Teststatistik': statistic, 'P-Wert': p_value,
-                  'Signifikanz': "Ja" if p_value < alpha else "Nein"}
+# The Friedman test is used if the same sample occurs in multiple groups and the data is dependent on eachother (e.g. repeated measurements on the same sample).
+# The Kruskal-Wallis-test however, is used when the samples are independent.
+# Since the same data was used and the results are the same, the samples are dependent of eachother.
+# This is obvious, as a single mutant always has a position and a new amino acid associated with the same dms-score.
 
-        results.append(result)
-#Ergebnisse ausspucken lassen
-summary_df = pd.DataFrame(results)
-#Sortieren nach aufsteigender Positionsnummer
-summary_df = summary_df.sort_values('Position', ascending=True)
-print(summary_df)
-
-#Wenn p-Wert <0,05 (alpha), dann signifikant --> Fitness-Score zwischen den Gruppen nicht gleich
-
-##Wenn der p-Wert klein ist (typischerweise kleiner als 0,05), deutet dies darauf hin, dass es einen statistisch signifikanten Unterschied in den Fitness-Scores zwischen den Positionen und Aminosäuren gibt.
-
-##Wenn der p-Wert größer als 0,05 ist, wird die Nullhypothese beibehalten, was bedeutet, dass kein statistisch signifikanter Unterschied in den Fitness-Scores zwischen den Positionen und Aminosäuren vorliegt.
-
-#Verwendet für große Stichproben und nicht normalverteilt
-
-#Der Mann-Whitney-U-Test wird verwendet, um zu prüfen, ob es statistisch signifikante Unterschiede in den Verteilungen der Fitness-Scores zwischen den Positionen und Aminosäuren gibt.
-
-#Nullhypothese: Es gibt keinen signifikanten Unterschied in den Fitness-Scores zwischen den verschiedenen Positionen und Aminosäuren.
