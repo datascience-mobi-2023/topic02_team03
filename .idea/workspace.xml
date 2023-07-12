@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="Variablen und Kommentare geändert 1" />
+    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="pray">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_overview_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_overview_1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_overview_1_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_overview_1_code.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +127,7 @@
       <workItem from="1689157205959" duration="235000" />
       <workItem from="1689157521004" duration="10000" />
       <workItem from="1689157538745" duration="138000" />
-      <workItem from="1689157687940" duration="316000" />
+      <workItem from="1689157687940" duration="1281000" />
     </task>
     <task id="LOCAL-00001" summary="Code with my Dateipfad">
       <created>1684835878280</created>
@@ -426,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689084910591</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="pray">
+      <created>1689158145932</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1689158145932</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="renamed" />
     <MESSAGE value="Ich kann multiplizieren!!" />
     <MESSAGE value="Richtige Nachbarschafts-Sortierung fehlt" />
     <MESSAGE value="gogogo" />
@@ -523,9 +533,11 @@
     <MESSAGE value="Für finale PPP vorbereitet 10" />
     <MESSAGE value="Für finale PPP vorbereitet 11" />
     <MESSAGE value="Variablen und Kommentare geändert 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Variablen und Kommentare geändert 1" />
+    <MESSAGE value="pray" />
+    <option name="LAST_COMMIT_MESSAGE" value="pray" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_overview_1_code.coverage" NAME="Roman_final_overview_1_code Coverage Results" MODIFIED="1689158962783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
   </component>
 </project>
