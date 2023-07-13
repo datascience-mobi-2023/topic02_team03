@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="work in progress">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/topic02_team03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/topic02_team03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_basic_analysis_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_basic_analysis_2_plots.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,14 +127,7 @@
       <workItem from="1689157521004" duration="10000" />
       <workItem from="1689157538745" duration="138000" />
       <workItem from="1689157687940" duration="27567000" />
-      <workItem from="1689239156653" duration="5694000" />
-    </task>
-    <task id="LOCAL-00010" summary="Weniger Speicherplatz verbrauchend">
-      <created>1686143573881</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1686143573881</updated>
+      <workItem from="1689239156653" duration="7671000" />
     </task>
     <task id="LOCAL-00011" summary="renamed">
       <created>1686143659528</created>
@@ -474,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689243367652</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="work in progress">
+      <created>1689244900257</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1689244900257</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
