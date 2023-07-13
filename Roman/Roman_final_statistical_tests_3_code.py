@@ -92,7 +92,7 @@ from scipy.stats import f_oneway
 statistic, p_value = f_oneway(*dms_scores_per_group_pos_list)
 # dms_scores_per_group was defined up above as the data grouped by position and extracting the corresponding dms-scores
 
-print("ANOVA")
+print("ANOVA_pos")
 print(f"Statistic: {statistic}")
 print(f"P-value: {p_value}")
 
@@ -122,7 +122,7 @@ for position, group in grouped_by_amino_acid:
 statistic, p_value = f_oneway(*dms_scores_per_group_new_AA_list)
 
 # Print the test results
-print("ANOVA")
+print("ANOVA_new_AA")
 print(f"Statistic: {statistic}")
 print(f"P-value: {p_value}")
 
@@ -142,7 +142,7 @@ model_ANOVA_3_components = ols("DMS_score_for_ANOVA ~ Position + new_AA", data=A
 anova_table_3_components = sm.stats.anova_lm(model_ANOVA_3_components)
 
 # Print the ANOVA table
-print('ANOVA:')
+print('ANOVA_pos_new_AA:')
 print(anova_table_3_components)
 
 # df = degrees of freedom
@@ -239,7 +239,6 @@ plt.ylabel("Data quantile")
 # Plot anzeigen
 plt.show()
 
-#-------------------------------------------------------------------------------------------------
 # Next, a Mann-Whitney-U-test was performed
 # This test is a nonparametric test.
 # The null hypothesis is that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater than X.
@@ -262,7 +261,7 @@ for position, group_position_loop_MWU in grouped_position_MWU:
         alpha = 0.05
 
         print(f"Position: {position}, amino acid: {AA}")
-        print(f"Mann-Whitney-U-Test")
+        print(f"Mann-Whitney-U-test_pos")
         print(f"Test statistic: {statistic}")
         print(f"P-value: {p_value}")
 
@@ -330,7 +329,6 @@ cbar.set_label('P-value')
 plt.show()
 
 
-
 # Here a different statistical test is performed:
 # The Kruskal-Wallis-test is a non-parametric method that uses ranks and therefor does not make assumptions about the distribution of the data.
 # This test allows for a comparison between multiple groups independently of their distribution or variance homogeneity.
@@ -349,7 +347,7 @@ statistic, p_value = stats.kruskal(*position_scores_Kruskal_list)
 
 alpha = 0.05
 
-print("Kruskal-Wallis-test")
+print("Kruskal-Wallis-test_pos")
 print(f"Test statistic: {statistic}")
 print(f"P-value: {p_value}")
 
@@ -375,7 +373,7 @@ statistic, p_value = stats.kruskal(*position_new_AA_and_pos_scores_Kruskal_list)
 
 alpha = 0.05
 
-print("Kruskal-Wallis-test")
+print("Kruskal-Wallis-test_pos_new_AA")
 print(f"Test statistic: {statistic}")
 print(f"P-value: {p_value}")
 
@@ -407,7 +405,7 @@ statistic, p_value = stats.friedmanchisquare(*dms_scores_Friedman)
 
 alpha = 0.05
 
-print("Friedman-test")
+print("Friedman-test_pos_new_AA")
 print(f"Test statistic: {statistic}")
 print(f"P-value: {p_value}")
 
