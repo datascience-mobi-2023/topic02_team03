@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 #%%
-original_dms_data = pd.read_csv("/Users/liza/Desktop/Bioinfo Project/DMS_data/GFP_AEQVI_Sarkisyan_2016.csv")
+original_dms_data = pd.read_csv("/Users/liza/Documents/Bioinfo Project/DMS_data/AAAA_GFP_dms_data_original_komplett.csv")
 only_scores_column = original_dms_data['DMS_score']
 df_only_scores_column = pd.DataFrame(only_scores_column)
 only_mutant_column = original_dms_data['mutant']
@@ -77,6 +77,9 @@ all_possible_mutations = list(set(all_possible_mutations))
 
 while None in all_possible_mutations:
     all_possible_mutations.remove(None)
+
+#%%
+only_mutants_list = only_mutants['mutant']
 
 #%%
 #existence of mutations (columns) in mutants (rows), boolians
@@ -154,30 +157,26 @@ frame_zum_mitteln_variance = pd.DataFrame(index = all_possible_mutations)
 variance_per_mutant_count_list = []
 
 # ATTENTION!! only mutcount from 2 to 8 got used, because everything above has a highly decreasing fscore mean (-> boxplot)
-for j, ax in zip(range(2, 8), axes.flatten()):
+import matplotlib.pyplot as plt
+
+fig, axes = plt.subplots(nrows=5, ncols=3, figsize=(19, 12))  # Abbildung und Achsenobjekte erstellen
+plt.subplots_adjust(wspace=0.4, hspace=0.6)
+
+scatter_plots = []
+for j, ax in zip(range(2, 16), axes.flatten()):
     variance_per_mutant_list = []
 
     for i in all_possible_mutations:
         mut_count_fscore = count_fscore_frame.loc[result_how_often[i] == True]
         fscore_mut = mut_count_fscore['DMS_score'].loc[mut_count_fscore['mut_count'] == j]
-        varianz_mut = fscore_mut.var()  #die varianz je mutation je anzahl
-        variance_per_mutant_list.append(varianz_mut) #liste der Varianzen ALLER Mutationen je anzahl
+        varianz_mut = fscore_mut.var()
+        variance_per_mutant_list.append(varianz_mut)
 
-    variance_per_mutant_df = pd.DataFrame(variance_per_mutant_list, index=all_possible_mutations)
-    variance_per_mutant_count_list.append(variance_per_mutant_df)
-variance_per_mutant_count_df = pd.concat(variance_per_mutant_count_list, axis=1)
-variance_per_mutant_count_df.set_axis(range(2,8), axis=1, inplace=True)
+    variance_per_mutant_series = pd.Series(variance_per_mutant_list, index=all_possible_mutations)
+    variance_per_mutant_df = variance_per_mutant_series.to_frame()
 
 
-
-# dataframe mit allen varianzen (Zellen) pro alle mutationen (rows) pro alle counts (columns)
-#%%
-mean_variances_per_mutations = pd.DataFrame(variance_per_mutant_count_df.mean(axis=1, skipna=True), columns=['Mean'])
-
-#%%
-how_many_per_mutant_count_list = []
-
-for j, ax in zip(range(2, 8), axes.flatten()):
+#rausfinden wie viele Daten wir jeweils haben zum berechnen
     how_many_for_variance = []
 
     for i in all_possible_mutations:
@@ -186,14 +185,31 @@ for j, ax in zip(range(2, 8), axes.flatten()):
         wie_viel_jeweils = len(fscore_mut)
         how_many_for_variance.append(wie_viel_jeweils)
 
-    how_many_per_mutant_df = pd.DataFrame(how_many_for_variance, index=all_possible_mutations)
-    how_many_per_mutant_count_list.append(how_many_per_mutant_df)
-how_many_per_mutant_count_df = pd.concat(how_many_per_mutant_count_list, axis=1)
-how_many_per_mutant_count_df.set_axis(range(2,8), axis=1, inplace=True)
+    how_many_for_variance = pd.Series(how_many_for_variance, index=all_possible_mutations)
+    how_many_for_variance_df = how_many_for_variance.to_frame()
 
-#%%
-mean_how_many_per_mutations = pd.DataFrame(how_many_per_mutant_count_df.mean(axis=1, skipna=True), columns=['Mean'])
+    how_many_AND_variance_df = pd.concat([how_many_for_variance_df, variance_per_mutant_df], axis = 1)
+    how_many_AND_variance_df.columns = ['Anzahl benutzter Werte', 'Varianz']
+    how_many_AND_variance_df = how_many_AND_variance_df.dropna()
 
+#scatter plot erstellen, mit benennungen
+    ax.scatter(how_many_AND_variance_df['Anzahl benutzter Werte'],how_many_AND_variance_df['Varianz'], s = j )
+    ax.set_xlabel('Anzahl benutzter Werte')
+    ax.set_ylabel('Varianz')
+
+    if "V163A" in how_many_AND_variance_df.index:
+        ax.scatter(how_many_AND_variance_df['Anzahl benutzter Werte']['V163A'],how_many_AND_variance_df['Varianz']['V163A'], c='red')
+    ax.set_title(f'für {j} Mutationen')
+
+    scatter_plots.append(scatter_plot)
+saved_plots = []
+
+for scatter_plot in scatter_plots:
+    fig.canvas.draw()
+    plot_image = np.array(fig.canvas.renderer.buffer_rgba())
+    saved_plots.append(plot_image)
+
+plt.close(fig)
 #%% md
 #TRYING ON ONE MUTATION: calculating the fscore_differences
 # (V163A)
