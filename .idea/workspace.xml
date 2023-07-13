@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="almost done">
+    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="work in progress">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/topic02_team03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/topic02_team03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_statistical_tests_3_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_statistical_tests_3_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_statistical_tests_3_plots_true.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_statistical_tests_3_plots_true.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_code.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -128,21 +129,7 @@
       <workItem from="1689157521004" duration="10000" />
       <workItem from="1689157538745" duration="138000" />
       <workItem from="1689157687940" duration="27567000" />
-      <workItem from="1689239156653" duration="869000" />
-    </task>
-    <task id="LOCAL-00008" summary="Variablen besser benannt">
-      <created>1685006278054</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1685006278054</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Roman's part traurigerweise löschen">
-      <created>1685451267018</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1685451267018</updated>
+      <workItem from="1689239156653" duration="5694000" />
     </task>
     <task id="LOCAL-00010" summary="Weniger Speicherplatz verbrauchend">
       <created>1686143573881</created>
@@ -473,7 +460,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689203791772</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fertig">
+      <created>1689240317366</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1689240317366</updated>
+    </task>
+    <task id="LOCAL-00058" summary="work in progress">
+      <created>1689243367652</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1689243367652</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Blast" />
     <MESSAGE value="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Clustal omega" />
     <MESSAGE value="Weiter gearbeitet" />
     <MESSAGE value="Für finale PPP vorbereitet 1" />
@@ -568,9 +568,10 @@
     <MESSAGE value="fertig5" />
     <MESSAGE value="fertig6" />
     <MESSAGE value="IN PROGRESS" />
-    <MESSAGE value="fertig" />
     <MESSAGE value="almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost done" />
+    <MESSAGE value="fertig" />
+    <MESSAGE value="work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
