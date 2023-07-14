@@ -1,14 +1,15 @@
+#import
 import pandas as pd
 import numpy as np
 pd.set_option('display.max_columns', 50)
-#%%
+
 #read dataset
 original_dms_data = pd.read_csv('/Users/liza/Documents/Bioinfo Project/DMS_data/AAAA_GFP_dms_data_original_komplett.csv')
 # split first column of df into multiple columns
 original_dms_data_col = original_dms_data
 only_mutants = original_dms_data["mutant"].to_frame()
 original_dms_data_col[['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9', 'm10', 'm11', 'm12', 'm13', 'm14', 'm15']] = original_dms_data_col['mutant'].str.split(':', 15, expand=True)
-#%% md
+
 #PREPARE DATASET FOR RANKING CALCULATION:
 #1. how many mutations does each mutant have? -> mut_count (df_mutation_count)
 #2. find out all possible mutations -> all_possible_mutations
@@ -16,7 +17,6 @@ original_dms_data_col[['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9', 'm1
 #4. plots + calculation variance x how many values used for variance per mutation count
 #-> variance of all fscores of all mutants containing mutation X shows how constant the effect of the mutation is
 
-#%%
 # count how many mutations each mutant has
 list_mut_count_in_progress = []
 for i in range(len(original_dms_data['mutant'])):
@@ -24,13 +24,15 @@ for i in range(len(original_dms_data['mutant'])):
 list_mut_count_prae = np.array(list_mut_count_in_progress)
 list_mut_count = (list_mut_count_prae + 1)
 df_mutation_counts = pd.DataFrame(list_mut_count)
-#%%
+
 #concat mutation_count to original df
 working_dataframe_prae = pd.concat([original_dms_data_col, df_mutation_counts], axis="columns")
+
 working_dataframe = working_dataframe_prae.drop(['mutant', 'mutated_sequence', 'DMS_score_bin'], axis=1)
 working_dataframe.rename(columns={working_dataframe.columns[16]: 'mut_count'}, inplace=True)
-#%%
+
 #all existing mutations in one list: calculation of all_possible_mutations
+
 working_dataframe_only_ms = working_dataframe.loc[:, ["m1", "m2", "m3", 'm4', 'm5', 'm6', 'm7', 'm8', 'm9', 'm10', 'm11', 'm12', 'm13', 'm14', 'm15']]
 all_possible_mutations = working_dataframe_only_ms.values.flatten().tolist()
 all_possible_mutations = list(set(all_possible_mutations))
@@ -38,16 +40,14 @@ all_possible_mutations = list(set(all_possible_mutations))
 while None in all_possible_mutations:
     all_possible_mutations.remove(None)
 only_mutants_list = only_mutants['mutant']
-#%%
+
 #remodel df so it is more convenient
 working_dataframe_prae = pd.concat([original_dms_data_col, df_mutation_counts], axis="columns")
 working_dataframe = working_dataframe_prae.drop(['mutant', 'mutated_sequence', 'DMS_score_bin'], axis=1)
 working_dataframe.rename(columns={working_dataframe.columns[16]: 'mut_count'}, inplace=True)
 
-#%%
 #df which mutant from only_mutants_list contains the mutations from all_possible_mutations
 list_of_dfs = []
-
 for i in all_possible_mutations:
     new_column_name = f'{i}'
     new_column_values = [only_mutants_list.str.contains(i, regex= False)]
@@ -58,12 +58,10 @@ for i in all_possible_mutations:
 # concat dfs from the list
 result_how_often = pd.concat(list_of_dfs, axis=1)
 result_how_often = result_how_often.reset_index(drop=True)
-print("result_how_often finished (1)")
-## result_how_often.to_csv('dataframe_mutanten_Mutationen.csv', index=True)
-#%%
+
 # more convenient df (just mutcount und fscore)
 count_fscore_frame = working_dataframe[['DMS_score', 'mut_count']]
-#%%
+
 #plot: variance of fscores per mutation count and number of values uesed for variance calculation
 #-> bottom right corner is the best, because the varaince is the most reliable
 
@@ -111,21 +109,19 @@ for j, ax in zip(range(2, 16), axes.flatten()):
 
     if "V163A" in how_many_AND_variance_df.index:
         ax.scatter(how_many_AND_variance_df['number of used values']['V163A'],how_many_AND_variance_df['Variance']['V163A'], c='red')
-    ax.set_title(f'mutation count = {j} ')
-plot_variances = fig
-print("variances plot finished (2)")
-#%% md
+    ax.set_title(f'mutation count = {j}')
+                 
 #FURTHER PREPARATION FOR RANKINGS:
 #1. variance calculation per mutant (not-weighted)
-#2. how many values got used for the calculation, same as above but for every mutcount combined
-#-> both in one dataframe
+#2. how many values got used for the calculation, same as above but for every mutcount combined -> both in one dataframe
 #3. calculate df that contains the difference between the fscore-means of all mutants WITH mutation X and WITHOUT mutation X
-#-> how big is the effect of the mutation on existing in general
-#-> not weighted
-#%%
-#variance means, calculate variances per mutation per mutation count -> mean of all per mutation
-#-> not yet weighted
+# -> how big is the effect of the mutation on existing in general
+# -> not weighted
 
+
+#goal: variance means, calculate variances per mutation per mutation count -> mean of all per mutation
+#ONLY MUTCOUNT FROM 2 TO 7 !! -> 5a
+#-> not yet weighted
 frame_zum_mitteln_variance = pd.DataFrame(index = all_possible_mutations)
 variance_per_mutant_count_list = []
 
@@ -145,15 +141,38 @@ variance_per_mutant_count_df = pd.concat(variance_per_mutant_count_list, axis=1)
 variance_per_mutant_count_df.set_axis(range(2,8), axis=1, inplace=True)
 
 # df variance per mutatuion (rows) per mutation_count (columns)
-variance_per_mutant_count_df
 mean_variances_per_mutations = pd.DataFrame(variance_per_mutant_count_df.mean(axis=1, skipna=True), columns=['Mean'])
 
-#%% md
+#very similar, again
+#variance means, calculate variances per mutation per mutation count -> mean of all per mutation
+#ALL MUTCOUNTS INVOLVED -> 5c
+#-> not yet weighted
+frame_zum_mitteln_variance_16 = pd.DataFrame(index=all_possible_mutations)
+variance_per_mutant_count_list_16 = []
 
-#%%
+# da die Fitness-Scores von Mutanten mit einer mut_count über 7 im Allgemeinen niedrig sind.
+for j in range(2, 16):
+    variance_per_mutant_list_16 = []
+
+    for i in all_possible_mutations:
+        mut_count_fscore_16 = count_fscore_frame.loc[result_how_often[i] == True]
+        fscore_mut_16 = mut_count_fscore_16['DMS_score'].loc[mut_count_fscore_16['mut_count'] == j]
+        varianz_mut_16 = fscore_mut_16.var()  # Varianz für die aktuelle Mutation und Mutation_count
+        variance_per_mutant_list_16.append(varianz_mut_16)
+
+    variance_per_mutant_df_16 = pd.DataFrame(variance_per_mutant_list_16, index=all_possible_mutations)
+    variance_per_mutant_count_list_16.append(variance_per_mutant_df_16)
+
+variance_per_mutant_count_df_16 = pd.concat(variance_per_mutant_count_list_16, axis=1)
+variance_per_mutant_count_df_16.columns = range(2, 16)
+
+mean_variances_per_mutations_16 = pd.DataFrame(variance_per_mutant_count_df_16.mean(axis=1, skipna=True), columns=['Mean'])
+
+#goal: weights for weighted variance in ranking 5d
+#variance gets weighted with how many values excist for calculation
 how_many_per_mutant_count_list = []
 
-for j, ax in zip(range(2, 8), axes.flatten()):
+for j, ax in zip(range(2, 16), axes.flatten()):
     how_many_for_variance = []
 
     for i in all_possible_mutations:
@@ -165,24 +184,15 @@ for j, ax in zip(range(2, 8), axes.flatten()):
     how_many_per_mutant_df = pd.DataFrame(how_many_for_variance, index=all_possible_mutations)
     how_many_per_mutant_count_list.append(how_many_per_mutant_df)
 how_many_per_mutant_count_df = pd.concat(how_many_per_mutant_count_list, axis=1)
-how_many_per_mutant_count_df.set_axis(range(2,8), axis=1, inplace=True)
+how_many_per_mutant_count_df.set_axis(range(2,16), axis=1, inplace=True)
 
 mean_how_many_per_mutations = pd.DataFrame(how_many_per_mutant_count_df.mean(axis=1, skipna=True), columns=['Mean'])
 
-#%%
-#dataframe with the mean fscores of each mutationcount
-mean_fitness_scores = pd.DataFrame(index=range(2, 16), columns=['mean_fitness_score'])
-
-for j in range(2, 16):
-    fscore_mutcount_mean = count_fscore_frame['DMS_score'].loc[count_fscore_frame['mut_count'] == j].mean()
-    mean_fitness_scores.loc[j, 'mean_fitness_score'] = fscore_mutcount_mean
-
-#%%
 combined_means_variance_how_many = pd.concat([mean_variances_per_mutations, mean_how_many_per_mutations], axis=1)
 combined_means_variance_how_many.columns = ['mean_variances_per_mutations', 'mean_how_many_per_mutations']
-print("combined_means_variance_how_many finished (3)")
-#%%
-#differences calculated (effect of mutation X on the fscore)
+
+
+#goal: differences calculated (effect of mutation X on the fscore)
 nur_fscore_mut_count = working_dataframe.loc[:, ["DMS_score", "mut_count"]]
 differences_list = []
 
@@ -208,70 +218,35 @@ for i in all_possible_mutations:
     differences_list.append(difference_means)
 
 all_differences_means = pd.DataFrame({'Difference': differences_list}, index=all_possible_mutations)
-print("all_different_means finished (4)")
-#%% md
-#----------------RANKING 0:
-#-> ranked by variance (without taking into account how many values got used for the calculation)
-#%%
+
+#—————-RANKING 0:
+# -> ranked by variance (without taking into account how many values got used for the calculation
+
 sorted_Ranking0 = combined_means_variance_how_many.sort_values(by='mean_variances_per_mutations')
 
-#%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-#TOP_MUTANTS = ['V163A', 'K166Q', 'I171V', 'K113R', 'K214E', 'K156R']
+#—————-RANKING 1: (that was the try if the ranking-function works)
+# -> ranked by the available values for each mutation (how often does mutation X appear in total)
 
-#def highlight_top_mutants(row):
-   # color = 'red' if row.name in TOP_MUTANTS else 'black'
-   # return ['color: {}'.format(color)] * len(row)
+sorted_Ranking1 = combined_means_variance_how_many.sort_values(by='mean_how_many_per_mutations', ascending=False)
 
-#styled_ranking0= sorted_Ranking0.style.apply(highlight_top_mutants, axis=1)
-
-#with open('formatted_ranking0.html', 'w') as file:
-    #file.write(styled_ranking0.render())
-#%% md
-#----------------RANKING 1: (that was the try if the ranking-function works)
-#-> ranked by the available values for each mutation (how often does mutation X appear in total)
-#%%
-sorted_Ranking1 = combined_means_variance_how_many.sort_values(by='mean_how_many_per_mutations', ascending= False)
-
-#%%
-
-print("styled ranking 1 finsihed (5)")
-#with open('formatted_ranking1.html', 'w') as file:
-    #file.write(styled_ranking1.render())
-#%% md
-
-
-
-
-#----------------RANKING 1a:
+#-------RANKING 1a:
 #-> ranked by a rank_score build from the variance and the count of available mutations
-#-> combination of ranking 0 and 1
-#%%
-combined_means_variance_how_many['Rank'] = combined_means_variance_how_many['mean_variances_per_mutations'].rank(ascending=False) - combined_means_variance_how_many['mean_how_many_per_mutations'].rank()
+#->combination of ranking 0 and 1
+
+combined_means_variance_how_many['Rank'] = combined_means_variance_how_many['mean_variances_per_mutations'].rank(
+        ascending=False) - combined_means_variance_how_many['mean_how_many_per_mutations'].rank()
 
 sorted_Ranking1a = combined_means_variance_how_many.sort_values(by='Rank')
 
-#%%
-#same ranking just with only the stabilizing (Difference > 0)
+# same ranking just with only the stabilizing (Difference > 0)
 condition = all_differences_means['Difference'] > 0
 sorted_only_stab_Ranking1a = sorted_Ranking1a.drop(all_differences_means.loc[condition].index)
 
-
-#%%
-# formatted dataframe with marked "important" mutations (TOP15 paper, TOP from pedigrees (Angela))
-
-print("styled ranking 1a finished (6)")
-#with open('formatted_ranking1a.html', 'w') as file:
-    #file.write(styled_ranking1a.render())
-#%% md
-
-
-
-
-#----------------RANKING 2:
+#------RANKING 2:
 #-> only ranked by Difference
-#%%
-#how often does the mutation X appear in all mutants
+#-> how big is the effect the mutation has on other excisting mutations (->fscores)
+
+# how often does the mutation X appear in all mutants
 list_wie_oft_mut = []
 for j in all_possible_mutations:
     matching_indexes = result_how_often.loc[result_how_often[j] == True].index
@@ -279,89 +254,130 @@ for j in all_possible_mutations:
     list_wie_oft_mut.append(wie_oft)
 df_wie_oft_muts_insg = pd.DataFrame(list_wie_oft_mut, index=all_possible_mutations)
 
-#%%
-#difference and count in one dataframe
-combined_differenz_wie_oft_mut= pd.concat([all_differences_means, df_wie_oft_muts_insg], axis=1)
+# difference and count in one dataframe
+combined_differenz_wie_oft_mut = pd.concat([all_differences_means, df_wie_oft_muts_insg], axis=1)
 combined_differenz_wie_oft_mut.columns = ['Difference', 'wie oft kommt mut insg vor']
 
-#%%
-ranking2 = combined_differenz_wie_oft_mut.sort_values(by='Difference', ascending= False)
+ranking2 = combined_differenz_wie_oft_mut.sort_values(by='Difference', ascending=False)
 
-#%% md
-
-
-
-
-#----------------RANKING 3:
+#-----RANKING 3:
 #-> ranked by difference and count
 
-#%%
 list_ranking3 = []
 for i in all_possible_mutations:
     score_ranking3 = all_differences_means.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0]
     list_ranking3.append(score_ranking3)
 ranking3_unsorted = pd.DataFrame(list_ranking3, index=all_possible_mutations, columns=['ranking3_score'])
-ranking3 = ranking3_unsorted.sort_values(by='ranking3_score', ascending= False)
+ranking3 = ranking3_unsorted.sort_values(by='ranking3_score', ascending=False)
 
-
-#%% md
-
-
-
-
-#----------------RANKING 4:
+#-----RANKING 4:
 #-> calculate own score1
-#-> score1 = Difference * 1/Variance * Anzahl muts
-#-> score1 = "effect of the mutation" * 1/"how reliable is the mean_fscore" * how much data is available
-#%%
+#->score1 = Difference * 1/Variance * how_often
+#->variance here: just the mean of all variances per mutcount per mutation (2 to 7)
+
 list_ranking4 = []
 for i in all_possible_mutations:
-    score_ranking4 = all_differences_means.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0] * (1/mean_variances_per_mutations.loc[i].values[0])
+    score_ranking4 = all_differences_means.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0] * (
+                    1 / mean_variances_per_mutations.loc[i].values[0])
     list_ranking4.append(score_ranking4)
 ranking4_unsorted = pd.DataFrame(list_ranking4, index=all_possible_mutations, columns=['ranking4_score'])
-ranking4 = ranking4_unsorted.sort_values(by='ranking4_score', ascending= False)
+ranking4 = ranking4_unsorted.sort_values(by='ranking4_score', ascending=False)
 
-#%%
+#------RANKING 5:
+#-> calculate own score, just like ranking 4 just different kind of variances
 
-print("styled ranking 4 finished (7)")
-#with open('formatted_ranking4.html', 'w') as file:
-    #file.write(styled_ranking4.render())
+#PREP for 5b: variances weighted with mean_fitness_scores as weights
+#dataframe with the mean fscores of each mutation count
+mean_fitness_scores = pd.DataFrame(index = range(2,16), columns = ["mean_fitness_score"])
+for i in range(2,16):
+    fscore_mutcount_mean = count_fscore_frame["DMS_score"].loc[count_fscore_frame["mut_count"] == i].mean()
+    mean_fitness_scores.loc[i, "mean_fitness_score"] = fscore_mutcount_mean
 
-#%% md
+weighted_variances_try = pd.Series(index=variance_per_mutant_count_df_16.index)
 
+for mutation in all_possible_mutations:
+    row_variance = variance_per_mutant_count_df_16.loc[mutation]
+    non_nan_values_variance = row_variance.dropna()
 
+    if len(non_nan_values_variance) > 0:
+        non_nan_weights_variance = mean_fitness_scores.loc[non_nan_values_variance.index]['mean_fitness_score']
+        weighted_variances_try[mutation] = np.average(non_nan_values_variance, weights=non_nan_weights_variance)
 
+weighted_variances_try_df = pd.DataFrame({'Weighted Variances': weighted_variances_try})
 
-#----------------RANKING 5:
-#-> calculate own score
-#-> score2 = Difference * aggregated Variance
-#-> Variance: weighted with mutcount (aggregated variance)
-#(sum of all variances*1/mut_count per mutation)/(count of all MUtations)
-#%%
-list_ranking5 = []
+#PREP for 5d: variances weighted with wieviel as weights
+#dataframe with the mean fscores of each mutation count
+
+for mutation in all_possible_mutations:
+    row_variance = variance_per_mutant_count_df_16.loc[mutation]
+    non_nan_values_variance = row_variance.dropna()
+    row_weight_how_many = how_many_per_mutant_count_df.loc[mutation].to_frame(name = 'how_many')
+
+    if len(non_nan_values_variance) > 0:
+        non_nan_weights_variance = row_weight_how_many.loc[non_nan_values_variance.index]['how_many']
+        weighted_variances_try[mutation] = np.average(non_nan_values_variance, weights=non_nan_weights_variance)
+
+weighted_variances_d_df = pd.DataFrame({'Weighted Variances': weighted_variances_try})
+
+#RANKING 5_0: wrong calculation of the variance (only the mutations that have complete data for all mutcounts
+#not mean of variance but sum! -> how "complete" is dataset
+
+list_ranking5_0 = []
 for i in all_possible_mutations:
 
-    score_ranking5 = (all_differences_means.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0]* 51714) / np.sum(variance_per_mutant_count_df.loc[i].values)
-    list_ranking5.append(score_ranking5)
-ranking5_unsorted = pd.DataFrame(list_ranking5, index=all_possible_mutations, columns=['ranking5_score'])
-ranking5 = ranking5_unsorted.sort_values(by='ranking5_score', ascending= False)
+    score_ranking5_0 =score_ranking5_0 = (all_differences_means.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0]) / np.nansum(variance_per_mutant_count_df.loc[i].values)
 
+    list_ranking5_0.append(score_ranking5_0)
+ranking5_0_unsorted = pd.DataFrame(list_ranking5_0, index=all_possible_mutations, columns=['ranking5_0_score'])
+ranking5_0 = ranking5_0_unsorted.sort_values(by='ranking5_0_score', ascending= False)
 
+#RANKING 5a:
+# variance calculated with the mean over all mut count varaiances
+list_ranking5_a = []
+for i in all_possible_mutations:
+    score_ranking5_a = (all_differences_means.loc[i].values[0]) * df_wie_oft_muts_insg.loc[i].values[0] / (mean_variances_per_mutations_16.loc[i].values[0])
+    list_ranking5_a.append(score_ranking5_a)
+ranking5_unsorted_a = pd.DataFrame(list_ranking5_a, index=all_possible_mutations, columns=['ranking5_a_score'])
+ranking5_a = ranking5_unsorted_a.sort_values(by='ranking5_a_score', ascending=False)
 
-#%% md
+#RANKING 5b:
+#variance calculated with the mean fscores of the corresponding mutcount group
+list_ranking5_b = []
+for i in all_possible_mutations:
 
+    score_ranking5_b = (all_differences_means.loc[i].values[0]) * df_wie_oft_muts_insg.loc[i].values[0] / (weighted_variances_try_df.loc[i].values[0])
+    list_ranking5_b.append(score_ranking5_b)
+ranking5_unsorted_b = pd.DataFrame(list_ranking5_b, index=all_possible_mutations, columns=['ranking5_b_score'])
+ranking5_b = ranking5_unsorted_b.sort_values(by='ranking5_b_score', ascending= False)
 
+#RANKING 5c:
+#variance mean from the variances from the mutcount groups 2 to 7
+list_ranking5_c = []
+for i in all_possible_mutations:
 
+    score_ranking5_c = (all_differences_means.loc[i].values[0]) * df_wie_oft_muts_insg.loc[i].values[0] / (mean_variances_per_mutations.loc[i].values[0])
+    list_ranking5_c.append(score_ranking5_c)
+ranking5_unsorted_c = pd.DataFrame(list_ranking5_c, index=all_possible_mutations, columns=['ranking5_c_score'])
+ranking5_c = ranking5_unsorted_c.sort_values(by='ranking5_c_score', ascending= False)
 
-#RANKING 6:
-#-> delta G values ranked on their own
+#RANKING 5d:
+#variance mean weighted with how many values there are for each group
+list_ranking5_d = []
+for i in all_possible_mutations:
+
+    score_ranking5_d = (all_differences_means.loc[i].values[0]) * df_wie_oft_muts_insg.loc[i].values[0] / (mean_variances_per_mutations.loc[i].values[0])
+    list_ranking5_d.append(score_ranking5_d)
+ranking5_unsorted_d = pd.DataFrame(list_ranking5_d, index=all_possible_mutations, columns=['ranking5_d_score'])
+ranking5_d = ranking5_unsorted_d.sort_values(by='ranking5_d_score', ascending= False)
+
+#------RANKING 6:
+#->delta G values ranked on their own
 #-> but calculated as differences as fscores
-#%%
+
 delta_G_data = pd.read_csv('/Users/liza/Downloads/df_ddG.csv')
-#%%
 count_fscore_frame['delta G'] = delta_G_data['Score']
 
-#%%
+#goal: differences from delta G values
 #same calculation as for the fscores above to get the general impact of one mutation on the delta G values
 differences_delta_G_list = []
 
@@ -384,10 +400,10 @@ for i in all_possible_mutations:
     differences_delta_G_list.append(difference_means_delta_G)
 
 all_differences_delta_G_means = pd.DataFrame({'Difference dG': differences_delta_G_list}, index=all_possible_mutations)
-print("all_differences_delta_G_means (8)")
+
 # the better the stability of the mutation
-#-> difference: WITHOUT - WITH
-#%%
+#-> difference: WITHOUT - WITH, better mutations have higher difference scores
+
 #ranking delta G
 combined_difference_dG_wie_oft_mut = pd.concat([all_differences_delta_G_means, df_wie_oft_muts_insg], axis=1)
 combined_difference_dG_wie_oft_mut.columns = ['Difference dG', 'wie oft kommt mut insg vor']
@@ -396,23 +412,14 @@ ranking6 = combined_difference_dG_wie_oft_mut.sort_values(by='Difference dG', as
 
 ranking6 = ranking6.drop(ranking6[~(ranking6['wie oft kommt mut insg vor'] >= 20)].index)
 
+#-----RANKING 7:
+#-> delta G differences combined with ranking 5b (weighted variances with fscore_means)
 
-
-#%% md
-
-
-
-#RANKING 7:
-#-> delta G differences combined with ranking 5
-#%%
 list_ranking7 = []
 for i in all_possible_mutations:
 
-    score_ranking7 = (all_differences_means.loc[i].values[0] * df_wie_oft_muts_insg.loc[i].values[0]* 51714) / (np.sum(variance_per_mutant_count_df.loc[i].values) * all_differences_delta_G_means.loc[i].values[0])
+    score_ranking7 = (all_differences_means.loc[i].values[0]) * df_wie_oft_muts_insg.loc[i].values[0] * all_differences_delta_G_means.loc[i].values[0] / (weighted_variances_try_df.loc[i].values[0] )
     list_ranking7.append(score_ranking7)
 ranking7_unsorted = pd.DataFrame(list_ranking7, index=all_possible_mutations, columns=['ranking7_score'])
 ranking7 = ranking7_unsorted.sort_values(by='ranking7_score', ascending= False)
-
-
-print("finished fertig unweighted (9)")
 
