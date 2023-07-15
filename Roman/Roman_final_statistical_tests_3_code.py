@@ -313,6 +313,32 @@ summary_MWU_collective_df_filtered = summary_MWU_collective_df[mask_for_summary_
 
 print(summary_MWU_collective_df_filtered)
 
+import matplotlib.pyplot as plt
+
+# Assign colors based on significant values
+colors = ['blue' if val == 'Yes' else 'red' for val in summary_MWU_collective_df_filtered["Significant?"]]
+
+# Scatter plot with binary colorbar
+plt.scatter(summary_MWU_collective_df_filtered["Position"], summary_MWU_collective_df_filtered["Amino acid"], c=colors, s=2)
+
+# Create a dummy scatter plot for the colorbar
+dummy = plt.scatter([], [], c=[], cmap='RdBu', vmin=0, vmax=1)
+
+# Set colorbar and labels
+cbar = plt.colorbar(dummy)
+cbar.set_ticks([0.25, 0.75])
+cbar.set_ticklabels(['Significant (p<0.05)', 'Not significant (p>0.05)'])
+
+# Add other plot elements (axes, labels, etc.)
+plt.xlabel('Position')
+plt.ylabel('Amino acid')
+plt.title('Scatter plot of the Mann-Whitney-U test results binary')
+
+plt.show()
+
+
+
+
 # If the p-value is < alpha (0.05) then the dms-score between the groups is significantly different
 # If the p-value is > alpha (0.05) then the H0 hypothesis cannot be discarded --> no significant difference in dms-score
 
@@ -418,4 +444,6 @@ else:
 # The Kruskal-Wallis-test however, is used when the samples are independent.
 # Since the same data was used and the results are the same, the samples are dependent of eachother.
 # This is obvious, as a single mutant always has a position and a new amino acid associated with the same dms-score.
+
+# It is unclear, if the dms-scores count as a third group. Therefor the MWU seems most reliable.
 

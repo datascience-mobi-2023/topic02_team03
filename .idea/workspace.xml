@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="work in progress">
-      <change afterPath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/impact of mutcount on FS mean (boxplot code).ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/variance analysis per mutcount (scatterplots code).ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_plots.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/unweighted rankings .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/unweighted rankings .ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/weighted rankings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/weighted rankings.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/L_pos_or_neg_stabilizing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/FSD calculation code.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/L_stabilizing_mutations_in_multiplemuts.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/L_statistical tests fscores.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic analysis + trial codes/L_basic_plots_proposal.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/basic analysis + trial codes/L_basic_plots_proposal.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_code.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +70,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tianxinangelama/Documents/GitHub/topic02_team03&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/roman/PycharmProjects/topic02_team03&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -86,11 +79,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -492,17 +480,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -597,11 +574,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_neighbourhoods_4_code.coverage" NAME="Roman_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689275657810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
-    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689203367486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689240028815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
-    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_basic_analysis_2_code.coverage" NAME="Roman_final_basic_analysis_2_code Coverage Results" MODIFIED="1689169362920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_overview_1_code.coverage" NAME="Roman_final_overview_1_code Coverage Results" MODIFIED="1689165313983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689240028815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689203367486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_neighbourhoods_4_code.coverage" NAME="Roman_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689275657810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_basic_analysis_2_code.coverage" NAME="Roman_final_basic_analysis_2_code Coverage Results" MODIFIED="1689169362920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
   </component>
 </project>
