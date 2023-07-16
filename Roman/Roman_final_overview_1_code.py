@@ -133,7 +133,7 @@ for i, subset in enumerate(heat_map_subsets_pos):
 plt.tight_layout()
 
 # A heatmap to see which single mutations are available in the dataset and which are not.
-# Only focuses on the new amino acid that occurs, not the old one before the mutation.
+# Only focuses on the new amino acid that occurs, not the rest one before the mutation.
 
 # This plot is created to show a global overview of all the positions with their respective dms-scores
 # Plot shows all the single mutations that occured at a specific position (x-axis) against the dms-score (y-axis)

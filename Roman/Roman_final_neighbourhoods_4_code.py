@@ -314,3 +314,8 @@ print(mutation_name_in_neighbourhoods_specific_result)
 # Now the specific effects of every amino acid can be analysed and perhaps the cause of a worse dms-score lies in a change of properties.
 # This is a bit speculative however. The next step would have to be to perform 3D structure modelling of GFP...
 
+print(Final_neighbourhoods_df_to_work_with)
+print(Neighbourhoods_improving_step_by_step_penultimate)
+print(Neighbourhoods_improving_step_by_step_without_edge_mut)
+print(Neighbourhoods_improving_step_by_step)
+print(Neighbourhoods_ready_to_improve)

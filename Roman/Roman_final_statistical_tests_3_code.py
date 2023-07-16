@@ -352,7 +352,7 @@ plt.ylabel('Amino acid')
 plt.title('Scatter plot of the Mann-Whitney-U test results')
 cbar = plt.colorbar()
 cbar.set_label('P-value')
-plt.show()
+
 
 
 # Here a different statistical test is performed:
