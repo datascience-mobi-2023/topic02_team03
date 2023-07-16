@@ -8,7 +8,7 @@ In this part of the project, the analysis focused primarily on single mutations.
  
 ## How to use the repository for single mutations:
 
-#### Directory "single mutations" contains everything about single mutations.
+#### Directory "single mutations" contains everything about single mutations. This is the important directory!
    
 -Single_mutants_final_overview_1_code.py: code behind the analysis of the first overview 
 
