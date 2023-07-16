@@ -9,8 +9,6 @@ In this part of the project, the analysis focused primarily on single mutations.
 How to use the repository for single mutations:
 
 Directory "single mutations" contains everything about single mutations.
-
-Directory "finalized single mutations" contains the final concise versions of the analysis.
    
 -Single_mutants_final_overview_1_code.py: code behind the analysis of the first overview 
 
@@ -34,6 +32,10 @@ mutation and summarized, Mann-Whitney-U results binary scatter, Kruskal-Wallis r
 -Single_mutants_final_neighbourhoods_4_plots.ipnyb: Plots and outputs of the code above (confirmation that calculations in the dataframe are correct, enter a specific single mutation to see the corresponding mutated and unmutated neighbourhoods + properties)
       
 -Single_mutants_final_GFP_variants_5.ipnyb: implemented blast results, blast results from NCBI website, CLustal Omega results, GFP variants + properties, FP colors + properties)
+
+Directory "plots_and_outputs_for_presentation_and_report" contains all plots and tables/outputs used in the final presentation and in the report.
+
+Directory "uncleaned_work_single_mutations" contains older work-in-progress versions of code.
  
 
 Epistasis
