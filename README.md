@@ -31,7 +31,7 @@ mutation and summarized, Mann-Whitney-U results binary scatter, Kruskal-Wallis r
       
 -Single_mutants_final_neighbourhoods_4_code.py: code behind the neighbourhood analysis.
 
--Single_mutants_final_neighbourhoods_4_plots.ipnyb: Plots and outputs of the code above (
+-Single_mutants_final_neighbourhoods_4_plots.ipnyb: Plots and outputs of the code above (confirmation that calculations in the dataframe are correct, enter a specific single mutation to see the corresponding mutated and unmutated neighbourhoods + properties)
       
 -Single_mutants_final_GFP_variants_5.ipnyb: implemented blast results, blast results from NCBI website, CLustal Omega results, GFP variants + properties, FP colors + properties)
  
