@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="">
+    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="IT WORKS AHHHHHHHHHHHHHHHHHH">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/further code (trials etc)/L_different_ranking_ideas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/further code (trials etc)/different_ranking_ideas.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/ranking notebooks/unweighted rankings .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/ranking notebooks/unweighted rankings .ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/ranking notebooks/weighted rankings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/ranking notebooks/weighted rankings.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/further code (trials etc)/L_copy_von_der_stabilizing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/further code (trials etc)/extracting all possible mutations + variance plots.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/further code (trials etc)/L_old_version_stabilizingmuts_plus_code_storage.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_basic_analysis_2_plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_basic_analysis_2_plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_neighbourhoods_4_plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_neighbourhoods_4_plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_overview_1_plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_overview_1_plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_statistical_tests_3_plots_true.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_statistical_tests_3_plots_true.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,33 +66,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tianxinangelama/Documents/GitHub/topic02_team03/Epistasis Analysis/Structure_Analysis&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "database.data.extractors.current.id": "Comma-separated (CSV)_id",
+    "last_opened_file_path": "C:/Users/roman/PycharmProjects/topic02_team03/Single_mutations/plots_and_outputs_for_presentation_and_report",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)" />
-      <recent name="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)" />
-      <recent name="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/final plots (output)" />
-      <recent name="$PROJECT_DIR$/Epistasis Analysis/Rankings/ranking notebooks" />
-      <recent name="$PROJECT_DIR$/Epistasis Analysis/Rankings/python files" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/old" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -148,21 +147,7 @@
       <workItem from="1689157687940" duration="27567000" />
       <workItem from="1689239156653" duration="17654000" />
       <workItem from="1689517764137" duration="2724000" />
-      <workItem from="1689536939469" duration="3571000" />
-    </task>
-    <task id="LOCAL-00024" summary="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Blast">
-      <created>1686849972662</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1686849972662</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Clustal omega">
-      <created>1686851952902</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1686851952903</updated>
+      <workItem from="1689540355258" duration="908000" />
     </task>
     <task id="LOCAL-00026" summary="Weiter gearbeitet">
       <created>1687169287957</created>
@@ -493,7 +478,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689517602555</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="IT WORKS AHHHHHHHHHHHHHHHHHH">
+      <created>1689539804575</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1689539804575</updated>
+    </task>
+    <task id="LOCAL-00074" summary="IT WORKS AHHHHHHHHHHHHHHHHHH">
+      <created>1689540290689</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1689540290689</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Für finale PPP vorbereitet 6" />
     <MESSAGE value="Für finale PPP vorbereitet 7" />
     <MESSAGE value="Für finale PPP vorbereitet 8" />
     <MESSAGE value="Für finale PPP vorbereitet 9" />
@@ -601,16 +599,21 @@
     <MESSAGE value="update" />
     <MESSAGE value="upload unversioned files" />
     <MESSAGE value="relative path" />
-    <option name="LAST_COMMIT_MESSAGE" value="relative path" />
+    <MESSAGE value="IT WORKS AHHHHHHHHHHHHHHHHHH" />
+    <option name="LAST_COMMIT_MESSAGE" value="IT WORKS AHHHHHHHHHHHHHHHHHH" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_neighbourhoods_4_code.coverage" NAME="Roman_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689275657810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
-    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689203367486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689240028815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
-    <SUITE FILE_PATH="coverage/workspace_xml$A_plots_3_steps.coverage" NAME="A_plots_3_steps Coverage Results" MODIFIED="1689327999843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_basic_analysis_2_code.coverage" NAME="Roman_final_basic_analysis_2_code Coverage Results" MODIFIED="1689169362920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
-    <SUITE FILE_PATH="coverage/workspace_xml$AS_residues_in_out.coverage" NAME="AS_residues_in_out Coverage Results" MODIFIED="1689514533631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis" />
+    <SUITE FILE_PATH="coverage/workspace_xml$AS_residues_in_out.coverage" NAME="AS_residues_in_out Coverage Results" MODIFIED="1689514687517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_overview_1_code.coverage" NAME="Roman_final_overview_1_code Coverage Results" MODIFIED="1689165313983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689240028815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689203367486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/workspace_xml$Roman_final_neighbourhoods_4_code.coverage" NAME="Roman_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689510982553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_neighbourhoods_4_code.coverage" NAME="Roman_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689275657810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/workspace_xml$A_plots_3_steps.coverage" NAME="A_plots_3_steps Coverage Results" MODIFIED="1689327999843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/workspace_xml$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689421475480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/workspace_xml$Roman_final_basic_analysis_2_code.coverage" NAME="Roman_final_basic_analysis_2_code Coverage Results" MODIFIED="1689500127152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_basic_analysis_2_code.coverage" NAME="Roman_final_basic_analysis_2_code Coverage Results" MODIFIED="1689169362920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/workspace_xml$Single_mutations_final_neighbourhoods_4_code.coverage" NAME="Single_mutations_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689540442648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Single_mutations" />
   </component>
 </project>

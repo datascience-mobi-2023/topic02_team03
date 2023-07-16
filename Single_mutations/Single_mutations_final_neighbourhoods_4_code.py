@@ -1,80 +1,154 @@
-# Import the GFP dataset
-
+# Import GFP dataset
 import numpy as np
 import pandas as pd
 import csv
+
 with open(r"C:\Users\roman\Desktop\DMS_data\DMS_data\GFP_AEQVI_Sarkisyan_2016.csv") as dms_GFP_datei:
     dms_GFP_datei_object = csv.reader(dms_GFP_datei, delimiter=',')
     print(dms_GFP_datei_object)
     for row in dms_GFP_datei_object:
         print(row)
 GFP_dataset = pd.read_csv(r"C:\Users\roman\Desktop\DMS_data\DMS_data\GFP_AEQVI_Sarkisyan_2016.csv")
+print(GFP_dataset)
 
-new_AA_of_mutation = []
+last_character_list = []
 for index, row in GFP_dataset.iterrows():
-    last_character_of_mutation = row["mutant"][-1]
-    new_AA_of_mutation.append(last_character_of_mutation)
-new_AA_of_mutation_df = pd.DataFrame(new_AA_of_mutation, columns=["new_AA"])
-
+    last_character = row["mutant"][-1]
+    last_character_list.append(last_character)
+last_character_df = pd.DataFrame(last_character_list, columns=["new_AA"])
+# Last character of each row = new amino acid
 
 number_mutations = GFP_dataset["mutant"].str.count(":") + 1
-number_mutations_singles = number_mutations == 1
+number_mutations_Single = number_mutations == 1
+# True are all the rows that only have 1 mutation
 
-single_mutants_only_df = new_AA_of_mutation_df[number_mutations_singles]
+single_mutants_df = last_character_df[number_mutations_Single]
+# Filters all true rows from both dataframes and creates a new one. The filtering of true values is automatically being transferred.
 
-dms_score_list = []
+dms_score_df = []
 for index, row in GFP_dataset.iterrows():
     dms_score = row["DMS_score"]
-    dms_score_list.append(dms_score)
-dms_score_list_all_mutants = pd.DataFrame(dms_score_list, columns=["DMS-score"])
+    dms_score_df.append(dms_score)
+dms_score_df_all = pd.DataFrame(dms_score_df, columns=["DMS-score"])
+# Creates a dataframe with all DMS-scores and the respective experiment number
 
-all_single_dms_scores = dms_score_list_all_mutants[number_mutations_singles]
+dms_score_filtered = dms_score_df_all[number_mutations_Single]
+# Dataframe with all DMS-scores of the single mutants
 
-all_single_dms_scores_with_new_AA = single_mutants_only_df.join(all_single_dms_scores)
+dms_score_filtered_new_AA = single_mutants_df.join(dms_score_filtered)
+# Combines and creates a new dataframe with the new amino acid and the dms-score
 
-mutations_pos_list = []
+mutations_pos = []
 for index, row in GFP_dataset.iterrows():
-    mutations_pos_list_number = row["mutant"][1:-1]
-    mutations_pos_list.append(mutations_pos_list_number)
-mutations_pos_df = pd.DataFrame(mutations_pos_list, columns=["Position"])
+    mutations_pos_number = row["mutant"][1:-1]
+    mutations_pos.append(mutations_pos_number)
+mutations_pos_df = pd.DataFrame(mutations_pos, columns=["Position"])
+# Removes the first and last character = position
 
 number_mutations = GFP_dataset["mutant"].str.count(":") + 1
-number_mutations_singles = number_mutations == 1
+number_mutations_Single = number_mutations == 1
+# True are all the rows that only contain 1 mutation.
 
-single_mutants_with_pos = mutations_pos_df[number_mutations_singles]
-mutations_singles_pos_dms_without_new_AA = single_mutants_with_pos.join(all_single_dms_scores)
+single_mutants_df_pos = mutations_pos_df[number_mutations_Single]
+# Creates a new dataframe that has the positions of all single mutants.
 
-new_column_for_pos = mutations_singles_pos_dms_without_new_AA["Position"]
-work_with_df_pos_new_AA_dms_score = all_single_dms_scores_with_new_AA.join(new_column_for_pos)
-work_with_df_pos_new_AA_dms_score = work_with_df_pos_new_AA_dms_score[["Position", "new_AA", "DMS-score"]]
+mutations_pos_df_with_scores = single_mutants_df_pos.join(dms_score_filtered)
+# Combines and creates a new dataframe with the position and the DMS-score (without the new amino acid)
 
-# Creates a separate dataframe to work with later and compare
+new_column = mutations_pos_df_with_scores["Position"]
+Neighbourhoods_1 = dms_score_filtered_new_AA.join(new_column)
+Neighbourhoods_1 = Neighbourhoods_1[["Position", "new_AA", "DMS-score"]]
+# Creates a new dataframe with position, new amino acid and DMS-score
+
 GFP_dataset["MutationCount"] = GFP_dataset["mutant"].str.count(":") + 1
+# Counts the number of mutations in each row
 
-work_with_df_pos_bin_mutant_dms_score_mut_sequence = GFP_dataset[GFP_dataset["MutationCount"] == 1].copy()
+single_mutations_df = GFP_dataset[GFP_dataset["MutationCount"] == 1].copy()
+# Filters the DataFrame to select rows with a single mutation
 
-# Drops the "MutationCount" column because its not needed anymore
-work_with_df_pos_bin_mutant_dms_score_mut_sequence.drop("MutationCount", axis=1, inplace=True)
+single_mutations_df.drop("MutationCount", axis=1, inplace=True)
+# Drops the "MutationCount" column if not needed anymore
 
-# Now the unmutated sequence of our GFP is determined by manually reversing a single mutation:
+sequence = "MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK"
+
+AA_properties = pd.read_csv(r"C:\Users\roman\Desktop\AS Eigenschaften\aminoacids.csv")
+# Import the amino acid property dataset
+
+columns_to_delete = ['Name', 'Abbr', 'Molecular Formula', 'Residue Formula']
+AA_properties.drop(columns=columns_to_delete, inplace=True)
+delete_columns = ["carbon", "hydrogen", "nitrogen", "oxygen", "sulfur"]
+AA_properties.drop(columns=delete_columns, inplace=True)
+# Cleans the dataframe from unnecessary properties
+
+row_index_to_delete = 12
+AA_properties_to_work_with = AA_properties.drop(row_index_to_delete)
+# Deletes a special amino acid that does not occur in our GFP dataset
+
+
+# Generate mutated sequences and calculate properties for each mutant
+import pandas as pd
+import re
+
+property_maps = {}
+for property_name in AA_properties_to_work_with.columns[1:]:
+    property_maps[property_name] = dict(zip(AA_properties_to_work_with["Letter"].dropna(), AA_properties_to_work_with[property_name].dropna()))
+# Creates a dictionary of property maps for each property
+
+results = []
+# Creates a list to store the results
+
+for i in range(len(sequence) - 6):
+    neighbourhood = sequence[i:i + 7]  # Gets the 7-amino-acid neighbourhood sequence
+    result = {"Neighbourhood": neighbourhood}
+    for property_name, property_map in property_maps.items():
+        score = sum(property_map.get(AA, 0) for AA in
+                    neighbourhood)  # Calculates the sum of property values in the neighbourhood
+        result[property_name] = score
+    results.append(result)
+# Calculates the neighbourhood score for every 7-amino-acid window for each property
+
+unmutated_all_neighbourhoods = pd.DataFrame(results)
+# This acts as the unmutated reference!
 
 unmutated_sequence = "MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK"
+single_mutations_df["position"] = single_mutations_df["mutant"].apply(lambda x: int(re.search(r'\d+', x).group()))
+results = []
 
-# Import a dataframe with the amino acid porperties:
-AA_properties_dataset = pd.read_csv(r"C:\Users\roman\Desktop\AS Eigenschaften\aminoacids.csv")
+for _, row in single_mutations_df.iterrows():
+    mutation = row["mutant"]
+    position = row["position"]
+    mutated_sequence = unmutated_sequence[:position - 1] + mutation[-1] + unmutated_sequence[position:]
 
-columns_to_delete_AA_properties = ['Name', 'Abbr', 'Molecular Formula', 'Residue Formula', "carbon", "hydrogen", "nitrogen", "oxygen", "sulfur"]
-AA_properties_dataset.drop(columns=columns_to_delete_AA_properties, inplace=True)
+    result = {"Mutation": mutation}
 
-# Delete the 12th row because it contains a special amino acid that is not present in GFP
-row_index_to_delete_AA_properties = 12
-AA_properties_work_with = AA_properties_dataset.drop(row_index_to_delete_AA_properties)
 
-# These are the property abbreviations and explanations:
+    for i in range(len(mutated_sequence) - 6):
+        neighbourhood = mutated_sequence[i:i + 7]
+        neighbourhood_properties = {"Neighbourhood": neighbourhood}
+        for property_name, property_map in property_maps.items():
+            neighbourhood_properties[property_name] = sum(property_map.get(AA, 0) for AA in neighbourhood)
+        results.append(neighbourhood_properties)
 
-# Name: name of the amino acid.
-# Abbr: abbreviation of the amino acid.
-# Letter: letter of the amino acid.
+# Cleaning the dataframe
+Neighbourhoods_2 = pd.DataFrame(results)
+
+Neighbourhoods_2 = Neighbourhoods_2.drop_duplicates()
+
+Neighbourhoods_2_filtered = Neighbourhoods_2.drop_duplicates()
+
+Neighbourhoods_2_filtered = pd.concat([unmutated_all_neighbourhoods, Neighbourhoods_2_filtered], axis=0, ignore_index=True)
+
+Neighbourhoods_3 = Neighbourhoods_2_filtered.drop_duplicates()
+
+Neighbourhoods_4 = Neighbourhoods_3.drop(["pKx3"], axis=1)
+
+Neighbourhoods_5 = Neighbourhoods_4.drop_duplicates()
+# Final cleaned dataframe with all the single mutants and with all non-duplicated frames.
+# Rows 0-231 are the unmutated reference.
+
+#Name: name of the amino acid.
+#Abbr: abbreviation of the amino acid.
+#Letter: letter of the amino acid.
 # Molecular Weight: molecular weight.
 # Molecular Formula: molecular formula.
 # Residue Formula: residue formula.
@@ -90,232 +164,138 @@ AA_properties_work_with = AA_properties_dataset.drop(row_index_to_delete_AA_prop
 # SASA: solvent accesible surface area.
 # NCISC: net charge of side chains.
 
-
-# Generate mutated sequences and calculate properties for each mutant
 import pandas as pd
-import re
 
-# Creates a dictionary of property maps for each property
-AA_property_maps = {}
-for property_name in AA_properties_work_with.columns[1:]:
-    AA_property_maps[property_name] = dict(zip(AA_properties_work_with["Letter"].dropna(), AA_properties_work_with[property_name].dropna()))
-
-# Creates a list to store the Neighbourhood_results_list
-Neighbourhood_results_list = []
-
-# This code determines the neighbourhood score for every 7-amino-acid window for each property
-for i in range(len(unmutated_sequence) - 6):
-    neighbourhood = unmutated_sequence[i:i+7]
-    # Picks the 7-amino-acid neighbourhood sequence
-    Neighbourhood_result = {"Neighbourhood": neighbourhood}
-    for property_name, property_map in AA_property_maps.items():
-        score = sum(property_map.get(AA, 0) for AA in neighbourhood)
-        # Calculates the sum of property values in the neighbourhood
-        Neighbourhood_result[property_name] = score
-    Neighbourhood_results_list.append(Neighbourhood_result)
-
-# Create a dataframe from the Neighbourhood_results_list
-Neighbourhood_results_df = pd.DataFrame(Neighbourhood_results_list)
-
-# This code above creates the unmutated reference for later analysis
-
-work_with_df_pos_bin_mutant_dms_score_mut_sequence["position"] = work_with_df_pos_bin_mutant_dms_score_mut_sequence["mutant"].apply(lambda x: int(re.search(r'\d+', x).group()))
-
-Neighbourhood_extraction_results_first_list = []
-for _, row in work_with_df_pos_bin_mutant_dms_score_mut_sequence.iterrows():
-    extract_mutation = row["mutant"]
-    extract_position = row["position"]
-    determine_mutated_sequence = unmutated_sequence[:extract_position - 1] + extract_mutation[-1] + unmutated_sequence[extract_position:]
-    # Generates mutated sequence using string slicing so that the mutation is determined and the reference sequence is changed to the mutated sequence.
-    # M[1] checks the second character in the mutant name
-    # intM[1] turn the second character into an integer --> Important for extraction of the position so he understands all the numbers as one coherent number
-    # #int(mutation[1])-1: Subtracting 1 from the position adjusts it to a zero-based index
-    # unmutated_sequence[:int(mutation[1])-1]: This retrieves the subsequence of unmutated_sequence from the beginning up to the position of the mutation (exclusive).
-    # It captures the amino acids before the mutation position.
-    # M[-1] checks the last character of the mutant name
-    # unmutated_sequence[int(mutation[1]):]: This retrieves the subsequence of unmutated_sequence from the position of the mutation to the end.
-    # It captures the amino acids after the mutation position.
-    # +: This concatenates the three parts together, resulting in the complete mutated sequence.
-    Neighbourhood_extraction_result = {"Mutation": extract_mutation, "Neighbourhoods": []}
-
-    # Calculate properties for each neighbourhood sequence
-    for i in range(len(determine_mutated_sequence) - 6):
-        # Cuts off the end of the general sequence, to always have neighbourhoods of 7 amino acids.
-        # Iteration over N has to occur with N-1 iteration length
-        neighbourhood = determine_mutated_sequence[i:i+7]
-        # Retrieve the 7-amino-acid neighbourhood sequence via slicing
-        neighbourhood_properties = {"Neighbourhood": neighbourhood}
-        # Creates a dictionary to save properties of each neighbourhood
-        for property_name, property_map in AA_property_maps.items():
-            neighbourhood_properties[property_name] = sum(property_map.get(AA, 0) for AA in neighbourhood)
-            # Calculates the property value for the neighbourhood
-        Neighbourhood_extraction_result["Neighbourhoods"].append(neighbourhood_properties)
-    Neighbourhood_extraction_results_first_list.append(Neighbourhood_extraction_result)
-
-# Convert the "Neighbourhoods" column to strings
-Neighbourhood_extraction_results_first_list_modified = [
-    {**entry, "Neighbourhoods": str(entry["Neighbourhoods"])} for entry in Neighbourhood_extraction_results_first_list
-]
-
-Neighbourhood_extraction_results_df = pd.DataFrame(Neighbourhood_extraction_results_first_list_modified)
-Neighbourhood_extraction_results_df_without_duplicates = Neighbourhood_extraction_results_df.drop_duplicates()
-Neighbourhood_extraction_results_df_without_duplicates_concatenated = pd.concat([Neighbourhood_results_df, Neighbourhood_extraction_results_df_without_duplicates], ignore_index=True).drop_duplicates()
-Neighbourhoods_without_pKx3 = Neighbourhood_extraction_results_df_without_duplicates_concatenated.drop(["pKx3"], axis=1)
-
-# First preliminary version to work with.
-# It contains all single mutants with non-duplicated frame-shifts along the respective mutated sequence.
-# Rows 0-231 are the unmutated reference sequence as neighbourhoods.
-
-# Now it was quickly tested, whether the results make sense based on some easy calculations, and they do.
-# It was manually tested, whether the results make sense, in particular the amount of rows in the dataframe.
-# By calculating what the code does, the same amount of rows was calculated as are present.
-
-# Now the dataframe will undergo some severe changes until its finalized version:
-
-
-columns_for_neighbourhood_to_add = pd.DataFrame(columns=["Neighbourhood"])
+Neighbourhoods_6 = pd.DataFrame(columns=["Neighbourhood"])
 columns_to_copy = ["Molecular Weight", "Residue Weight", "pKa1", "pKb2", "pl4", "H", "VSC", "P1", "P2", "SASA", "NCISC"]
 
-unmutated_sequence = str(unmutated_sequence)
-for index, row in Neighbourhoods_without_pKx3.iterrows():
-    neighbourhood_rows_values = row["Neighbourhood"]
-    neighbourhood_rows_values = str(neighbourhood_rows_values)
-    neighbourhood_length = len(neighbourhood_rows_values)
+unmutated_sequence = "MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK"
 
-    for i in range(len(unmutated_sequence) - 6):
-        mismatch_found = False
-        # To track if there is a mismatch
+for index, row in Neighbourhoods_5.iterrows():
+    neighbourhood = row["Neighbourhood"]  # Gets the neighbourhood value of each row
+    neighbourhood_length = len(neighbourhood)
+
+    for i in range(
+            len(unmutated_sequence) - 6):
+        mismatch_found = False  # To track if a mismatch occurs
 
         for j in range(neighbourhood_length):
-            if j == 3:
-                # 4th position
-                if neighbourhood_rows_values[j] == unmutated_sequence[i+j]:
-                    # Checks if the 4th amino acid matches the unmutated sequence
-                    mismatch_found = True
-                    break
-                    # Breaks the loop if there is a match
+            if j == 3:  # Finds the 4th position of each neighbourhood
+                if neighbourhood[j] == unmutated_sequence[
+                    i + j]:  # Checks, if the 4th position matches the original sequence
+                    mismatch_found = True  #If there is a match, then true
+                    break  # Breaks the loop if there is a match (I dont want a match!)
             else:
-                if neighbourhood_rows_values[j] != unmutated_sequence[i+j]:
-                   mismatch_found = True
-                   # If a mismatch occurs outside of the 4th position it breaks the loop
-                   break
+                if neighbourhood[j] != unmutated_sequence[
+                    i + j]:  # Checks, if the not-4th positions match the original sequence
+                    mismatch_found = True  # If an amino acid matches outside of the 4th position, then true
+                    break  # Breaks the loop if any other position but the 4th matches
 
-        if not mismatch_found:
-            columns_for_neighbourhood_to_add = pd.concat([columns_for_neighbourhood_to_add, pd.DataFrame({"Neighbourhood": [neighbourhood_rows_values]})], ignore_index=True)
-            # If there is not a mismatch, it adds the neighbourhood to the dataframe
-            break
-            # Code has to break because there can only be one match
-columns_for_neighbourhood_to_add = columns_for_neighbourhood_to_add.join(Neighbourhoods_without_pKx3[columns_to_copy])
+        if not mismatch_found:  # If there was no mismatch, except for the 4th position
+            Neighbourhoods_6 = pd.concat([Neighbourhoods_6, pd.DataFrame({"Neighbourhood": [neighbourhood]})],
+                                ignore_index=True)  # If no mismatch, then append the neighbourhood to the new dataframe
+            break  #Breaks the code because there can only be 1 match maximum
 
+Neighbourhoods_6 = Neighbourhoods_6.join(Neighbourhoods_5[columns_to_copy])  # Adds the old columns I want to keep
 
-Neighbourhoods_ready_to_improve = pd.DataFrame(columns=["Neighbourhood"] + columns_to_copy)
+import pandas as pd
 
-Neighbourhoods_ready_to_improve_rows = []  # Initialize an empty list to store the rows
+Neighbourhoods_7 = pd.DataFrame(columns=["Neighbourhood"] + columns_to_copy)
 
-# Iterate over your data and add rows to the list
-for i in range(len(determine_mutated_sequence) - 6):
-    neighbourhood = determine_mutated_sequence[i:i + 7]
-    neighbourhood_properties = {"Neighbourhood": neighbourhood}
+unmutated_sequence = "MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK"
 
-    for property_name, property_map in AA_property_maps.items():
-        neighbourhood_properties[property_name] = sum(property_map.get(AA, 0) for AA in neighbourhood)
+rows = []
+for _, row in Neighbourhoods_6.iterrows():
+    neighbourhood = row["Neighbourhood"]
+    unmutated_row = neighbourhood[:3] + unmutated_sequence[3] + neighbourhood[4:]
+    properties = {col: row[col] for col in columns_to_copy}
+    mutated_df = pd.DataFrame(data=[[neighbourhood] + list(row[columns_to_copy])],
+                              columns=["Neighbourhood"] + columns_to_copy)
+    unmutated_df = pd.DataFrame(data=[[unmutated_row] + list(properties.values())],
+                                columns=["Neighbourhood"] + columns_to_copy)
+    rows.append(mutated_df)
+    rows.append(unmutated_df)
 
-    Neighbourhoods_ready_to_improve_rows.append(pd.Series(neighbourhood_properties))
+Neighbourhoods_7 = pd.concat(rows, ignore_index=True)
+# This contains an error, where he takes the 3rd position of the original sequence (absolute) and not relative to the neighbourhood how I need it
 
-# Check if the rows list is not empty before concatenating
-if Neighbourhoods_ready_to_improve_rows:
-    Neighbourhoods_ready_to_improve = pd.concat(Neighbourhoods_ready_to_improve_rows, axis=1).T.reset_index(drop=True)
-else:
-    Neighbourhoods_ready_to_improve = pd.DataFrame()
+property_names = ["Molecular Weight", "Residue Weight", "pKa1", "pKb2", "pl4", "H"]  # List of property names to calculate
 
-property_names_to_calculate = ["Molecular Weight", "Residue Weight", "pKa1", "pKb2", "pl4", "H"]
+Neighbourhoods_8 = Neighbourhoods_7.copy()
+for property_name in property_names:
+    Neighbourhoods_8[property_name] = Neighbourhoods_8["Neighbourhood"].apply(lambda x: sum(AA_properties_to_work_with[property_name].loc[AA_properties_to_work_with["Letter"] == aa].values[0] for aa in x))
 
-# Calculates the property values for each row in Neighbourhoods_ready_to_improve and update the corresponding columns
-Neighbourhoods_improving_step_by_step = Neighbourhoods_ready_to_improve.copy()
-for property_name in property_names_to_calculate:
-    Neighbourhoods_improving_step_by_step[property_name] = Neighbourhoods_improving_step_by_step["Neighbourhood"].apply(lambda x: sum(AA_properties_work_with[property_name].loc[AA_properties_work_with["Letter"] == aa].values[0] for aa in x))
-    # Lambda quickly defines a function. Lambda argument: expression
-    # This function calculates the sum of specific property values for each letter in the "Neighbourhood" value.
-    # loc searches for the correct letter (amino acid) and retrieves the values from the columns
+# Lambda quickly defines a function without using def
+# This function calculates the sum of specific property values for each letter in the "Neighbourhood" value.
+# Loc finds the correct character/letter and takes the values from the columns
+# Values 0 takes the first value
 
-# This calculates all the values for the unmutated sequences and adds them to the dataframe.
-# All mutations before position 4 and after position 235 cannot be incorporated, because they can never be in the middle of the neighbourhood.
-
-Neighbourhood_test_sequence = "MSKGEEL"
-molecular_weight = sum(AA_properties_work_with["Molecular Weight"].loc[AA_properties_work_with["Letter"] == aa].values[0] for aa in Neighbourhood_test_sequence)
+sequence = "MSKGEEL"
+molecular_weight = sum(AA_properties_to_work_with["Molecular Weight"].loc[AA_properties_to_work_with["Letter"] == aa].values[0] for aa in sequence)
 print("Molecular Weight:", molecular_weight)
-# To confirm the validity. Calculating this by hand yields the same result.
+# This is a test calculation to see if the properties of the neighbourhoods are calculated correctly.
+# Comparison to manually calculating this yields the same result!
 
+Neighbourhoods_9 = Neighbourhoods_8.copy()
 
-Neighbourhoods_improving_step_by_step_without_edge_mut = Neighbourhoods_improving_step_by_step.copy()
+filtered_mutations = [mutant for mutant in single_mutations_df['mutant'] if not (len(mutant) == 3 and mutant[1] == '3')]
 # Filters out mutations where 'n' in 'XnY' mutation name is 3
-Neighbourhood_filtered_mutations_without_edge = [mutant for mutant in work_with_df_pos_bin_mutant_dms_score_mut_sequence['mutant'] if not (len(mutant) == 3 and mutant[1] == '3')]
 
+mutants_cloned = [mutant for mutant in filtered_mutations for _ in range(2)]
 # Clones each mutant and write twice consecutively in a new list
-Neighbourhood_mutants_cloned = [mutant for mutant in Neighbourhood_filtered_mutations_without_edge for _ in range(2)]
 
+mutants_cloned = mutants_cloned[:len(Neighbourhoods_9)]
 # Truncates the list of mutants to match the length of the DataFrame
-Neighbourhood_mutants_cloned = Neighbourhood_mutants_cloned[:len(Neighbourhoods_improving_step_by_step_without_edge_mut)]
 
+Neighbourhoods_9.insert(Neighbourhoods_9.columns.get_loc('Neighbourhood'), 'Mutation', mutants_cloned)
 # Inserts the 'Mutation' column left of the 'Neighbourhood' column
-Neighbourhoods_improving_step_by_step_without_edge_mut.insert(Neighbourhoods_improving_step_by_step_without_edge_mut.columns.get_loc('Neighbourhood'), 'Mutation', Neighbourhood_mutants_cloned)
 
-# Creates a copy of the original DataFrame
-Neighbourhoods_improving_step_by_step_penultimate = Neighbourhoods_improving_step_by_step_without_edge_mut.copy()
+Neighbourhoods_10 = Neighbourhoods_9.copy()
 
+modified_mutations_name = []
+modified_neighbourhood = []
 # Creates a list to store the modified mutation names
-Neighbourhoods_modified_mutations_name_list = []
-modified_neighbourhood_list = []
 
-for index, row in Neighbourhoods_improving_step_by_step_without_edge_mut.iterrows():
-    mutation_for_neighbourhoods = row['Mutation']
-    neighbourhood_rows_values = row['Neighbourhood']
+for index, row in Neighbourhoods_9.iterrows():
+    mutation = row['Mutation']
+    neighbourhood = row['Neighbourhood']
 
+    X = mutation[0]
     # Extracts the X character from the mutation name
-    X_mutation_name = mutation_for_neighbourhoods[0]
 
-    # Modify the 4th position of the neighbourhood sequence based on X in XnY for odd rows
     if index % 2 != 0:
-        modified_neighbourhood_list.append(neighbourhood_rows_values[:3] + X_mutation_name + neighbourhood_rows_values[4:])
+        modified_neighbourhood.append(neighbourhood[:3] + X + neighbourhood[4:])
     else:
-        modified_neighbourhood_list.append(neighbourhood_rows_values)
+        modified_neighbourhood.append(neighbourhood)
+   # Modifies the 4th position of the neighbourhood sequence based on X for odd rows
 
-    # Append '-unmut' to every other mutation name
     if index % 2 != 0:
-        Neighbourhoods_modified_mutations_name_list.append(mutation_for_neighbourhoods + '-unmut')
+        modified_mutations_name.append(mutation + '-unmut')
     else:
-        Neighbourhoods_modified_mutations_name_list.append(mutation_for_neighbourhoods)
+        modified_mutations_name.append(mutation)
+  # Appends '-unmut' to every other mutation name
 
-# Update the 'Mutation' and 'Neighbourhood' columns with the modified values
-Neighbourhoods_improving_step_by_step_penultimate['Mutation'] = Neighbourhoods_modified_mutations_name_list
-Neighbourhoods_improving_step_by_step_penultimate['Neighbourhood'] = modified_neighbourhood_list
+Neighbourhoods_10['Mutation'] = modified_mutations_name
+Neighbourhoods_10['Neighbourhood'] = modified_neighbourhood
+# Updates the 'Mutation' and 'Neighbourhood' columns with the modified values
+
+property_names = ["Molecular Weight", "Residue Weight", "pKa1", "pKb2", "pl4", "H", "VSC", "P1", "P2", "SASA",
+                  "NCISC"]  # List of property names to calculate
+
+Neighbourhoods_11 = Neighbourhoods_10.copy()
+for property_name in property_names:
+    Neighbourhoods_11[property_name] = Neighbourhoods_11["Neighbourhood"].apply(
+        lambda x: sum(AA_properties_to_work_with[property_name].loc[AA_properties_to_work_with["Letter"] == aa].values[0] for aa in x))
+
+# This calculates all values for the newly inserted unmutated sequences and fills them in (to update the values)
+# The values seem to be correct according to manual checking!
+# All the mutations bevor position 4 and after 235 cannot be seen in this dataframe, because they can never be in the middle of a neighbourhood of length 7
+
+# Enter a specific mutation in the little window that pops up!
+
+mutation_name = input("Enter the mutation name: ")
+Dataframe_for_specific_mutation = Neighbourhoods_11[Neighbourhoods_11['Mutation'].str.contains(mutation_name)]
+print(Dataframe_for_specific_mutation)
+# works!
 
 
-
-property_names_for_advanced_neighbourhoods = ["Molecular Weight", "Residue Weight", "pKa1", "pKb2", "pl4", "H", "VSC", "P1", "P2", "SASA", "NCISC"]
-
-# Calculates the property values for each row in Neighbourhoods_ready_to_improve and updates the corresponding columns
-Final_neighbourhoods_df_to_work_with = Neighbourhoods_improving_step_by_step_penultimate.copy()
-for property_name in property_names_for_advanced_neighbourhoods:
-    Final_neighbourhoods_df_to_work_with[property_name] = Final_neighbourhoods_df_to_work_with["Neighbourhood"].apply(lambda x: sum(AA_properties_work_with[property_names_for_advanced_neighbourhoods].loc[AA_properties_work_with["Letter"] == aa].values[0] for aa in x))
-
-# Final_neighbourhoods_df_to_work_with is the final and corrected version of the dataframe.
-
-# Now I want to build a small interface where I can search for a specific mutation.
-# The output should be the mutated and the unmutated rows of the dataframe with all the property values calculated.
-
-mutation_name_in_neighbourhoods_specific = input("Enter the mutation name: ")
-# This opens a small window to enter the mutation name.
-# Convert 'Mutation' column to string
-Final_neighbourhoods_df_to_work_with['Mutation'] = Final_neighbourhoods_df_to_work_with['Mutation'].astype(str)
-
-mutation_name_in_neighbourhoods_specific_result = Final_neighbourhoods_df_to_work_with[Final_neighbourhoods_df_to_work_with['Mutation'].str.contains(mutation_name_in_neighbourhoods_specific)]
-print(mutation_name_in_neighbourhoods_specific_result)
-# Now the specific effects of every amino acid can be analysed and perhaps the cause of a worse dms-score lies in a change of properties.
-# This is a bit speculative however. The next step would have to be to perform 3D structure modelling of GFP...
-
-print(Final_neighbourhoods_df_to_work_with)
-print(Neighbourhoods_improving_step_by_step_penultimate)
-print(Neighbourhoods_improving_step_by_step_without_edge_mut)
-print(Neighbourhoods_improving_step_by_step)
-print(Neighbourhoods_ready_to_improve)
