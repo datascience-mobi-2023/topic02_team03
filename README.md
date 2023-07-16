@@ -8,7 +8,7 @@ In this part of the project, the analysis focused primarily on single mutations.
  
 ## How to use the repository for single mutations:
 
-Directory "single mutations" contains everything about single mutations.
+#### Directory "single mutations" contains everything about single mutations.
    
 -Single_mutants_final_overview_1_code.py: code behind the analysis of the first overview 
 
@@ -33,13 +33,13 @@ mutation and summarized, Mann-Whitney-U results binary scatter, Kruskal-Wallis r
       
 -Single_mutants_final_GFP_variants_5.ipnyb: implemented blast results, blast results from NCBI website, CLustal Omega results, GFP variants + properties, FP colors + properties)
 
-Directory "plots_and_outputs_for_presentation_and_report" contains all plots and tables/outputs used in the final presentation and in the report.
+#### Directory "plots_and_outputs_for_presentation_and_report" contains all plots and tables/outputs used in the final presentation and in the report.
 
-Directory "uncleaned_work_single_mutations" contains older work-in-progress versions of code.
+#### Directory "uncleaned_work_single_mutations" contains older work-in-progress versions of code.
  
 
-Epistasis
+# Epistasis
 Additionally, analyses were performed to obtain information about the ability of mutations to stabilize the fitness scores of proteins that already contain other mutations and get quantified data to rank them accordingly. To make the calculations as specific as possible, weighted factors were computed, and the effect of mutation count on protein fitness got included.
 
-Protein stability prediction with PyRosetta 
+# Protein stability prediction with PyRosetta 
 The stability of proteins is important as it can affect proper folding and functional performance. Protein stability can be characterized by thermodynamic stability, which refers to the resistance against denaturation, as well as kinetic stability, which measures the resistance of a protein against irreversible inactivation (Liu, Xun et al. 2019). Since no experimentally determined parameters capturing stability were available in the dataset used (Sarkisyan, Bolotin et al. 2016), we utilized the software platform PyRosetta to predict a stability parameter, enabling us to investigate the relationship between function and stability in mutated GFP. 
