@@ -245,7 +245,7 @@ Neighbourhood_test_sequence = "MSKGEEL"
 molecular_weight = sum(AA_properties_work_with["Molecular Weight"].loc[AA_properties_work_with["Letter"] == aa].values[0] for aa in Neighbourhood_test_sequence)
 print("Molecular Weight:", molecular_weight)
 # To confirm the validity. Calculating this by hand yields the same result.
-
+######### ab hier kaputt
 
 Neighbourhoods_improving_step_by_step_without_edge_mut = Neighbourhoods_improving_step_by_step.copy()
 # Filters out mutations where 'n' in 'XnY' mutation name is 3
@@ -259,7 +259,7 @@ Neighbourhood_mutants_cloned = Neighbourhood_mutants_cloned[:len(Neighbourhoods_
 
 # Inserts the 'Mutation' column left of the 'Neighbourhood' column
 Neighbourhoods_improving_step_by_step_without_edge_mut.insert(Neighbourhoods_improving_step_by_step_without_edge_mut.columns.get_loc('Neighbourhood'), 'Mutation', Neighbourhood_mutants_cloned)
-
+# ########hier runter alles gut
 # Creates a copy of the original DataFrame
 Neighbourhoods_improving_step_by_step_penultimate = Neighbourhoods_improving_step_by_step_without_edge_mut.copy()
 
