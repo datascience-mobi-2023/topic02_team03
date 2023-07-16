@@ -29,7 +29,7 @@ violin plot, analysis of chromophore single mutations)
 ANOVA results, eta-squared results, Bonferroni correction, Shapiro-wilks results, q-q-plot of the DMS scores, Mann-Whitney-U results individually for each
 mutation and summarized, Mann-Whitney-U results binary scatter, Kruskal-Wallis results, Friedman results)
       
--Single_mutants_final_neighbourhoods_4_code.py: 
+-Single_mutants_final_neighbourhoods_4_code.py: code behind the neighbourhood analysis.
 
 -Single_mutants_final_neighbourhoods_4_plots.ipnyb: Plots and outputs of the code above (
       
