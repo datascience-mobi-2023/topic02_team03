@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequential_mutants.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/A_Stammbaum_neue_Idee.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequential_mutants_print_all.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequentianal_mutants.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequential_mutants_filtering.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequential_mutants_filtering.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,14 +143,7 @@
       <workItem from="1689157538745" duration="138000" />
       <workItem from="1689157687940" duration="27567000" />
       <workItem from="1689239156653" duration="17654000" />
-      <workItem from="1689517764137" duration="2724000" />
-    </task>
-    <task id="LOCAL-00024" summary="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Blast">
-      <created>1686849972662</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1686849972662</updated>
+      <workItem from="1689517764137" duration="4526000" />
     </task>
     <task id="LOCAL-00025" summary="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Clustal omega">
       <created>1686851952902</created>
@@ -490,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689517602555</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="filtering cleaned">
+      <created>1689529075977</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1689529075977</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +571,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Für finale PPP vorbereitet 6" />
     <MESSAGE value="Für finale PPP vorbereitet 7" />
     <MESSAGE value="Für finale PPP vorbereitet 8" />
     <MESSAGE value="Für finale PPP vorbereitet 9" />
@@ -598,7 +595,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="upload unversioned files" />
     <MESSAGE value="relative path" />
-    <option name="LAST_COMMIT_MESSAGE" value="relative path" />
+    <MESSAGE value="filtering cleaned" />
+    <option name="LAST_COMMIT_MESSAGE" value="filtering cleaned" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_neighbourhoods_4_code.coverage" NAME="Roman_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689275657810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
