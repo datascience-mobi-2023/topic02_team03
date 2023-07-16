@@ -4,11 +4,97 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="work in progress">
-      <change afterPath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_plots.ipynb" afterDir="false" />
+    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/AS_residues_in_out.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/topic02_team03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/topic02_team03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_neighbourhoods_4_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D102G_F130L.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/D102G_F130L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D102G_F130L_E142V_K214E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/D102G_F130L_E142V_K214E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D197G_Q204R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/D197G_Q204R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DMS_score for each number of mutations.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/DMS_score for each number of mutations.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E90V_I136V_I152V_K166E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/E90V_I136V_I152V_K166E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/A_position_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/AS_residues_in_out.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F114S_I136V_K209R_M233K.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F114S_I136V_K209R_M233K.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F130L_D102G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F130L_D102G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F130L__D102G_F130L__D102G_F130L_E142V__D102G_F130L_E142V_K214E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F130L__D102G_F130L__D102G_F130L_E142V__D102G_F130L_E142V_K214E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F71L_F99L_K101E_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F71L_F99L_K101E_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F99L_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F99L_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F99L_N212D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F99L_N212D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F99L_Q177R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F99L_Q177R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I128T_K162E_K166E_S202G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I128T_K162E_K166E_S202G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I128T_S202G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I128T_S202G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I136V_K209R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I136V_K209R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I152V_K166E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I152V_K166E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I229V_T43S.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I229V_T43S.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I229V_T9A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I229V_T9A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I229V__T43S_I229V__L7P_T43S_I229V__L7P_T43S_D117G_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I229V__T43S_I229V__L7P_T43S_I229V__L7P_T43S_D117G_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I229V__T9A_I229V__T9A_N212Y_I229V__T9A_K113R_N212Y_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I229V__T9A_I229V__T9A_N212Y_I229V__T9A_K113R_N212Y_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K101E_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K101E_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K113E_T62A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K113E_T62A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K113E__T62A_K113E__S28G_T62A_K113E__S28G_T62A_K113E_K156R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K113E__T62A_K113E__S28G_T62A_K113E__S28G_T62A_K113E_K156R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K156R_D190G_D197G_Q204R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K156R_D190G_D197G_Q204R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K166E_I152V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K166E_I152V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K166E__I152V_K166E__I136V_I152V_K166E__E90V_I136V_I152V_K166E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K166E__I152V_K166E__I136V_I152V_K166E__E90V_I136V_I152V_K166E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K209R_I136V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K209R_I136V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K209R_M233K.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K209R_M233K.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K209R__I136V_K209R__I136V_K209R_M233K__F114S_I136V_K209R_M233K.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K209R__I136V_K209R__I136V_K209R_M233K__F114S_I136V_K209R_M233K.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K26E_T118A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K26E_T118A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K26E_V68A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K26E_V68A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K26E_V68A_T118A_I123V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K26E_V68A_T118A_I123V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K79R_K162R_N164S_I229N.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K79R_K162R_N164S_I229N.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K79R_N164S.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K79R_N164S.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L220P_T186A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L220P_T186A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L220P__T186A_L220P__Y151H_T186A_L220P__Y151H_D180A_T186A_L220P.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L220P__T186A_L220P__Y151H_T186A_L220P__Y151H_D180A_T186A_L220P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L53Q_F99L_Q177R_N212D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L53Q_F99L_Q177R_N212D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L7P_T43S.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L7P_T43S.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L7P_T43S_D117G_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L7P_T43S_D117G_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M233K_K209R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M233K_K209R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M233K__K209R_M233K__I136V_K209R_M233K__F114S_I136V_K209R_M233K.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M233K__K209R_M233K__I136V_K209R_M233K__F114S_I136V_K209R_M233K.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M78T_S147C.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M78T_S147C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M78V_F83S_K101R_N170D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M78V_F83S_K101R_N170D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M78V_N170D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M78V_N170D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N164S_K79R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164S_K79R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N164S_V176A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164S_V176A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N164S__K79R_N164S__K79R_K162R_N164S__K79R_K162R_N164S_I229N.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164S__K79R_N164S__K79R_K162R_N164S__K79R_K162R_N164S_I229N.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N164Y_F99L.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164Y_F99L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N164Y_K101E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164Y_K101E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N164Y__F99L_N164Y__F99L_K101E_N164Y__F71L_F99L_K101E_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164Y__F99L_N164Y__F99L_K101E_N164Y__F71L_F99L_K101E_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N164Y__K101E_N164Y__F99L_K101E_N164Y__F71L_F99L_K101E_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164Y__K101E_N164Y__F99L_K101E_N164Y__F71L_F99L_K101E_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N170D_M78V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N170D_M78V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N170D__M78V_N170D__M78V_K101R_N170D__M78V_F83S_K101R_N170D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N170D__M78V_N170D__M78V_K101R_N170D__M78V_F83S_K101R_N170D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N212D_F99L.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N212D_F99L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N212D__F99L_N212D__F99L_Q177R_N212D__L53Q_F99L_Q177R_N212D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N212D__F99L_N212D__F99L_Q177R_N212D__L53Q_F99L_Q177R_N212D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q177R_F99L.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Q177R_F99L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q177R__F99L_Q177R__F99L_Q177R_N212D__L53Q_F99L_Q177R_N212D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Q177R__F99L_Q177R__F99L_Q177R_N212D__L53Q_F99L_Q177R_N212D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q204R_D197G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Q204R_D197G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q204R__D197G_Q204R__K156R_D197G_Q204R__K156R_D190G_D197G_Q204R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Q204R__D197G_Q204R__K156R_D197G_Q204R__K156R_D190G_D197G_Q204R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Roman/Roman_final_overview_1_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Roman/Roman_final_overview_1_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S147C_M78T.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S147C_M78T.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S147C__M78T_S147C__T63A_M78T_S147C__W57R_T63A_M78T_S147C.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S147C__M78T_S147C__T63A_M78T_S147C__W57R_T63A_M78T_S147C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S202G_I128T.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S202G_I128T.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S202G__I128T_S202G__I128T_K166E_S202G__I128T_K162E_K166E_S202G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S202G__I128T_S202G__I128T_K166E_S202G__I128T_K162E_K166E_S202G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S28G_T62A_K113E_K156R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S28G_T62A_K113E_K156R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T118A_K26E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T118A_K26E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T118A_V68A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T118A_V68A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T118A__K26E_T118A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T118A__K26E_T118A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T118A__V68A_T118A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T118A__V68A_T118A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T186A_L220P.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T186A_L220P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T43S_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T43S_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T43S_L7P.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T43S_L7P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T43S__L7P_T43S__L7P_T43S_I229V__L7P_T43S_D117G_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T43S__L7P_T43S__L7P_T43S_I229V__L7P_T43S_D117G_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T62A_K113E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T62A_K113E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T9A_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T9A_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T9A_K113R_N212Y_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T9A_K113R_N212Y_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/T9A_N164S_V176A_I188V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T9A_N164S_V176A_I188V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V176A_N164S.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V176A_N164S.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V176A__N164S_V176A__N164S_V176A_I188V__T9A_N164S_V176A_I188V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V176A__N164S_V176A__N164S_V176A_I188V__T9A_N164S_V176A_I188V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V68A_K26E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V68A_K26E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V68A_T118A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V68A_T118A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V68A__K26E_V68A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V68A__K26E_V68A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/W57R_T63A_M78T_S147C.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/W57R_T63A_M78T_S147C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Y151H_D180A_T186A_L220P.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Y151H_D180A_T186A_L220P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/all.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +104,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -70,7 +156,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/roman/PycharmProjects/topic02_team03&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tianxinangelama/Documents/GitHub/topic02_team03&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -79,6 +167,18 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/old" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths" />
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -130,41 +230,6 @@
       <workItem from="1689157538745" duration="138000" />
       <workItem from="1689157687940" duration="27567000" />
       <workItem from="1689239156653" duration="17654000" />
-    </task>
-    <task id="LOCAL-00012" summary="Ich kann multiplizieren!!">
-      <created>1686570104420</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1686570104420</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Ich kann multiplizieren!!">
-      <created>1686570697249</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1686570697249</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Richtige Nachbarschafts-Sortierung fehlt">
-      <created>1686588724670</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1686588724670</updated>
-    </task>
-    <task id="LOCAL-00015" summary="gogogo">
-      <created>1686650865361</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1686650865361</updated>
-    </task>
-    <task id="LOCAL-00016" summary="gogogo2">
-      <created>1686652605591</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1686652605591</updated>
     </task>
     <task id="LOCAL-00017" summary="Fast fertig">
       <created>1686683685746</created>
@@ -474,11 +539,57 @@
       <option name="project" value="LOCAL" />
       <updated>1689251623528</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="update">
+      <created>1689448744819</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1689448744819</updated>
+    </task>
+    <task id="LOCAL-00062" summary="new labels for plot positive epistasis">
+      <created>1689484346205</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1689484346205</updated>
+    </task>
+    <task id="LOCAL-00063" summary="adjust plot">
+      <created>1689484898802</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1689484898802</updated>
+    </task>
+    <task id="LOCAL-00064" summary="new caption">
+      <created>1689485179046</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1689485179046</updated>
+    </task>
+    <task id="LOCAL-00065" summary="sorting repo">
+      <created>1689508758956</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1689508758956</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -546,11 +657,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Clustal omega" />
-    <MESSAGE value="Weiter gearbeitet" />
-    <MESSAGE value="Für finale PPP vorbereitet 1" />
-    <MESSAGE value="Für finale PPP vorbereitet 2" />
-    <MESSAGE value="Für finale PPP vorbereitet 3" />
     <MESSAGE value="Für finale PPP vorbereitet 4" />
     <MESSAGE value="Für finale PPP vorbereitet 5" />
     <MESSAGE value="Für finale PPP vorbereitet 6" />
@@ -571,14 +677,20 @@
     <MESSAGE value="almost done" />
     <MESSAGE value="fertig" />
     <MESSAGE value="work in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
+    <MESSAGE value="update" />
+    <MESSAGE value="new labels for plot positive epistasis" />
+    <MESSAGE value="adjust plot" />
+    <MESSAGE value="new caption" />
+    <MESSAGE value="sorting repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorting repo" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_neighbourhoods_4_code.coverage" NAME="Roman_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689275657810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
+    <SUITE FILE_PATH="coverage/workspace_xml$A_plots_3_steps.coverage" NAME="A_plots_3_steps Coverage Results" MODIFIED="1689327999843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_s_part.coverage" NAME="Roman's part Coverage Results" MODIFIED="1684835819447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_overview_1_code.coverage" NAME="Roman_final_overview_1_code Coverage Results" MODIFIED="1689165313983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
     <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689240028815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_statistical_tests_3_code.coverage" NAME="Roman_final_statistical_tests_3_code Coverage Results" MODIFIED="1689203367486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
-    <SUITE FILE_PATH="coverage/Roman_AS_Eigenschaften_ipynb$Roman_final_neighbourhoods_4_code.coverage" NAME="Roman_final_neighbourhoods_4_code Coverage Results" MODIFIED="1689275657810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
     <SUITE FILE_PATH="coverage/topic02_team03$Roman_final_basic_analysis_2_code.coverage" NAME="Roman_final_basic_analysis_2_code Coverage Results" MODIFIED="1689169362920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Roman" />
   </component>
 </project>
