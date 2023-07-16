@@ -7,20 +7,25 @@ Single mutation:
 In this part of the project, the analysis focused primarily on single mutations. The main objective was to determine and quantify the relative impact of the mutation position versus the newly created amino acid on the resulting dms-score. Furthermore, the physiological impact of the change in amino acid to the fluorescence activity was determined by analyzing amino acid-specific parameters such as the volume of side chains (VSC), net charge index of side chains (NCISC), polarity (P1) and solvent accessible surface area (SASA).
  
 How to use the repository for single mutations:
-	-Directory "single mutations" contains everything about single mutations.
-	-Directory "finalized single mutations" contains the final concise versions of the analysis.
-    	-Single_mutants_final_overview_1_code.py: code behind the analysis of the first overview 
-	 	-Single_mutants_final_overview_1_plots.ipnyb: Plots and outputs of the code above (DMS scores of each single mutation based on the new AA, heatmaps showing available 			 mutations, DMS scores of each single mutation based on the position)
-   
-	 	-Single_mutants_final_basic_analysis_2_code.py: code behind the basic analysis.
-   		-Single_mutants_final_basic_analysis_2_plots.ipnyb: Plots and outputs of the code above (Mean and median by position, mean and median by new amino acid, DMS score vs. 			 position for the new amino acid = R scatter, Distribution of DMS scores by new amino acid boxplot, Distribution of DMS scores by new amino acid violin plot, analysis 			 of chromophore single mutations)
-	 
-	 	-Single_mutants_final_statistical_tests_3_code.py: code behind the statistical tests.
-   		-Single_mutants_final_statistical_tests_3_plots_true.ipnyb: Plots and outputs of the code above (Distribution of DMS scores by mutation position boxplots, ANOVA 				 results, eta-squared results, Bonferroni correction, Shapiro-wilks results, q-q-plot of the DMS scores, Mann-Whitney-U results individually for each mutation and 				 summarized, Mann-Whitney-U results binary scatter, Kruskal-Wallis results, Friedman results)
-	 
-	 	-Single_mutants_final_neighbourhoods_4_code.py: 
-
-   		-Single_mutants_final_GFP_variants_5.ipnyb: 
+Directory "single mutations" contains everything about single mutations.
+Directory "finalized single mutations" contains the final concise versions of the analysis.
+    -Single_mutants_final_overview_1_code.py: code behind the analysis of the first overview 
+    -Single_mutants_final_overview_1_plots.ipnyb: Plots and outputs of the code above (DMS scores of each single mutation based on the new AA, heatmaps showing
+     available mutations, DMS scores of each single mutation based on the position)
+     
+    -Single_mutants_final_basic_analysis_2_code.py: code behind the basic analysis.
+    -Single_mutants_final_basic_analysis_2_plots.ipnyb: Plots and outputs of the code above (Mean and median by position, mean and median by new amino acid, DMS
+     score vs. position for the new amino acid = R scatter, Distribution of DMS scores by new amino acid boxplot, Distribution of DMS scores by new amino acid
+     violin plot, analysis of chromophore single mutations)
+     
+     -Single_mutants_final_statistical_tests_3_code.py: code behind the statistical tests.
+     -Single_mutants_final_statistical_tests_3_plots_true.ipnyb: Plots and outputs of the code above (Distribution of DMS scores by mutation position boxplots,
+      ANOVA results, eta-squared results, Bonferroni correction, Shapiro-wilks results, q-q-plot of the DMS scores, Mann-Whitney-U results individually for each
+      mutation and summarized, Mann-Whitney-U results binary scatter, Kruskal-Wallis results, Friedman results)
+      
+      -Single_mutants_final_neighbourhoods_4_code.py: 
+      
+      -Single_mutants_final_GFP_variants_5.ipnyb: 
  4) 
 
 Epistasis
