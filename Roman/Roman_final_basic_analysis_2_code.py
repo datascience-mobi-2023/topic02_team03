@@ -125,7 +125,7 @@ for position, group in grouped_by_amino_acid:
     dms_scores_per_group_new_AS.append(group['DMS-score'])
 
 # Creates a box plot to depict the results
-sns.boxplot(x='new_AA', y='DMS-score', data=work_with_df_pos_new_AA_dms_score)
+sns.boxplot(x='new_AA', y='DMS-score', data=work_with_df_pos_new_AA_dms_score, color="blue")
 plt.xlabel('new_AA')
 plt.ylabel('DMS-score')
 plt.title('Distribution of DMS Scores by New_AS')

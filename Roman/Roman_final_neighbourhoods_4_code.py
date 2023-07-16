@@ -298,7 +298,7 @@ property_names_for_advanced_neighbourhoods = ["Molecular Weight", "Residue Weigh
 Final_neighbourhoods_df_to_work_with = Neighbourhoods_improving_step_by_step_penultimate.copy()
 for property_name in property_names_for_advanced_neighbourhoods:
     Final_neighbourhoods_df_to_work_with[property_name] = Final_neighbourhoods_df_to_work_with["Neighbourhood"].apply(lambda x: sum(AA_properties_work_with[property_names_for_advanced_neighbourhoods].loc[AA_properties_work_with["Letter"] == aa].values[0] for aa in x))
-
+%store Final_neighbourhoods_df_to_work_with
 # Final_neighbourhoods_df_to_work_with is the final and corrected version of the dataframe.
 
 # Now I want to build a small interface where I can search for a specific mutation.
@@ -307,7 +307,6 @@ for property_name in property_names_for_advanced_neighbourhoods:
 mutation_name_in_neighbourhoods_specific = input("Enter the mutation name: ")
 # This opens a small window to enter the mutation name.
 # Convert 'Mutation' column to string
-Final_neighbourhoods_df_to_work_with['Mutation'] = Final_neighbourhoods_df_to_work_with['Mutation'].astype(str)
 
 mutation_name_in_neighbourhoods_specific_result = Final_neighbourhoods_df_to_work_with[Final_neighbourhoods_df_to_work_with['Mutation'].str.contains(mutation_name_in_neighbourhoods_specific)]
 print(mutation_name_in_neighbourhoods_specific_result)
