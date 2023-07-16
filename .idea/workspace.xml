@@ -6,12 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="work in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking0.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking7_weighted.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking7_weighted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking0.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking1a.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking2_weighted.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking3_weighted.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking4_weighted .html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking5_a.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking5_b.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking5_c.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking5_d.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking5a_weighted.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking5b_weighted.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking5c_weighted.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/formatted_ranking7_weighted.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/ranking0.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/ranking0.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/unweighted rankings .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/unweighted rankings .ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/weighted rankings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/jupyter notebooks/weighted rankings.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
