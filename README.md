@@ -45,6 +45,12 @@ mutation and summarized, Mann-Whitney-U results binary scatter, Kruskal-Wallis r
 # Epistasis Analysis
 Additionally, analyses were performed to obtain information about the ability of mutations to stabilize the fitness scores of proteins that already contain other mutations and get quantified data to rank them accordingly. To make the calculations as specific as possible, weighted factors were computed, and the effect of mutation count on protein fitness got included.
 
+## Sequential Mutants
+The data set was filtered to find sequential mutants to determine whether epistasis can be observed. All codes for this part of the project can be found in the directory “Sequential_Mutants”. The filtering was done with “sequential_mutants_filtering.ipynb”, and plots were generated with “sequential_mutants_plots.ipynb”. Plots used for the report can also be found as png-files in the subdirectory "plot_paths". The directory “further codes” contains previous code versions and trials.
+
+## Structure Analysis
+To analyze the impact of amino acid residue orientation on epistasis, double mutation mutants were grouped according to the orientation of both amino acid residues. All files for this part of the project can be found in the directory “Structure_Analysis”. The needed structure information is stored in “AS_residues.xlsx”, where “1” stands for buried amino acid residues and “0” for surface-exposed ones. “AS_residues_in_out” contains the entire code for processing and plot generation, and plots used for the report are saved as png-files.
+
 ## Variance Analysis
 To analyze the influence the mutation count has on the fitness of the protein, two plots were generated, showing the influence (see "final plots (output) for the png files). 
 The directory "further code (trials etc)" contains codes developed in the process of the final plots, showing the development process of the final code.
