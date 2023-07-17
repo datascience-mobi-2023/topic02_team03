@@ -8,8 +8,7 @@ This project investigates the impact of singular and multiple mutations on the d
 To start of we did general basic plots visualizing the dataset. The code in "basic_plots_proposal" results in the two plots used in the project proposal. 
 See the plots in the two png files. Codes for general sorting of the data set are in the directory "general_sorting".
 
-# Single mutation
-##### Roman Kurley
+# Single mutation ##### Roman Kurley
 In this part of the project, the analysis focused primarily on single mutations. The main objective was to determine and quantify the relative impact of the mutation position versus the newly created amino acid on the resulting dms-score. Furthermore, the physiological impact of the change in amino acid to the fluorescence activity was determined by analyzing amino acid-specific parameters such as the volume of side chains (VSC), net charge index of side chains (NCISC), polarity (P1) and solvent accessible surface area (SASA).
  
 ## How to use the repository for single mutations:
