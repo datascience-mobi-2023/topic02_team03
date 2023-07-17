@@ -70,3 +70,9 @@ The rankings included in the final presentation were:
 
 # Protein stability prediction with PyRosetta 
 The stability of proteins is important as it can affect proper folding and functional performance. Protein stability can be characterized by thermodynamic stability, which refers to the resistance against denaturation, as well as kinetic stability, which measures the resistance of a protein against irreversible inactivation (Liu, Xun et al. 2019). Since no experimentally determined parameters capturing stability were available in the dataset used (Sarkisyan, Bolotin et al. 2016), we utilized the software platform PyRosetta to predict a stability parameter, enabling us to investigate the relationship between function and stability in mutated GFP. 
+## How to use the repository for predicting ddG with PyRosetta
+The "PyRosetta" folder contains the "Final Version" and the "Other Analysis" subfolders.
+- The "Final Version" subfolder contains only imagine file ("correlation_plot_DMS_score_ddG") and a Jupyter notebook "Final_Version_Prediction_with_Pyrosetta_and_Analysis" which contains everything for the report and presentation i.a. the prediction of ddG with PyRosetta and the anlysis
+- The "Other Analysis" subfolder contains the "Additional Analysis" folder and the "Tm Values" subfolder.
+    - The "Other Analysis" subfolder contains a Jupyter notebook "REB_ddG_additional_analysis_final" which stores all additional analysis and fails, and the Jupyter notebooks "REB_Prediction_ddG_version_1" and "REB_Prediction_ddG_version_2" which contain older versions of ddG's prediction
+    - The "Tm Values" ​​subfolder contains a Jupyter notebook with additional predictions for the Tm parameter
