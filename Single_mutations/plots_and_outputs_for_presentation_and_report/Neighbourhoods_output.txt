@@ -1,0 +1,48 @@
+                                      mutant  \
+0      K3R:V55A:Q94R:A110T:D117G:M153K:D216A   
+1                       K3Q:V16A:I167T:L195Q   
+2                K3Q:Y143C:N164D:S205P:A227T   
+3                            K3Q:Y143N:V193A   
+4                                        K3R   
+...                                      ...   
+51709                                  Y237N   
+51710                                  Y237C   
+51711                                  Y237D   
+51712                                  Y237F   
+51713                                  Y237H   
+
+                                        mutated_sequence  DMS_score  \
+0      MSRGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   1.301030   
+1      MSQGEELFTGVVPILAELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   3.137350   
+2      MSQGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   1.553913   
+3      MSQGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   3.404237   
+4      MSRGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   3.738586   
+...                                                  ...        ...   
+51709  MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   3.809468   
+51710  MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   3.760217   
+51711  MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   3.754101   
+51712  MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   3.673173   
+51713  MSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKF...   3.735417   
+
+       DMS_score_bin  
+0                  0  
+1                  1  
+2                  0  
+3                  1  
+4                  1  
+...              ...  
+51709              1  
+51710              1  
+51711              1  
+51712              1  
+51713              1  
+
+[51714 rows x 4 columns]
+Molecular Weight: 901.0
+        Mutation Neighbourhood  Molecular Weight  Residue Weight   pKa1  \
+972        K113R       AEVRFEG            914.97          788.87  15.38   
+973  K113R-unmut       AEVKFEG            886.96          760.86  15.39   
+
+      pKb2    pl4     H    VSC    P1     P2    SASA     NCISC  
+972  66.42  40.61 -0.64  443.5  63.3  1.069  12.219  0.337986  
+973  66.33  39.59  0.39  438.5  64.1  0.997  11.917  0.312107
