@@ -108,3 +108,4 @@ Bio.Align
 Bio.Seq
 Bio.SeqRecord
 Bio.Align.Applications
+### The full environment can be seen in the file "DMS_project_GFP_group_03.yaml"
