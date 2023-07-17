@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="final">
-      <change afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking7_TOP.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyRosetta/Other Analysis/Additional Analysis/older Versions/REB_Prediction_ddG_version_1.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyRosetta/Other Analysis/Additional Analysis/older Versions/REB_Prediction_ddG_version_2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyRosetta/Other Analysis/Tm Values/REB_Tm_Prediction_Final.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Single_mutations/plots_and_outputs_for_presentation_and_report/Neighbourhoods_output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Single_mutations/uncleaned_work_single_mutations/Lets pray.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/further code (trials etc)/L_different_ranking_ideas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Rankings/further code (trials etc)/L_different_ranking_ideas.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/further code (trials etc)/L_copy_von_der_stabilizing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/further code (trials etc)/L_copy_von_der_stabilizing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/further code (trials etc)/L_different_ranking_ideas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/further code (trials etc)/different_ranking_ideas.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/ranking notebooks/unweighted rankings .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/ranking notebooks/unweighted rankings .ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/ranking notebooks/weighted rankings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/ranking notebooks/weighted rankings.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/further code (trials etc)/L_copy_von_der_stabilizing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/further code (trials etc)/extracting all possible mutations + variance plots.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/further code (trials etc)/L_old_version_stabilizingmuts_plus_code_storage.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyRosetta/Other Analysis/Additional Analysis/.here" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyRosetta/Other Analysis/Additional Analysis/older Versions/.b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyRosetta/Other Analysis/Tm Values/.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_basic_analysis_2_plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_basic_analysis_2_plots.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_neighbourhoods_4_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_neighbourhoods_4_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_neighbourhoods_4_plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_neighbourhoods_4_plots.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_overview_1_plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_overview_1_plots.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_statistical_tests_3_plots_true.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/Single_mutations_final_statistical_tests_3_plots_true.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Single_mutations/uncleaned_work_single_mutations/Roman_final_neighbourhoods_4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Single_mutations/uncleaned_work_single_mutations/Roman_final_neighbourhoods_4.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="final" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,6 +142,7 @@
       <workItem from="1689157687940" duration="27567000" />
       <workItem from="1689239156653" duration="17654000" />
       <workItem from="1689517764137" duration="8691000" />
+      <workItem from="1689592582346" duration="36000" />
     </task>
     <task id="LOCAL-00028" summary="Weiter gearbeitet">
       <created>1687329624718</created>
