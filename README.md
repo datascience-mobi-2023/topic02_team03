@@ -1,4 +1,5 @@
-# team03 of topic02 Roman Kurley, Tianxin Angela Ma, Lisa Duttenhöfer, Rebecca Ress
+# team03 of topic02 
+##### Roman Kurley, Tianxin Angela Ma, Lisa Duttenhöfer, Rebecca Ress
 DMS analysis of green fluorescent protein (GFP)
 
 This project investigates the impact of singular and multiple mutations on the dms-score of green fluorescent protein (GFP). The analysis begins by examining the effects of mutation position and amino acid substitutions on the dms-scores of single mutants. Additionally, the study explores the physiological properties of neighboring amino acids, to identify causality for a lowered dms-score. Moreover, this project delves into the phenomenon of epistasis in GFP, investigating the interplay of multiple mutations and identifying buried amino acid residues that exhibit enhanced epistatic effects. Furthermore, the influence of the number of mutations on the dms-score is analyzed, leading to the development of weighted rankings to identify mutations with positive epistatic effects. Finally, pyrosetta is utilized to predict the difference in free energy (ΔG) between the unfolded and folded protein. The findings provide valuable insights into the factors influencing the dms-score in GFP mutants and have implications for protein engineering and design.
@@ -82,3 +83,20 @@ The "PyRosetta" folder contains the "Final Version" and the "Other Analysis" sub
 - The "Other Analysis" subfolder contains the "Additional Analysis" folder and the "Tm Values" subfolder.
     - The "Other Analysis" subfolder contains a Jupyter notebook "REB_ddG_additional_analysis_final" which stores all additional analysis and fails, and the Jupyter notebooks "REB_Prediction_ddG_version_1" and "REB_Prediction_ddG_version_2" which contain older versions of ddG's prediction
     - The "Tm Values" ​​subfolder contains a Jupyter notebook with additional predictions for the Tm parameter
+
+ ## used packages
+numpy
+pandas
+matplotlib
+seaborn
+scipy.stats
+statsmodels.api
+ols
+re
+statsmodels.stats.multitest
+Bio.Blast
+Bio
+Bio.Align
+Bio.Seq
+Bio.SeqRecord
+Bio.Align.Applications
