@@ -5,8 +5,167 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c994abd2-9f8d-4e7a-8192-550a457907db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/sequential_mutants_plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/topic02_team03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/topic02_team03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequential_mutants_filtering.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequential_mutants_filtering.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/further code (trials etc)/Cross validation try.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/further code (trials etc)/Cross validation try.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/further code (trials etc)/L_different_ranking_ideas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/further code (trials etc)/L_different_ranking_ideas.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking0.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking1a.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking1a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking5_a.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking5_a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking5_b.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking5_b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking5_c.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking5_c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking5_d.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete unweighted rankings (output)/ranking5_d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking2_weighted.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking2_weighted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking3_weighted.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking3_weighted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking5a_weighted.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking5a_weighted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking5b_weighted.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking5b_weighted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking5c_weighted.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking5c_weighted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking7_weighted.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/complete weighted rankings (output)/ranking7_weighted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking0_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking0_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking1_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking1_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking1a_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking1a_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking2_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking2_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking2_weighted_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking2_weighted_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking3_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking3_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking3_weighted_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking3_weighted_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5a_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5a_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5a_weighted_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5a_weighted_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5b_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5b_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5b_weighted_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5b_weighted_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5c_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5c_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5c_weighted_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5c_weighted_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5d_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking5d_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking7_weighted_TOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/output rankings (html files)/ranked mutation names (output)/ranking7_weighted_TOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/python files/rankings_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/python files/rankings_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/python files/weighted_rankings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/python files/weighted_rankings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/ranking notebooks/unweighted rankings .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/ranking notebooks/unweighted rankings .ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Rankings/ranking notebooks/weighted rankings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Rankings/ranking notebooks/weighted rankings.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/A_plots_4_steps.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_plots_4_steps.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/A_plots_4_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/preprocessing_for_sequential_mutants_plots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_ABCDE.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_ABCDE.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_Stammbaum_12_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_Stammbaum_12_2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_Stammbaum_ABCDE_auf_12.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_Stammbaum_ABCDE_auf_12.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_Stammbaum_across_m1_to_m15.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_Stammbaum_across_m1_to_m15.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_Stammbaum_rekursiv.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_Stammbaum_rekursiv.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_Stammbaum_rekursiv_10.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_Stammbaum_rekursiv_10.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_Stammbaum_rekursiv_11.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_Stammbaum_rekursiv_11.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_Stammbaum_rekursiv_12.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_Stammbaum_rekursiv_12.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_Versuch aufeinanderfolgende Mutationen rausfiltern.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_Versuch aufeinanderfolgende Mutationen rausfiltern.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_alle_Schritte_12_Mutationen.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_alle_Schritte_12_Mutationen.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_alle_Schritte_1_Mutation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_alle_Schritte_1_Mutation.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_find_path_for_new_rankings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_find_path_for_new_rankings.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_neu_Stammbaum.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_neu_Stammbaum.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_ord_Stammbaum.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_ord_Stammbaum.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_plots_3_steps.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_plots_3_steps.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code/A_plots_3_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/A_plots_3_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/Example for Positive Epistasis.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/Example for Positive Epistasis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/Example without Epistasis.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/Example without Epistasis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/all.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/all.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/D102G_F130L.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/D102G_F130L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/D102G_F130L_E142V_K214E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/D102G_F130L_E142V_K214E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/D197G_Q204R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/D197G_Q204R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/DMS_score for each number of mutations.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/DMS_score for each number of mutations.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/E90V_I136V_I152V_K166E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/E90V_I136V_I152V_K166E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F114S_I136V_K209R_M233K.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/F114S_I136V_K209R_M233K.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F130L_D102G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/F130L_D102G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F130L__D102G_F130L__D102G_F130L_E142V__D102G_F130L_E142V_K214E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/F130L__D102G_F130L__D102G_F130L_E142V__D102G_F130L_E142V_K214E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F71L_F99L_K101E_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/F71L_F99L_K101E_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F99L_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/F99L_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F99L_N212D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/F99L_N212D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/F99L_Q177R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/F99L_Q177R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I128T_K162E_K166E_S202G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/I128T_K162E_K166E_S202G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I128T_S202G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/I128T_S202G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I136V_K209R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/I136V_K209R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I152V_K166E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/I152V_K166E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I229V_T43S.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/I229V_T43S.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I229V_T9A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/I229V_T9A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I229V__T43S_I229V__L7P_T43S_I229V__L7P_T43S_D117G_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/I229V__T43S_I229V__L7P_T43S_I229V__L7P_T43S_D117G_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/I229V__T9A_I229V__T9A_N212Y_I229V__T9A_K113R_N212Y_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/I229V__T9A_I229V__T9A_N212Y_I229V__T9A_K113R_N212Y_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K101E_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K101E_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K113E_T62A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K113E_T62A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K113E__T62A_K113E__S28G_T62A_K113E__S28G_T62A_K113E_K156R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K113E__T62A_K113E__S28G_T62A_K113E__S28G_T62A_K113E_K156R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K156R_D190G_D197G_Q204R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K156R_D190G_D197G_Q204R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K166E_I152V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K166E_I152V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K166E__I152V_K166E__I136V_I152V_K166E__E90V_I136V_I152V_K166E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K166E__I152V_K166E__I136V_I152V_K166E__E90V_I136V_I152V_K166E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K209R_I136V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K209R_I136V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K209R_M233K.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K209R_M233K.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K209R__I136V_K209R__I136V_K209R_M233K__F114S_I136V_K209R_M233K.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K209R__I136V_K209R__I136V_K209R_M233K__F114S_I136V_K209R_M233K.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K26E_T118A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K26E_T118A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K26E_V68A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K26E_V68A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K26E_V68A_T118A_I123V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K26E_V68A_T118A_I123V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K79R_K162R_N164S_I229N.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K79R_K162R_N164S_I229N.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/K79R_N164S.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/K79R_N164S.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L220P_T186A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/L220P_T186A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L220P__T186A_L220P__Y151H_T186A_L220P__Y151H_D180A_T186A_L220P.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/L220P__T186A_L220P__Y151H_T186A_L220P__Y151H_D180A_T186A_L220P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L53Q_F99L_Q177R_N212D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/L53Q_F99L_Q177R_N212D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L7P_T43S.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/L7P_T43S.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/L7P_T43S_D117G_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/L7P_T43S_D117G_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M233K_K209R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/M233K_K209R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M233K__K209R_M233K__I136V_K209R_M233K__F114S_I136V_K209R_M233K.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/M233K__K209R_M233K__I136V_K209R_M233K__F114S_I136V_K209R_M233K.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M78T_S147C.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/M78T_S147C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M78V_F83S_K101R_N170D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/M78V_F83S_K101R_N170D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/M78V_N170D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/M78V_N170D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164S_K79R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N164S_K79R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164S_V176A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N164S_V176A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164S__K79R_N164S__K79R_K162R_N164S__K79R_K162R_N164S_I229N.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N164S__K79R_N164S__K79R_K162R_N164S__K79R_K162R_N164S_I229N.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164Y_F99L.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N164Y_F99L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164Y_K101E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N164Y_K101E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164Y__F99L_N164Y__F99L_K101E_N164Y__F71L_F99L_K101E_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N164Y__F99L_N164Y__F99L_K101E_N164Y__F71L_F99L_K101E_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N164Y__K101E_N164Y__F99L_K101E_N164Y__F71L_F99L_K101E_N164Y.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N164Y__K101E_N164Y__F99L_K101E_N164Y__F71L_F99L_K101E_N164Y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N170D_M78V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N170D_M78V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N170D__M78V_N170D__M78V_K101R_N170D__M78V_F83S_K101R_N170D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N170D__M78V_N170D__M78V_K101R_N170D__M78V_F83S_K101R_N170D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N212D_F99L.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N212D_F99L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/N212D__F99L_N212D__F99L_Q177R_N212D__L53Q_F99L_Q177R_N212D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/N212D__F99L_N212D__F99L_Q177R_N212D__L53Q_F99L_Q177R_N212D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Q177R_F99L.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/Q177R_F99L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Q177R__F99L_Q177R__F99L_Q177R_N212D__L53Q_F99L_Q177R_N212D.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/Q177R__F99L_Q177R__F99L_Q177R_N212D__L53Q_F99L_Q177R_N212D.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Q204R_D197G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/Q204R_D197G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Q204R__D197G_Q204R__K156R_D197G_Q204R__K156R_D190G_D197G_Q204R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/Q204R__D197G_Q204R__K156R_D197G_Q204R__K156R_D190G_D197G_Q204R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S147C_M78T.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/S147C_M78T.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S147C__M78T_S147C__T63A_M78T_S147C__W57R_T63A_M78T_S147C.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/S147C__M78T_S147C__T63A_M78T_S147C__W57R_T63A_M78T_S147C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S202G_I128T.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/S202G_I128T.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S202G__I128T_S202G__I128T_K166E_S202G__I128T_K162E_K166E_S202G.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/S202G__I128T_S202G__I128T_K166E_S202G__I128T_K162E_K166E_S202G.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/S28G_T62A_K113E_K156R.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/S28G_T62A_K113E_K156R.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T118A_K26E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T118A_K26E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T118A_V68A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T118A_V68A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T118A__K26E_T118A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T118A__K26E_T118A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T118A__V68A_T118A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T118A__V68A_T118A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T186A_L220P.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T186A_L220P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T43S_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T43S_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T43S_L7P.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T43S_L7P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T43S__L7P_T43S__L7P_T43S_I229V__L7P_T43S_D117G_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T43S__L7P_T43S__L7P_T43S_I229V__L7P_T43S_D117G_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T62A_K113E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T62A_K113E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T9A_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T9A_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T9A_K113R_N212Y_I229V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T9A_K113R_N212Y_I229V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/T9A_N164S_V176A_I188V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/T9A_N164S_V176A_I188V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V176A_N164S.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/V176A_N164S.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V176A__N164S_V176A__N164S_V176A_I188V__T9A_N164S_V176A_I188V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/V176A__N164S_V176A__N164S_V176A_I188V__T9A_N164S_V176A_I188V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V68A_K26E.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/V68A_K26E.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V68A_T118A.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/V68A_T118A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/V68A__K26E_V68A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/V68A__K26E_V68A__K26E_V68A_T118A__K26E_V68A_T118A_I123V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/W57R_T63A_M78T_S147C.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/W57R_T63A_M78T_S147C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest/Y151H_D180A_T186A_L220P.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/plots_paths/rest/Y151H_D180A_T186A_L220P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequential_mutants_filtering.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/sequential_mutants_filtering.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/sequential_mutants_print_all.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code/sequential_mutants_print_all.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/AS_residues.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Structure_Analysis/AS_residues.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/AS_residues_in_out.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Structure_Analysis/AS_residues_in_out.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/further_code/A_fscore_position.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Structure_Analysis/further_code/A_fscore_position.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/further_code/A_position.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Structure_Analysis/further_code/A_position.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/further_code/A_position_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Structure_Analysis/further_code/A_position_2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/negative_epistasis.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Structure_Analysis/negative_epistasis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis/positive_epistasis.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Structure_Analysis/positive_epistasis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/final plots (output)/boxplot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/final plots (output)/boxplot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/final plots (output)/variances_scatterplot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/final plots (output)/variances_scatterplot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/further code (trials etc)/L_copy_von_der_stabilizing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/further code (trials etc)/L_copy_von_der_stabilizing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/further code (trials etc)/L_old_version_stabilizingmuts_plus_code_storage.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/further code (trials etc)/L_old_version_stabilizingmuts_plus_code_storage.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/FSD calculation code.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/jupyter notebooks/FSD calculation code.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/impact of mutcount on FS mean (boxplot code).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/jupyter notebooks/impact of mutcount on FS mean (boxplot code).ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/jupyter notebooks/variance analysis per mutcount (scatterplots code).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/jupyter notebooks/variance analysis per mutcount (scatterplots code).ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epistasis Analysis/Variance Analysis/variance_analysis_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Epistasis_Analysis/Variance Analysis/variance_analysis_code.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +175,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -63,33 +222,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tianxinangelama/Documents/GitHub/topic02_team03/Epistasis Analysis/Structure_Analysis&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "database.data.extractors.current.id": "Comma-separated (CSV)_id",
+    "last_opened_file_path": "/Users/tianxinangelama/Documents/GitHub/topic02_team03/Epistasis Analysis/Sequential_Mutants",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants" />
       <recent name="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Epistasis_Analysis/Sequential_Mutants/further_code" />
       <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/further_code" />
       <recent name="$PROJECT_DIR$/Epistasis Analysis/Structure_Analysis" />
       <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/rest" />
       <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths/old" />
-      <recent name="$PROJECT_DIR$/Epistasis Analysis/Sequential_Mutants/plots_paths" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -143,14 +303,7 @@
       <workItem from="1689157538745" duration="138000" />
       <workItem from="1689157687940" duration="27567000" />
       <workItem from="1689239156653" duration="17654000" />
-      <workItem from="1689517764137" duration="4526000" />
-    </task>
-    <task id="LOCAL-00025" summary="Neues Dokument für GFP-Varianten mit Sequenzen mit Arbeit in Clustal omega">
-      <created>1686851952902</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1686851952903</updated>
+      <workItem from="1689517764137" duration="8329000" />
     </task>
     <task id="LOCAL-00026" summary="Weiter gearbeitet">
       <created>1687169287957</created>
@@ -488,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689529075977</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="filtering cleaned">
+      <created>1689538267561</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1689538267561</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
